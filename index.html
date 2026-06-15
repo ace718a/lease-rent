@@ -85,7 +85,6 @@ font-size:12px;color:#777;text-decoration:line-through;
 font-size:17px;color:#ff3b30;font-weight:bold;
 }
 
-/* live */
 .live-box{
 background:#1a1a1a;
 padding:12px;
@@ -108,8 +107,6 @@ font-weight:900;
 font-size:14px;
 }
 
-
-/* ⭐ 수정된 담당자 안내 */
 .form-guide{
 background:#0f0f0f;
 border:2px solid #ff3b30;
@@ -117,12 +114,11 @@ padding:16px;
 font-size:20px;
 margin-bottom:12px;
 color:#fff;
-text-align:center;   /* 가운데 정렬 */
-font-weight:700;     /* 굵게 */
+text-align:center;
+font-weight:700;
 line-height:1.5;
 }
 
-/* iframe */
 .db-section{
 background:#1a1a1a;
 padding:15px;
@@ -152,13 +148,6 @@ font-weight:bold;text-decoration:none;
 .btn-tel{background:#000;color:#fff;}
 .btn-form{background:#ff3b30;color:#fff;}
 
-@media(max-width:768px){
-.grid{grid-template-columns:repeat(2,1fr);}
-}
-@media(max-width:480px){
-.grid{grid-template-columns:1fr;}
-}
-
 .site-footer{
 background:#0b0b0b;
 border-top:1px solid rgba(255,255,255,0.08);
@@ -170,7 +159,6 @@ color:#888;
 text-align:center;
 word-break:keep-all;
 }
-
 </style>
 </head>
 
@@ -181,23 +169,16 @@ word-break:keep-all;
 <div class="hero">
 <div class="badge">모든 캐피탈 실시간 비교</div>
 
-<h1 class="hero-title">
-초기비용 0원 · 최저가 특가 진행중
-</h1>
-
-<p class="hero-sub">
-최근 30일 상담 기준 승인율 98%
-</p>
+<h1 class="hero-title">초기비용 0원 · 최저가 특가 진행중</h1>
+<p class="hero-sub">최근 30일 상담 기준 승인율 98%</p>
 </div>
 
 <div class="container">
 
 <div class="section-title">이달의 <span>인기 특판 차량</span></div>
-
 <div class="grid" id="carGrid"></div>
 
 <div class="section-title">🚨 실시간 승인 현황</div>
-
 <div class="live-box" id="liveBox"></div>
 
 <div class="section-title">🚨 30초 빠른 상담 신청</div>
@@ -221,19 +202,11 @@ src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"></iframe>
 FAX : 070-4758-8210 ㅣ E-mail : replyalba@nate.com
 </div>
 
-
 <div class="footer-bar">
-<a class="btn-tel"
-href="https://replyalba.com/pt/ISviBzViFs"
-target="_blank"
-rel="noopener">
-리스렌트성지 바로가기
-</a>
-
-<a class="btn-form" href="#consultation">
-무료 비교견적 확인
-</a>
+<a class="btn-tel" href="https://replyalba.com/pt/ISviBzViFs" target="_blank">리스렌트성지 바로가기</a>
+<a class="btn-form" href="#consultation">무료 비교견적 확인</a>
 </div>
+
 <script>
 
 /* 차량 데이터 */
@@ -261,48 +234,39 @@ grid.innerHTML+=`
 </div>`;
 });
 
+/* 시간 함수 추가 (핵심 수정) */
+function getTime(){
+const r=Math.random();
+if(r<0.1) return "방금 전";
+if(r<0.2) return "1시간 전";
+
+const today=new Date();
+const daysAgo=Math.floor(Math.random()*5);
+const date=new Date(today);
+date.setDate(today.getDate()-daysAgo);
+
+return `${date.getMonth()+1}/${date.getDate()}`;
+}
+
 /* live */
 const names=["김*우","이*준","박*현","최*석","정*호","오*민","강*우","윤*서","홍*진","장*훈"];
 const carsName=["그랜저","쏘렌토","카니발","BMW 5","벤츠 E","스포티지","G80","쏘나타"];
 const locs=["부산","서울","대구","인천","울산","창원"];
 
-
-
 const liveBox=document.getElementById("liveBox");
 
-function getTime(){
-
-const r = Math.random();
-
-/* 20% 확률: 실시간 */
-if(r < 0.1) return "방금 전";
-if(r < 0.2) return "1시간 전";
-
-/* 80% 확률: 최근 5일 날짜 */
-const today = new Date();
-
-// 0~4일 전 (오늘 포함 5일)
-const daysAgo = Math.floor(Math.random() * 5);
-
-const date = new Date(today);
-date.setDate(today.getDate() - daysAgo);
-
-const month = date.getMonth() + 1;
-const day = date.getDate();
-
-return `${month}/${day}`;
-
-}
-
-}
 function addLive(){
-const name=names[Math.floor(Math.random()*names.length)];
-const car=carsName[Math.floor(Math.random()*carsName.length)];
-const loc=locs[Math.floor(Math.random()*locs.length)];
+
+const name = names[Math.floor(Math.random()*names.length)];
+const car = carsName[Math.floor(Math.random()*carsName.length)];
+const loc = locs[Math.floor(Math.random()*locs.length)];
 
 const div=document.createElement("div");
 div.className="live-item";
-div.innerHTML=`${loc} ${name} 고객님 <b>${car}</b> 승인 완료 <span>[${getTime()}]</span>`;
+
+div.innerHTML =
+`${loc} ${name} 고객님 <b>${car}</b> 승인 완료 <span>[${getTime()}]</span>`;
+
 liveBox.prepend(div);
 
 if(liveBox.children.length>10){
@@ -310,6 +274,7 @@ liveBox.removeChild(liveBox.lastChild);
 }
 }
 
+/* 초기 + 반복 */
 for(let i=0;i<6;i++) addLive();
 setInterval(addLive,2500);
 
