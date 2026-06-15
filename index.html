@@ -1,22 +1,18 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>리스렌트 비교견적 | 즉시 상담</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>리스렌트 비교견적</title>
 
 <style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5f6f8;
-}
+body { margin:0; font-family:Arial; background:#f5f6f8; }
 
 header {
   background:#111;
   color:#fff;
-  padding:16px;
   text-align:center;
+  padding:15px;
   font-weight:bold;
 }
 
@@ -27,21 +23,7 @@ header {
   text-align:center;
 }
 
-.hero h1 {
-  font-size:26px;
-  margin-bottom:10px;
-}
-
-.cta {
-  display:inline-block;
-  margin-top:15px;
-  padding:14px 20px;
-  background:#ff3b30;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-}
+.hero h1 { font-size:26px; }
 
 .section {
   max-width:1000px;
@@ -49,69 +31,18 @@ header {
   padding:20px;
 }
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.card {
+.box {
   background:#fff;
+  padding:15px;
   border-radius:10px;
-  overflow:hidden;
   box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  margin-top:20px;
 }
 
-.card img {
+iframe {
   width:100%;
-  height:160px;
-  object-fit:cover;
-}
-
-.card-body {
-  padding:12px;
-}
-
-.price {
-  color:#ff3b30;
-  font-weight:bold;
-  margin:5px 0;
-}
-
-.btn {
-  width:100%;
-  padding:10px;
-  background:#111;
-  color:#fff;
+  height:700px;
   border:none;
-  margin-top:10px;
-  cursor:pointer;
-}
-
-.form-box {
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  margin-top:30px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-}
-
-input {
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border:1px solid #ddd;
-  border-radius:6px;
-}
-
-.submit {
-  width:100%;
-  padding:14px;
-  background:#ff3b30;
-  color:#fff;
-  border:none;
-  font-weight:bold;
-  border-radius:6px;
 }
 
 .footer {
@@ -133,7 +64,7 @@ input {
 .consult { background:#ff3b30; color:#fff; }
 
 @media(max-width:768px){
-  .grid{grid-template-columns:1fr;}
+  iframe { height:800px; }
 }
 </style>
 </head>
@@ -141,101 +72,46 @@ input {
 <body>
 
 <header>
-  🚗 리스 / 렌트 즉시 비교견적
+  🚗 리스 / 렌트 즉시 상담
 </header>
 
 <div class="hero">
   <h1>월 20만원대부터 가능</h1>
-  <p>최저가 빠른 매칭 상담</p>
-  <a class="cta" href="#form">상담받기</a>
+  <p>빠른 심사 / 즉시 안내</p>
 </div>
 
 <div class="section">
 
-  <h2>🔥 인기 차량</h2>
+  <h2>📞 상담 신청</h2>
 
-  <div class="grid">
+  <div class="box">
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x250?text=SONATA">
-      <div class="card-body">
-        <div>현대 쏘나타</div>
-        <div class="price">월 252,000원</div>
-        <button class="btn" onclick="setCar('현대 쏘나타')">상담</button>
-      </div>
-    </div>
+    <!-- 🔥 네 DB가 아니라 외부 DB 저장 iframe -->
+    <iframe
+      name="ifrm_icode"
+      id="ifrCCAl"
+      scrolling="no"
+      frameborder="0"
+      src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs">
+    </iframe>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x250?text=K5">
-      <div class="card-body">
-        <div>기아 K5</div>
-        <div class="price">월 239,000원</div>
-        <button class="btn" onclick="setCar('기아 K5')">상담</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/400x250?text=GV70">
-      <div class="card-body">
-        <div>제네시스 GV70</div>
-        <div class="price">월 498,000원</div>
-        <button class="btn" onclick="setCar('제네시스 GV70')">상담</button>
-      </div>
-    </div>
-
-  </div>
-
-  <div id="form" class="form-box">
-    <h2>📞 상담 신청</h2>
-
-    <form id="leadForm">
-      <input type="text" name="name" placeholder="이름" required>
-      <input type="text" name="phone" placeholder="연락처" required>
-      <input type="text" name="car" placeholder="차량">
-      <button class="submit" type="submit">신청하기</button>
-    </form>
   </div>
 
 </div>
 
 <div class="footer">
-  <a class="call" href="tel:01000000000">전화</a>
-  <a class="consult" href="#form">상담</a>
+  <a class="call" href="tel:01000000000">전화상담</a>
+  <a class="consult" href="#ifrCCAl">상담하기</a>
 </div>
 
+<script src="https://replyalba.com/js/jquery-1.11.0.min.js"></script>
+<script src="https://replyalba.com/js/iframeResizer.min.js"></script>
+
 <script>
-function setCar(name){
-  document.querySelector('input[name="car"]').value = name;
-  document.getElementById("form").scrollIntoView({behavior:"smooth"});
-}
-
-// DB 연결 핵심
-document.getElementById("leadForm").addEventListener("submit", async function(e){
-  e.preventDefault();
-
-  const data = {
-    name: this.name.value,
-    phone: this.phone.value,
-    car: this.car.value
-  };
-
-  try {
-    const res = await fetch("/api/lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-
-    if (res.ok) {
-      alert("상담 완료");
-      this.reset();
-    } else {
-      alert("전송 실패");
-    }
-
-  } catch (e) {
-    alert("서버 오류");
-  }
+$("#ifrCCAl").iFrameResize({
+  autoResize: true,
+  checkOrigin: true,
+  heightCalculationMethod: "offset"
 });
 </script>
 
