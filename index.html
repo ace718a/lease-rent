@@ -3,93 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>리스렌트 비교견적</title>
-<meta name="description" content="리스·렌트 최저가 비교견적 빠르게 확인">
+<title>리스렌트 상담</title>
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-body {background:#f6f7fb;color:#111;}
-
-.header {
-  background:#111827;
-  color:#fff;
-  padding:18px;
-  text-align:center;
-  font-size:18px;
-  font-weight:bold;
-}
-
-.hero {
-  padding:40px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#2563eb,#1e40af);
-  color:#fff;
-}
-
-.hero h1 {font-size:26px;margin-bottom:10px;}
-.hero p {opacity:0.9;}
-
-.container {
-  max-width:900px;
-  margin:20px auto;
-  padding:20px;
-}
-
-.card {
-  background:#fff;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
-  margin-bottom:15px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-input, select {
-  width:100%;
-  padding:12px;
-  border:1px solid #ddd;
-  border-radius:8px;
-}
+body {margin:0;font-family:Arial;background:#f6f7fb;}
+.header {background:#111827;color:#fff;padding:15px;text-align:center;}
+.container {max-width:900px;margin:0 auto;padding:15px;}
+.card {background:#fff;padding:15px;border-radius:10px;margin-top:15px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
 
 button {
   width:100%;
   padding:14px;
   background:#2563eb;
   color:#fff;
-  border:none;
-  border-radius:10px;
+  border:0;
+  border-radius:8px;
   font-size:16px;
-  cursor:pointer;
   margin-top:10px;
 }
 
-button:hover {background:#1e40af;}
-
-.badges {
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:10px;
-}
-
-.badge {
-  background:#eef2ff;
-  color:#3730a3;
-  padding:6px 10px;
-  border-radius:20px;
-  font-size:12px;
-}
-
-.footer {
-  text-align:center;
-  padding:20px;
-  font-size:12px;
-  color:#666;
+.subbtn {
+  background:#10b981;
 }
 </style>
 </head>
@@ -97,91 +31,45 @@ button:hover {background:#1e40af;}
 <body>
 
 <div class="header">
-리스·렌트 최저가 비교견적
-</div>
-
-<div class="hero">
-<h1>한 번 입력으로 최저가 견적 비교</h1>
-<p>국산차 / 수입차 / 장기렌트 / 리스 빠른 상담</p>
+리스 / 렌트 무료 상담
 </div>
 
 <div class="container">
 
 <div class="card">
-<h3>빠른 견적 신청</h3>
+<h3>빠른 상담</h3>
 
-<div class="grid">
-  <input type="text" placeholder="이름">
-  <input type="text" placeholder="연락처">
-</div>
+<!-- 🔥 iframe 유지 -->
+<iframe
+  id="ifr"
+  src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"
+  width="100%"
+  style="border:0;min-height:800px;">
+</iframe>
 
-<div class="grid">
-  <select>
-    <option>차량 종류 선택</option>
-    <option>국산차</option>
-    <option>수입차</option>
-    <option>SUV</option>
-    <option>전기차</option>
-  </select>
+<!-- 🔥 핵심: 외부 CPA 직접 링크 (DB 확보용) -->
+<button onclick="goCPA()">👉 상담 바로가기 (DB확실반영)</button>
 
-  <select>
-    <option>이용 방식</option>
-    <option>장기렌트</option>
-    <option>리스</option>
-  </select>
-</div>
-
-<input type="text" placeholder="희망 차종 (예: 쏘렌토, G80)">
-
-<button onclick="send()">무료 견적 받기</button>
-
-<div class="badges">
-  <div class="badge">✔ 1분 신청</div>
-  <div class="badge">✔ 최저가 비교</div>
-  <div class="badge">✔ 비공개 상담</div>
-</div>
+<button class="subbtn" onclick="fallback()">
+상담이 안 뜨면 여기 클릭
+</button>
 
 </div>
 
-<div class="card">
-<h3>왜 여기서 해야 하나요?</h3>
-<p style="margin-top:10px;line-height:1.6;">
-여러 업체 견적을 한 번에 비교하여<br>
-조건별 최저가를 빠르게 확인할 수 있습니다.<br><br>
-초기 비용 / 월 납입 / 잔존가치까지 자동 비교.
-</p>
-</div>
-
-<div class="card">
-<h3>진행 프로세스</h3>
-<p style="margin-top:10px;line-height:1.8;">
-1. 정보 입력<br>
-2. 조건 분석<br>
-3. 업체별 견적 비교<br>
-4. 최저가 안내
-</p>
-</div>
-
-</div>
-
-<div class="footer">
-© 렌트 비교 플랫폼
 </div>
 
 <script>
-function send(){
-  const name = document.querySelectorAll("input")[0].value;
-  const phone = document.querySelectorAll("input")[1].value;
+const CPA_URL = "https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs";
 
-  if(!name || !phone){
-    alert("이름/연락처 입력");
-    return;
-  }
+// 🔥 메인 전환 (DB 잡히는 핵심)
+function goCPA(){
+  // 클릭 즉시 외부 이동 → CPA 추적 확실
+  window.location.href = CPA_URL;
+}
 
-  alert("신청 완료! 상담사가 연락드립니다.");
-
-  // 실제 운영 시 여기에 webhook / 구글폼 / 노션 / API 연결
-  console.log({name, phone});
+// 🔥 fallback
+function fallback(){
+  window.open(CPA_URL, "_blank");
 }
 </script>
 
