@@ -291,18 +291,37 @@
 /* ✅ 실시간 승인 로그 */
 const logs = [
 '부산 해운대구 이*준 고객님 <b>쏘렌토 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (방금 전)',
-'서울 강서구 박*현 고객님 <b>그랜저 IG</b> <span class="status-txt">심사 승인 완료</span> (1분 전)',
-'대구 수성구 김*진 고객님 <b>카니발</b> <span class="status-txt">심사 승인 완료</span> (2분 전)',
-'부산 사하구 최*석 고객님 <b>BMW 5시리즈</b> <span class="status-txt">심사 승인 완료</span> (3분 전)',
-'서울 송파구 정*호 고객님 <b>벤츠 E클래스</b> <span class="status-txt">심사 승인 완료</span> (4분 전)',
-'인천 남동구 오*민 고객님 <b>스포티지</b> <span class="status-txt">심사 승인 완료</span> (5분 전)',
-'부산 북구 강*우 고객님 <b>싼타페</b> <span class="status-txt">심사 승인 완료</span> (6분 전)',
-'서울 마포구 윤*서 고객님 <b>아반떼 CN7</b> <span class="status-txt">심사 승인 완료</span> (7분 전)',
-'울산 남구 장*훈 고객님 <b>G80</b> <span class="status-txt">심사 승인 완료</span> (8분 전)',
-'창원 성산구 홍*진 고객님 <b>쏘나타</b> <span class="status-txt">심사 승인 완료</span> (9분 전)'
+'서울 강서구 박*현 고객님 <b>그랜저 IG</b> <span class="status-txt">심사 승인 완료</span> (2분 전)',
+'대구 수성구 김*진 고객님 <b>카니발</b> <span class="status-txt">심사 승인 완료</span> (5분 전)',
+'부산 사하구 최*석 고객님 <b>BMW 5시리즈</b> <span class="status-txt">심사 승인 완료</span> (10분 전)',
+'서울 송파구 정*호 고객님 <b>벤츠 E클래스</b> <span class="status-txt">심사 승인 완료</span> (20분 전)',
+'인천 남동구 오*민 고객님 <b>스포티지</b> <span class="status-txt">심사 승인 완료</span> (30분 전)',
+'부산 북구 강*우 고객님 <b>싼타페</b> <span class="status-txt">심사 승인 완료</span> (1시간 전)',
+'서울 마포구 윤*서 고객님 <b>아반떼 CN7</b> <span class="status-txt">심사 승인 완료</span> (오늘)',
+'울산 남구 장*훈 고객님 <b>G80</b> <span class="status-txt">심사 승인 완료</span> (3분 전)',
+'창원 성산구 홍*진 고객님 <b>쏘나타 디엣지</b> <span class="status-txt">심사 승인 완료</span> (6분 전)',
+'부산 금정구 김*호 고객님 <b>투싼</b> <span class="status-txt">심사 승인 완료</span> (9분 전)',
+'서울 영등포구 박*수 고객님 <b>쏘렌토</b> <span class="status-txt">심사 승인 완료</span> (15분 전)',
+'대전 서구 정*민 고객님 <b>그랜저 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (25분 전)',
+'부산 동래구 최*진 고객님 <b>카니발 하이리무진</b> <span class="status-txt">심사 승인 완료</span> (40분 전)',
+'서울 강남구 이*성 고객님 <b>BMW X5</b> <span class="status-txt">심사 승인 완료</span> (50분 전)',
+'인천 부평구 한*영 고객님 <b>벤츠 E300</b> <span class="status-txt">심사 승인 완료</span> (1시간 전)',
+'대구 달서구 조*현 고객님 <b>스포티지 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (오늘)',
+'부산 사상구 유*준 고객님 <b>아반떼</b> <span class="status-txt">심사 승인 완료</span> (4분 전)',
+'서울 은평구 김*서 고객님 <b>싼타페</b> <span class="status-txt">심사 승인 완료</span> (8분 전)',
+'울산 북구 박*훈 고객님 <b>G70</b> <span class="status-txt">심사 승인 완료</span> (12분 전)',
+'창원 마산합포구 정*우 고객님 <b>쏘나타</b> <span class="status-txt">심사 승인 완료</span> (18분 전)',
+'부산 수영구 이*현 고객님 <b>카니발</b> <span class="status-txt">심사 승인 완료</span> (22분 전)',
+'서울 관악구 최*영 고객님 <b>그랜저 IG</b> <span class="status-txt">심사 승인 완료</span> (28분 전)',
+'인천 계양구 김*민 고객님 <b>스포티지</b> <span class="status-txt">심사 승인 완료</span> (35분 전)',
+'대전 유성구 장*석 고객님 <b>BMW 3시리즈</b> <span class="status-txt">심사 승인 완료</span> (45분 전)',
+'부산 연제구 박*진 고객님 <b>벤츠 C클래스</b> <span class="status-txt">심사 승인 완료</span> (55분 전)',
+'서울 동작구 윤*호 고객님 <b>투싼</b> <span class="status-txt">심사 승인 완료</span> (1시간 전)',
+'울산 중구 김*우 고객님 <b>싼타페</b> <span class="status-txt">심사 승인 완료</span> (오늘)',
+'창원 성산구 홍*석 고객님 <b>G80</b> <span class="status-txt">심사 승인 완료</span> (오늘)'
 ];
-
 let i = 0;
+
 
 function renderLog() {
     document.getElementById("liveLog").innerHTML = `[실시간] ${logs[i]}`;
