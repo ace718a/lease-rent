@@ -1,336 +1,239 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신차 장기렌트 리스 가격비교</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        /* 히어로 배너 */
-        .hero-banner {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .badge-live {
-            background-color: #ff3b30;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .hero-banner h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .hero-banner p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        /* 실시간 알림 텍스트 */
-        .live-ticker {
-            background-color: #f1f3f5;
-            text-align: center;
-            padding: 10px;
-            font-size: 13px;
-            color: #666;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .live-ticker strong {
-            color: #ff3b30;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신차 장기렌트 리스 가격비교</title>
 
-        /* 인기 차량 섹션 */
-        .car-section {
-            padding: 25px 15px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .car-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        /* 카니발 같은 패밀리카를 위해 마지막 요소는 전체 너비 차지하게 설정 가능 */
-        .car-card.full-width {
-            grid-column: span 2;
-        }
-        .car-card {
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #fff;
-        }
-        .car-img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-        }
-        .car-card.full-width .car-img {
-            height: 160px;
-        }
-        .car-info {
-            padding: 12px;
-        }
-        .tag {
-            display: inline-block;
-            font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-        .tag.hot { background-color: #ff3b30; color: white; }
-        .tag.popular { background-color: #ff9500; color: white; }
-        .tag.family { background-color: #5856d6; color: white; }
-        
-        .car-name {
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .car-price {
-            font-size: 16px;
-            color: #ff3b30;
-            font-weight: bold;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f6f8;
+    color: #111;
+}
 
-        /* 상담 신청 폼 섹션 */
-        .form-section {
-            background-color: #1c1c1e;
-            color: white;
-            padding: 25px 20px;
-        }
-        .form-title {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .form-subtitle {
-            text-align: center;
-            font-size: 12px;
-            color: #aaa;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            margin-bottom: 6px;
-            color: #ddd;
-        }
-        .form-group label span {
-            color: #ff453a;
-        }
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #3a3a3c;
-            border-radius: 6px;
-            background-color: #2c2c2e;
-            color: white;
-            font-size: 15px;
-        }
-        .form-control:focus {
-            outline: none;
-            border-color: #0a84ff;
-        }
-        /* 연락처 레이아웃 */
-        .phone-group {
-            display: flex;
-            gap: 8px;
-        }
-        .phone-group input {
-            text-align: center;
-        }
-        /* 라디오 버튼 스타일 */
-        .radio-group {
-            display: flex;
-            gap: 20px;
-            padding: 5px 0;
-        }
-        .radio-label {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            color: white !important;
-        }
-        .radio-label input {
-            width: 18px;
-            height: 18px;
-        }
-        /* 약관 동의 및 버튼 */
-        .agree-group {
-            margin: 20px 0;
-            font-size: 13px;
-            color: #aaa;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .agree-group a {
-            color: #0a84ff;
-            text-decoration: none;
-        }
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: #ff3b30;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .submit-btn:hover {
-            background-color: #e03228;
-        }
-    </style>
+header {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    border-bottom: 2px solid #ff3b30;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200') center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero .badge {
+    background: #ff3b30;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    font-weight: 900;
+}
+
+.hero p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* LIVE STATUS */
+.live-status {
+    max-width: 960px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* GRID */
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 0 15px;
+}
+
+.section-title span {
+    color: #ff3b30;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.car-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.car-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.car-detail {
+    padding: 12px;
+}
+
+.car-tag {
+    background: #eee;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.car-tag.hot {
+    background: #ff3b30;
+    color: #fff;
+}
+
+.car-name {
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+.price-del {
+    font-size: 12px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.price-main {
+    color: #ff3b30;
+    font-weight: bold;
+}
+
+/* DB */
+.db-section {
+    background: #fff;
+    border: 2px solid #ff3b30;
+    border-radius: 12px;
+    margin: 40px 0 100px;
+    padding: 10px;
+}
+
+.footer-bar {
+    display: none; /* 전화 버튼 완전 제거 */
+}
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
+
 <body>
 
+<header>국산·수입 장기렌트/리스 비교센터</header>
+
+<div class="hero">
+    <div class="badge">실시간 최저가 비교</div>
+    <h1>초기비용 0원 특가 진행중</h1>
+    <p>승인 데이터 실시간 업데이트</p>
+</div>
+
+<!-- 🔴 실시간 변경 영역 -->
+<div class="live-status">
+    <span id="liveText">[실시간] 상담 요청이 접수되었습니다...</span>
+</div>
+
 <div class="container">
-    <div style="text-align:center; padding: 10px; font-weight: bold; font-size: 14px; border-bottom: 1px solid #eee;">
-        국산·수입 장기렌트/리스 비교센터
-    </div>
 
-    <div class="hero-banner">
-        <div class="badge-live">실시간 최저가 비교</div>
-        <h1>초기비용 0원 특가 진행중</h1>
-        <p>승인 데이터 실시간 업데이트</p>
-    </div>
+<div class="section-title">인기 <span>특가 차량</span></div>
 
-    <div class="live-ticker">
-        [실시간] 부산 해운대 박** 견적 확인중 🚨
-    </div>
-
-    <div class="car-section">
-        <div class="section-title">인기 특가 차량</div>
-        
-        <div class="car-grid">
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1617469167446-8043d4466baf?auto=format&fit=crop&w=500&q=80" alt="그랜저 하이브리드" class="car-img">
-                <div class="car-info">
-                    <span class="tag hot">즉시출고</span>
-                    <div class="car-name">그랜저 하이브리드</div>
-                    <div class="car-price">월 31만원~</div>
-                </div>
-            </div>
-
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=500&q=80" alt="쏘렌토" class="car-img">
-                <div class="car-info">
-                    <span class="tag popular">인기</span>
-                    <div class="car-name">쏘렌토</div>
-                    <div class="car-price">월 34만원~</div>
-                </div>
-            </div>
-
-            <div class="car-card full-width">
-                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="카니발" class="car-img">
-                <div class="car-info">
-                    <span class="tag family">패밀리</span>
-                    <div class="car-name">카니발</div>
-                    <div class="car-price">월 39만원~</div>
-                </div>
-            </div>
+<div class="grid">
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400">
+        <div class="car-detail">
+            <div class="car-tag hot">즉시출고</div>
+            <div class="car-name">그랜저 하이브리드</div>
+            <div class="price-main">월 31만원~</div>
         </div>
     </div>
 
-    <div class="form-section">
-        <div class="form-title">리스렌트 성지 무료상담</div>
-        <div class="form-subtitle">* 필수 입력항목입니다.</div>
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400">
+        <div class="car-detail">
+            <div class="car-tag hot">인기</div>
+            <div class="car-name">쏘렌토</div>
+            <div class="price-main">월 34만원~</div>
+        </div>
+    </div>
 
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label><span>*</span> 이름</label>
-                <input type="text" class="form-control" placeholder="이름을 입력하세요" required>
-            </div>
-
-            <div class="form-group">
-                <label><span>*</span> 연락처</label>
-                <div class="phone-group">
-                    <input type="text" class="form-control" value="010" maxlength="3" required>
-                    <input type="text" class="form-control" maxlength="4" required>
-                    <input type="text" class="form-control" maxlength="4" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label><span>*</span> 보증금/선납금</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="deposit" value="유" checked> 유</label>
-                    <label class="radio-label"><input type="radio" name="deposit" value="무"> 무</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label><span>*</span> 관심차량</label>
-                <input type="text" class="form-control" placeholder="예) 그랜저 하이브리드, 쏘렌토 등" required>
-            </div>
-
-            <div class="form-group">
-                <label>담당자 선택</label>
-                <select class="form-control">
-                    <option value="">선택 안함 (최우수 팀장 자동 배정)</option>
-                    <option value="team1">국산차 전문 상담 1팀</option>
-                    <option value="team2">수입차 리스 전문 2팀</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>궁금하신 점</label>
-                <textarea class="form-control" rows="3" placeholder="기타 문의사항을 적어주세요."></textarea>
-            </div>
-
-            <div class="agree-group">
-                <input type="checkbox" id="agree" required>
-                <label style="color:#aaa;" for="agree">개인 정보 수집 및 이용 동의(필수)</label>
-                <a href="#">[약관보기]</a>
-            </div>
-
-            <button type="submit" class="submit-btn">무료상담신청</button>
-        </form>
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400">
+        <div class="car-detail">
+            <div class="car-tag">패밀리</div>
+            <div class="car-name">카니발</div>
+            <div class="price-main">월 39만원~</div>
+        </div>
     </div>
 </div>
+
+<div class="section-title">🚨 실시간 상담 신청</div>
+
+<div class="db-section">
+<iframe 
+    id="ifrCCAl"
+    width="100%"
+    height="500"
+    frameborder="0"
+    src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs">
+</iframe>
+</div>
+
+</div>
+
+<script>
+const messages = [
+"[실시간] 서울 강남 김** 고객 상담 접수",
+"[실시간] 부산 해운대 박** 견적 확인중",
+"[실시간] 인천 남동구 최** 승인 완료",
+"[실시간] 대구 달서구 정** 상담 진행중",
+"[실시간] 경기 수원 이** 최저가 요청"
+];
+
+let i = 0;
+
+setInterval(() => {
+    document.getElementById("liveText").innerText = messages[i];
+    i = (i + 1) % messages.length;
+}, 2500);
+</script>
 
 </body>
 </html>
