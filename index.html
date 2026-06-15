@@ -35,6 +35,8 @@ padding:5px 12px;
 border-radius:20px;
 font-size:13px;
 font-weight:bold;
+display:inline-block;
+margin-bottom:10px;
 }
 
 .hero h1{
@@ -45,28 +47,6 @@ margin:10px 0;
 .hero p{
 color:#ccc;
 margin:0;
-}
-
-.live-status{
-background:#222;
-max-width:960px;
-margin:20px auto;
-padding:12px;
-border-radius:8px;
-font-size:13px;
-border:1px dashed #555;
-height:160px;
-overflow:hidden;
-}
-
-.live-item{
-padding:4px 0;
-border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-.live-item span{
-color:#ff3b30;
-font-weight:bold;
 }
 
 .container{
@@ -134,8 +114,17 @@ font-weight:bold;
 background:#1a1a1a;
 padding:15px;
 border-radius:12px;
-margin:40px 0 100px;
+margin:20px 0 100px;
 border:1px solid rgba(255,59,48,0.4);
+}
+
+.form-guide{
+background:#111;
+border-left:3px solid #ff3b30;
+padding:10px;
+font-size:13px;
+margin-bottom:10px;
+color:#ddd;
 }
 
 #ifrCCAl{
@@ -183,87 +172,32 @@ text-decoration:none;
 
 <div class="container">
 
-<!-- 실시간 로그 -->
-<div class="live-status" id="liveList"></div>
-
 <div class="section-title">이달의 <span>인기 차종 특판 리스트</span></div>
 
 <div class="grid">
 
-<div class="car-card">
-<img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400">
-<div class="car-detail">
-<span class="car-tag hot">즉시출고</span>
-<div>현대 그랜저</div>
-<div class="price-del">490,000원</div>
-<div class="price-main">310,000원~</div>
-</div>
-</div>
+<div class="car-card"><img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400"><div class="car-detail"><span class="car-tag hot">즉시출고</span><div>현대 그랜저</div><div class="price-del">490,000원</div><div class="price-main">310,000원~</div></div></div>
 
-<div class="car-card">
-<img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400">
-<div class="car-detail">
-<span class="car-tag hot">인기</span>
-<div>쏘렌토</div>
-<div class="price-del">510,000원</div>
-<div class="price-main">340,000원~</div>
-</div>
-</div>
+<div class="car-card"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400"><div class="car-detail"><span class="car-tag hot">인기</span><div>쏘렌토</div><div class="price-del">510,000원</div><div class="price-main">340,000원~</div></div></div>
 
-<div class="car-card">
-<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400">
-<div class="car-detail">
-<span class="car-tag">패밀리</span>
-<div>카니발</div>
-<div class="price-del">580,000원</div>
-<div class="price-main">390,000원~</div>
-</div>
-</div>
+<div class="car-card"><img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400"><div class="car-detail"><span class="car-tag">패밀리</span><div>카니발</div><div class="price-del">580,000원</div><div class="price-main">390,000원~</div></div></div>
 
-<div class="car-card">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400">
-<div class="car-detail">
-<span class="car-tag hot">수입</span>
-<div>BMW 5시리즈</div>
-<div class="price-del">890,000원</div>
-<div class="price-main">520,000원~</div>
-</div>
-</div>
+<div class="car-card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400"><div class="car-detail"><span class="car-tag hot">수입</span><div>BMW 5시리즈</div><div class="price-del">890,000원</div><div class="price-main">520,000원~</div></div></div>
 
-<div class="car-card">
-<img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400">
-<div class="car-detail">
-<span class="car-tag">법인</span>
-<div>벤츠 E클래스</div>
-<div class="price-del">980,000원</div>
-<div class="price-main">610,000원~</div>
-</div>
-</div>
+<div class="car-card"><img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400"><div class="car-detail"><span class="car-tag">법인</span><div>벤츠 E클래스</div><div class="price-del">980,000원</div><div class="price-main">610,000원~</div></div></div>
 
-<div class="car-card">
-<img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400">
-<div class="car-detail">
-<span class="car-tag">초보</span>
-<div>스포티지</div>
-<div class="price-del">390,000원</div>
-<div class="price-main">260,000원~</div>
-</div>
-</div>
+<div class="car-card"><img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400"><div class="car-detail"><span class="car-tag">초보</span><div>스포티지</div><div class="price-del">390,000원</div><div class="price-main">260,000원~</div></div></div>
 
-</div>
-
-<div class="section-title">🚨 실시간 승인 현황</div>
-
-<div class="db-section">
-<div id="liveBox"></div>
 </div>
 
 <div class="section-title">🚨 30초 견적 신청</div>
 
 <div class="db-section">
 
-<!-- 🔥 담당자 문구 수정 적용 -->
-<!-- (iframe 내부 폼은 외부라 직접 수정 불가 → 안내문구는 상단에 반영하는 구조가 정석) -->
+<div class="form-guide">
+👉 담당자 선택은 비워두셔도 됩니다.<br>
+오늘 기준 가장 빠른 상담 담당자가 자동 연결됩니다.
+</div>
 
 <iframe id="ifrCCAl"
 src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"></iframe>
@@ -279,7 +213,6 @@ src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"></iframe>
 
 <script>
 
-/* 실시간 로그 */
 const data = [
 "부산 해운대구 이*준 <b>쏘렌토</b> 승인 완료",
 "서울 강서구 박*현 <b>그랜저</b> 승인 완료",
@@ -291,23 +224,38 @@ const data = [
 "창원 홍*진 <b>쏘나타</b> 승인 완료"
 ];
 
-let box = document.getElementById("liveBox");
+function getTimeLabel(){
+const r = Math.random();
+
+if(r < 0.4) return "(오늘)";
+if(r < 0.7) return "(어제)";
+if(r < 0.85) return "(2시간 전)";
+if(r < 0.95) return "(5시간 전)";
+return "(방금 전)";
+}
+
+let box = document.createElement("div");
+box.style.cssText="background:#222;max-width:960px;margin:20px auto;padding:12px;border-radius:8px;font-size:13px;";
+
+document.querySelector(".container").prepend(box);
 
 function add(){
 let item = document.createElement("div");
-item.className="live-item";
+item.style.padding="4px 0";
+item.style.borderBottom="1px solid rgba(255,255,255,0.05)";
+
 item.innerHTML =
 data[Math.floor(Math.random()*data.length)] +
-" <span>(방금 전)</span>";
+" <span style='color:#ff3b30;font-weight:bold;'>"+getTimeLabel()+"</span>";
 
 box.prepend(item);
 
-if(box.children.length > 8){
+if(box.children.length > 10){
 box.removeChild(box.lastChild);
 }
 }
 
-for(let i=0;i<5;i++) add();
+for(let i=0;i<6;i++) add();
 setInterval(add,2500);
 
 </script>
