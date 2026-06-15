@@ -1,167 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>리스렌트 비교견적 | 내 DB 수집형</title>
-
-<style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5f6f8;
-}
-
-header {
-  background:#111;
-  color:#fff;
-  padding:16px;
-  text-align:center;
-  font-weight:bold;
-}
-
-.hero {
-  background:linear-gradient(135deg,#111,#333);
-  color:#fff;
-  padding:40px 20px;
-  text-align:center;
-}
-
-.hero h1 {
-  font-size:26px;
-  margin-bottom:10px;
-}
-
-.section {
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-}
-
-.card {
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-}
-
-input {
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border:1px solid #ddd;
-  border-radius:6px;
-}
-
-button {
-  width:100%;
-  padding:14px;
-  background:#ff3b30;
-  color:#fff;
-  border:none;
-  font-weight:bold;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.note {
-  font-size:13px;
-  color:#666;
-  margin-top:10px;
-}
-
-.footer {
-  position:fixed;
-  bottom:0;
-  width:100%;
-  display:flex;
-}
-
-.footer a {
-  flex:1;
-  text-align:center;
-  padding:14px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.call { background:#111; color:#fff; }
-.consult { background:#ff3b30; color:#fff; }
-
-@media(max-width:768px){
-  .section { padding:15px; }
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>리스렌트 비교견적 | 실시간 상담 신청</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background: #f5f6f8; 
+        }
+        header { 
+            background: #111; 
+            color: #fff; 
+            padding: 16px; 
+            text-align: center; 
+            font-weight: bold; 
+        }
+        .hero { 
+            background: linear-gradient(135 deg, #111, #333); 
+            color: #fff; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+        .hero h1 { 
+            font-size: 26px; 
+            margin-bottom: 10px; 
+        }
+        .section { 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 20px; 
+        }
+        .card { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
+        }
+        input { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 8px 0; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            box-sizing: border-box;
+        }
+        button { 
+            width: 100%; 
+            padding: 14px; 
+            background: #ff3b30; 
+            color: #fff; 
+            border: none; 
+            font-weight: bold; 
+            border-radius: 6px; 
+            cursor: pointer; 
+        }
+        .note { 
+            font-size: 13px; 
+            color: #666; 
+            margin-top: 10px; 
+        }
+        .footer { 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+            display: flex; 
+        }
+        .footer a { 
+            flex: 1; 
+            text-align: center; 
+            padding: 14px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        .call { 
+            background: #111; 
+            color: #fff; 
+        }
+        .consult { 
+            background: #ff3b30; 
+            color: #fff; 
+        }
+        @media (max-width: 768px){ 
+            .section { padding: 15px; } 
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  🚗 리스 / 렌트 즉시 비교견적
-</header>
-
-<div class="hero">
-  <h1>월 20만원대부터 즉시 가능</h1>
-  <p>내 DB로 바로 수집되는 상담 시스템</p>
-</div>
-
-<div class="section">
-
-  <div class="card">
-    <h2>📞 상담 신청</h2>
-
-    <form id="leadForm">
-      <input type="text" name="name" placeholder="이름" required>
-      <input type="text" name="phone" placeholder="연락처" required>
-      <input type="text" name="car" placeholder="원하는 차량 (선택)">
-
-      <button type="submit">상담 요청하기</button>
-    </form>
-
-    <div class="note">
-      * 상담 데이터는 실시간으로 DB에 저장됩니다
+    <header> 🚗 리스 / 렌트 즉시 비교견적 </header>
+    
+    <div class="hero">
+        <h1>월 20만원대부터 즉시 가능</h1>
+        <p>빠르고 정확한 실시간 상담 시스템</p>
     </div>
-  </div>
-
-</div>
-
-<div class="footer">
-  <a class="call" href="tel:01000000000">전화상담</a>
-  <a class="consult" href="#leadForm">빠른상담</a>
-</div>
-
-<script>
-// DB 연결 핵심
-document.getElementById("leadForm").addEventListener("submit", async function(e){
-  e.preventDefault();
-
-  const data = {
-    name: this.name.value,
-    phone: this.phone.value,
-    car: this.car.value
-  };
-
-  try {
-    const res = await fetch("/api/lead", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (res.ok) {
-      alert("상담 신청 완료");
-      this.reset();
-    } else {
-      alert("전송 실패");
-    }
-
-  } catch (err) {
-    alert("서버 오류");
-  }
-});
-</script>
-
-</body>
-</html>
+    
+    <div class="section">
+        <div class="card">
+            <h2>📞 상담 신청</h2>
+            <form id="leadForm">
+                <input type="text" name="name" placeholder="이름" required>
+                <input type="text" name="phone" placeholder="연락처" required>
+                <input type="text" name="car" placeholder="원하는 차량 (선택)">
+                <button type="submit">상담 요청하기</button>
+            </form>
+            <div class="note">* 상담 데이터는 실시간으로 안전하게 저장됩니다.</div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a class="call" href="tel:01000000000">전화상담</a>
+        <a class="consult" href="#leadForm">빠
