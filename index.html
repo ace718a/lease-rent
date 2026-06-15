@@ -6,28 +6,28 @@
     <title>신차 장기렌트 리스 가격비교 성지</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-            background: #111;
+        body { 
+            margin: 0; 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background: #111; 
             color: #fff;
         }
 
-        header {
-            background: #000;
-            padding: 15px;
-            text-align: center;
-            font-weight: 900;
+        header { 
+            background: #000; 
+            padding: 15px; 
+            text-align: center; 
+            font-weight: 900; 
             font-size: 20px;
             color: #fff;
             border-bottom: 2px solid #ff3b30;
         }
 
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
             url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop') no-repeat center/cover;
-            padding: 60px 20px;
-            text-align: center;
+            padding: 60px 20px; 
+            text-align: center; 
         }
 
         .hero .badge {
@@ -41,9 +41,9 @@
             margin-bottom: 15px;
         }
 
-        .hero h1 {
-            font-size: 32px;
-            margin: 0 0 10px 0;
+        .hero h1 { 
+            font-size: 32px; 
+            margin: 0 0 10px 0; 
             font-weight: 900;
             line-height: 1.3;
         }
@@ -54,7 +54,6 @@
             color: #ccc;
         }
 
-        /* LIVE STATUS */
         .live-status {
             background: #222;
             max-width: 960px;
@@ -66,10 +65,7 @@
             border: 1px dashed #555;
         }
 
-        .live-status span {
-            color: #ff3b30;
-            font-weight: bold;
-        }
+        .live-status span { color: #ff3b30; font-weight: bold; }
 
         .container {
             max-width: 960px;
@@ -84,9 +80,7 @@
             text-align: center;
         }
 
-        .section-title span {
-            color: #ff3b30;
-        }
+        .section-title span { color: #ff3b30; }
 
         .grid {
             display: grid;
@@ -108,9 +102,7 @@
             object-fit: cover;
         }
 
-        .car-detail {
-            padding: 15px;
-        }
+        .car-detail { padding: 15px; }
 
         .car-tag {
             background: #444;
@@ -120,9 +112,7 @@
             border-radius: 4px;
         }
 
-        .car-tag.hot {
-            background: #ff3b30;
-        }
+        .car-tag.hot { background: #ff3b30; }
 
         .car-name {
             font-size: 16px;
@@ -142,7 +132,7 @@
             color: #ff3b30;
         }
 
-        /* 🔥 iframe 영역 개선 (화이트 제거 + 카드형) */
+        /* ✅ iframe 영역 (흰 박스 제거 + 톤 통일) */
         .db-section {
             background: #1a1a1a;
             color: #fff;
@@ -159,21 +149,21 @@
             border: none;
         }
 
-        .footer-bar {
-            position: fixed;
-            bottom: 0;
+        .footer-bar { 
+            position: fixed; 
+            bottom: 0; 
             left: 0;
-            width: 100%;
-            display: flex;
+            width: 100%; 
+            display: flex; 
             z-index: 1000;
         }
 
-        .footer-bar a {
-            flex: 1;
-            text-align: center;
-            padding: 18px;
-            text-decoration: none;
-            font-weight: bold;
+        .footer-bar a { 
+            flex: 1; 
+            text-align: center; 
+            padding: 18px; 
+            text-decoration: none; 
+            font-weight: bold; 
             font-size: 18px;
         }
 
@@ -213,7 +203,7 @@
 
     <div class="grid">
         <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400">
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400" alt="">
             <div class="car-detail">
                 <span class="car-tag hot">즉시출고</span>
                 <div class="car-name">현대 디 올 뉴 그랜저</div>
@@ -223,12 +213,22 @@
         </div>
 
         <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400">
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400" alt="">
             <div class="car-detail">
                 <span class="car-tag hot">인기폭발</span>
                 <div class="car-name">기아 더 뉴 쏘렌토</div>
                 <div class="price-del">월 510,000원</div>
                 <div class="price-main">월 340,000원 ~</div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400" alt="">
+            <div class="car-detail">
+                <span class="car-tag">패밀리카</span>
+                <div class="car-name">기아 더 뉴 카니발</div>
+                <div class="price-del">월 580,000원</div>
+                <div class="price-main">월 390,000원 ~</div>
             </div>
         </div>
     </div>
@@ -237,14 +237,16 @@
         🚨 <span>30초 실시간 견적 신청</span>
     </div>
 
-    <!-- 🔥 iframe -->
+    <!-- iframe -->
     <div class="db-section">
-        <iframe id="ifrCCAl"
+        <iframe name="ifrm_icode"
+                id="ifrCCAl"
                 scrolling="no"
                 frameborder="0"
                 src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs">
         </iframe>
     </div>
+
 </div>
 
 <div class="footer-bar">
@@ -253,32 +255,34 @@
 </div>
 
 <script>
-/* 🔥 LIVE LOG 10개 자동 롤링 */
+/* 🔥 실시간 로그 (10개 유지, 구조 고정) */
 const logs = [
-    '부산 해운대구 이*준 고객님 <b>쏘렌토 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (방금 전)',
-    '서울 강서구 박*현 고객님 <b>그랜저 IG</b> <span class="status-txt">심사 승인 완료</span> (1분 전)',
-    '대구 수성구 김*진 고객님 <b>카니발 하이리무진</b> <span class="status-txt">심사 승인 완료</span> (2분 전)',
-    '부산 사하구 최*석 고객님 <b>BMW 5시리즈</b> <span class="status-txt">심사 승인 완료</span> (3분 전)',
-    '서울 송파구 정*호 고객님 <b>벤츠 E클래스</b> <span class="status-txt">심사 승인 완료</span> (3분 전)',
-    '인천 남동구 오*민 고객님 <b>스포티지</b> <span class="status-txt">심사 승인 완료</span> (4분 전)',
-    '부산 북구 강*우 고객님 <b>싼타페</b> <span class="status-txt">심사 승인 완료</span> (5분 전)',
-    '서울 마포구 윤*서 고객님 <b>아반떼 CN7</b> <span class="status-txt">심사 승인 완료</span> (6분 전)',
-    '울산 남구 장*훈 고객님 <b>G80</b> <span class="status-txt">심사 승인 완료</span> (7분 전)',
-    '창원 성산구 홍*진 고객님 <b>쏘나타 디엣지</b> <span class="status-txt">심사 승인 완료</span> (8분 전)'
+'부산 해운대구 이*준 고객님 <b>쏘렌토 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (방금 전)',
+'서울 강서구 박*현 고객님 <b>그랜저 IG</b> <span class="status-txt">심사 승인 완료</span> (1분 전)',
+'대구 수성구 김*진 고객님 <b>카니발</b> <span class="status-txt">심사 승인 완료</span> (2분 전)',
+'부산 사하구 최*석 고객님 <b>BMW 5시리즈</b> <span class="status-txt">심사 승인 완료</span> (3분 전)',
+'서울 송파구 정*호 고객님 <b>벤츠 E클래스</b> <span class="status-txt">심사 승인 완료</span> (4분 전)',
+'인천 남동구 오*민 고객님 <b>스포티지</b> <span class="status-txt">심사 승인 완료</span> (5분 전)',
+'부산 북구 강*우 고객님 <b>싼타페</b> <span class="status-txt">심사 승인 완료</span> (6분 전)',
+'서울 마포구 윤*서 고객님 <b>아반떼 CN7</b> <span class="status-txt">심사 승인 완료</span> (7분 전)',
+'울산 남구 장*훈 고객님 <b>G80</b> <span class="status-txt">심사 승인 완료</span> (8분 전)',
+'창원 성산구 홍*진 고객님 <b>쏘나타</b> <span class="status-txt">심사 승인 완료</span> (9분 전)'
 ];
 
 let i = 0;
-document.getElementById("liveLog").innerHTML = `[실시간] ${logs[0]}`;
 
-setInterval(() => {
-    i = (i + 1) % logs.length;
+function renderLog() {
     document.getElementById("liveLog").innerHTML = `[실시간] ${logs[i]}`;
-}, 2500);
+    i = (i + 1) % logs.length;
+}
 
-/* 🔥 iframe 최소 안정 보정 */
-window.addEventListener("load", () => {
+renderLog();
+setInterval(renderLog, 2500);
+
+/* iframe fallback only (기존 resize 의존 제거 없이 보완) */
+window.addEventListener("load", function () {
     const iframe = document.getElementById("ifrCCAl");
-    iframe.style.minHeight = "750px";
+    if (iframe) iframe.style.minHeight = "750px";
 });
 </script>
 
