@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>리스렌트 비교견적 | 실시간 상담 신청</title>
+    <title>리스렌트 비교견적 | 실시간 최저가 조회</title>
     <style>
         body { 
             margin: 0; 
-            font-family: Arial, sans-serif; 
-            background: #f5f6f8; 
+            font-family: 'Noto Sans KR', Arial, sans-serif; 
+            background: #f8f9fa; 
+            color: #333;
         }
         header { 
             background: #111; 
@@ -16,109 +17,201 @@
             padding: 16px; 
             text-align: center; 
             font-weight: bold; 
+            font-size: 18px;
         }
         .hero { 
-            background: linear-gradient(135 deg, #111, #333); 
+            background: linear-gradient(135deg, #1c1c1e, #3a3a3c); 
             color: #fff; 
             padding: 40px 20px; 
             text-align: center; 
         }
         .hero h1 { 
-            font-size: 26px; 
-            margin-bottom: 10px; 
+            font-size: 28px; 
+            margin: 0 0 10px 0; 
+            font-weight: 800;
         }
+        .hero p {
+            margin: 0;
+            font-size: 16px;
+            color: #aeaeacf;
+        }
+        
+        /* 자동차 이미지 3장 섹션 */
+        .car-container {
+            max-width: 900px;
+            margin: -20px auto 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .car-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .car-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .car-card .car-name {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            background: #fff;
+        }
+
         .section { 
             max-width: 900px; 
             margin: auto; 
             padding: 20px; 
+            padding-bottom: 100px; /* 하단 바 가려짐 방지 */
         }
         .card { 
             background: #fff; 
-            padding: 20px; 
-            border-radius: 10px; 
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
+            padding: 30px 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+            color: #555;
         }
         input { 
             width: 100%; 
-            padding: 12px; 
-            margin: 8px 0; 
+            padding: 14px; 
+            margin: 6px 0 16px 0; 
             border: 1px solid #ddd; 
-            border-radius: 6px; 
+            border-radius: 8px; 
             box-sizing: border-box;
+            font-size: 15px;
         }
         button { 
             width: 100%; 
-            padding: 14px; 
+            padding: 16px; 
             background: #ff3b30; 
             color: #fff; 
             border: none; 
             font-weight: bold; 
-            border-radius: 6px; 
+            font-size: 16px;
+            border-radius: 8px; 
             cursor: pointer; 
+            box-shadow: 0 4px 6px rgba(255, 59, 48, 0.3);
+        }
+        button:hover {
+            background: #e03228;
         }
         .note { 
-            font-size: 13px; 
-            color: #666; 
-            margin-top: 10px; 
+            font-size: 12px; 
+            color: #8e8e93; 
+            margin-top: 12px; 
+            text-align: center;
         }
+        
+        /* 하단 고정 바 */
         .footer { 
             position: fixed; 
             bottom: 0; 
             width: 100%; 
+            max-width: 100%;
             display: flex; 
+            z-index: 1000;
         }
         .footer a { 
             flex: 1; 
             text-align: center; 
-            padding: 14px; 
+            padding: 16px; 
             text-decoration: none; 
             font-weight: bold; 
+            font-size: 16px;
         }
         .call { 
-            background: #111; 
+            background: #1c1c1e; 
             color: #fff; 
         }
         .consult { 
             background: #ff3b30; 
             color: #fff; 
         }
+
+        /* 모바일 반응형 조절 */
         @media (max-width: 768px){ 
-            .section { padding: 15px; } 
+            .car-container {
+                grid-template-columns: 1fr; /* 모바일에선 세로로 나열 혹은 1열 */
+                gap: 10px;
+                padding: 0 15px;
+            }
+            .car-card img {
+                height: 180px;
+            }
+            .section { padding: 15px; padding-bottom: 100px; } 
         }
     </style>
 </head>
 <body>
 
-    <header> 🚗 리스 / 렌트 즉시 비교견적 </header>
+    <header> 🚗 국산·수입 리스/장기렌트 대형 플랫폼 </header>
     
     <div class="hero">
-        <h1>월 20만원대부터 즉시 가능</h1>
-        <p>빠르고 정확한 실시간 상담 시스템</p>
+        <h1>선납금 0원부터, 즉시출고 특가</h1>
+        <p>전 금융사 실시간 비교로 최저가를 보장합니다.</p>
+    </div>
+    
+    <div class="car-container">
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500&auto=format&fit=crop" alt="세단">
+            <div class="car-name">🔥 프리미엄 세단 특가</div>
+        </div>
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop" alt="SUV">
+            <div class="car-name">⚡ 패밀리 SUV 패키지</div>
+        </div>
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&auto=format&fit=crop" alt="수입차">
+            <div class="car-name">👑 수입 럭셔리 기획전</div>
+        </div>
     </div>
     
     <div class="section">
-        <div class="card">
-            <h2>📞 상담 신청</h2>
+        <div class="card" id="consultation">
+            <h2>📊 30초 간편 최저가 견적 신청</h2>
             <form id="leadForm">
-                <input type="text" name="name" placeholder="이름" required>
-                <input type="text" name="phone" placeholder="연락처" required>
-                <input type="text" name="car" placeholder="원하는 차량 (선택)">
-                <button type="submit">상담 요청하기</button>
+                <label for="name">고객명</label>
+                <input type="text" id="name" name="name" placeholder="성함을 입력해주세요" required>
+                
+                <label for="phone">연락처</label>
+                <input type="text" id="phone" name="phone" placeholder="번호만 입력 (예: 01012345678)" required>
+                
+                <label for="car">희망 차종</label>
+                <input type="text" id="car" name="car" placeholder="관심 있는 차량을 적어주세요 (선택)">
+                
+                <button type="submit">실시간 최저가 확인하기</button>
             </form>
-            <div class="note">* 상담 데이터는 실시간으로 안전하게 저장됩니다.</div>
+            <div class="note">* 본 상담 신청은 개인정보 보호법을 준수하며, 견적 안내 외의 용도로 사용되지 않습니다.</div>
         </div>
     </div>
     
     <div class="footer">
-        <a class="call" href="tel:01000000000">전화상담</a>
-        <a class="consult" href="#leadForm">빠른상담</a>
+        <a class="call" href="tel:01000000000">📞 직통 전화상담</a>
+        <a class="consult" href="#consultation">✏️ 모바일 빠른상담</a>
     </div>
 
     <script>
         document.getElementById("leadForm").addEventListener("submit", async function (e) {
             e.preventDefault();
             
-            // 폼 데이터 수집
             const data = {
                 name: this.name.value,
                 phone: this.phone.value,
@@ -126,7 +219,6 @@
             };
             
             try {
-                // 내 서버/Worker API로 데이터 전송
                 const res = await fetch("/api/lead", {
                     method: "POST",
                     headers: {
@@ -136,13 +228,13 @@
                 });
                 
                 if (res.ok) {
-                    alert("상담 신청이 완료되었습니다.");
-                    this.reset(); // 폼 초기화
+                    alert("성공적으로 접수되었습니다. 담당자가 곧 연락드리겠습니다!");
+                    this.reset();
                 } else {
-                    alert("전송 실패 (서버 오류)");
+                    alert("서버 전송에 실패했습니다. 잠시 후 다시 시도해주세요.");
                 }
             } catch (err) {
-                alert("네트워크 오류가 발생했습니다.");
+                alert("네트워크 연결이 원활하지 않습니다.");
             }
         });
     </script>
