@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>리스렌트 비교견적</title>
+<title>리스렌트 상담</title>
 
 <style>
 body { margin:0; font-family:Arial; background:#f5f6f8; }
@@ -11,38 +11,29 @@ body { margin:0; font-family:Arial; background:#f5f6f8; }
 header {
   background:#111;
   color:#fff;
+  padding:16px;
   text-align:center;
-  padding:15px;
   font-weight:bold;
 }
 
 .hero {
-  background:linear-gradient(135deg,#111,#333);
+  background:#222;
   color:#fff;
-  padding:40px 20px;
+  padding:35px 20px;
   text-align:center;
 }
 
-.hero h1 { font-size:26px; }
-
-.section {
-  max-width:1000px;
+.container {
+  max-width:900px;
   margin:auto;
   padding:20px;
 }
 
-.box {
-  background:#fff;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  margin-top:20px;
-}
-
 iframe {
   width:100%;
-  height:700px;
-  border:none;
+  height:750px;
+  border:0;
+  background:#fff;
 }
 
 .footer {
@@ -64,56 +55,32 @@ iframe {
 .consult { background:#ff3b30; color:#fff; }
 
 @media(max-width:768px){
-  iframe { height:800px; }
+  iframe { height:850px; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  🚗 리스 / 렌트 즉시 상담
-</header>
+<header>🚗 리스 / 렌트 즉시 상담</header>
 
 <div class="hero">
-  <h1>월 20만원대부터 가능</h1>
-  <p>빠른 심사 / 즉시 안내</p>
+  <h2>빠른 견적 / 즉시 상담 가능</h2>
 </div>
 
-<div class="section">
+<div class="container">
 
-  <h2>📞 상담 신청</h2>
-
-  <div class="box">
-
-    <!-- 🔥 네 DB가 아니라 외부 DB 저장 iframe -->
-    <iframe
-      name="ifrm_icode"
-      id="ifrCCAl"
-      scrolling="no"
-      frameborder="0"
-      src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs">
-    </iframe>
-
-  </div>
+  <iframe
+    src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"
+    scrolling="no">
+  </iframe>
 
 </div>
 
 <div class="footer">
-  <a class="call" href="tel:01000000000">전화상담</a>
-  <a class="consult" href="#ifrCCAl">상담하기</a>
+  <a class="call" href="tel:01000000000">전화</a>
+  <a class="consult" href="#top">상담</a>
 </div>
-
-<script src="https://replyalba.com/js/jquery-1.11.0.min.js"></script>
-<script src="https://replyalba.com/js/iframeResizer.min.js"></script>
-
-<script>
-$("#ifrCCAl").iFrameResize({
-  autoResize: true,
-  checkOrigin: true,
-  heightCalculationMethod: "offset"
-});
-</script>
 
 </body>
 </html>
