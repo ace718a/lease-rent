@@ -121,6 +121,7 @@ video {
   padding:20px;
   border-radius:10px;
   box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  margin-top:30px;
 }
 
 input {
@@ -191,6 +192,7 @@ input {
 <div class="section">
 
   <h2>🔥 인기 특가 차량</h2>
+
   <div class="grid">
 
     <div class="car-card">
@@ -199,7 +201,7 @@ input {
         <div>현대 쏘나타</div>
         <div class="price">월 252,000원</div>
         <div class="small">즉시 출고 / 무보증 가능</div>
-        <button class="car-btn">상담 신청</button>
+        <button class="car-btn" onclick="fillCar('현대 쏘나타')">상담 신청</button>
       </div>
     </div>
 
@@ -209,7 +211,7 @@ input {
         <div>기아 K5</div>
         <div class="price">월 239,000원</div>
         <div class="small">특가 프로모션</div>
-        <button class="car-btn">상담 신청</button>
+        <button class="car-btn" onclick="fillCar('기아 K5')">상담 신청</button>
       </div>
     </div>
 
@@ -219,7 +221,7 @@ input {
         <div>제네시스 GV70</div>
         <div class="price">월 498,000원</div>
         <div class="small">프리미엄 즉시 출고</div>
-        <button class="car-btn">상담 신청</button>
+        <button class="car-btn" onclick="fillCar('제네시스 GV70')">상담 신청</button>
       </div>
     </div>
 
@@ -254,6 +256,13 @@ input {
 </div>
 
 <script>
+// 차량 자동 입력
+function fillCar(name){
+  document.querySelector('input[name="car"]').value = name;
+  document.getElementById("form").scrollIntoView({behavior:"smooth"});
+}
+
+// DB 연결 (Cloudflare Worker)
 document.getElementById("leadForm").addEventListener("submit", async function(e){
   e.preventDefault();
 
@@ -263,15 +272,25 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
     car: this.car.value
   };
 
-  // Cloudflare Workers / DB 연결용 POST
-  await fetch("/api/lead", {
-    method:"POST",
-    headers:{ "Content-Type":"application/json" },
-    body: JSON.stringify(data)
-  });
+  try {
+    const res = await fetch("/api/lead", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-  alert("상담 신청이 완료되었습니다. 빠르게 연락드리겠습니다.");
-  this.reset();
+    if (res.ok) {
+      alert("상담 신청 완료");
+      this.reset();
+    } else {
+      alert("전송 실패");
+    }
+
+  } catch (err) {
+    alert("서버 오류");
+  }
 });
 </script>
 
