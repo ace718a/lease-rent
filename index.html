@@ -103,8 +103,11 @@ border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .live-item span{
-color:#ff3b30;font-weight:bold;
+color:#ff3b30;
+font-weight:900;
+font-size:14px;
 }
+
 
 /* ⭐ 수정된 담당자 안내 */
 .form-guide{
@@ -266,11 +269,19 @@ const locs=["부산","서울","대구","인천","울산","창원"];
 
 
 const liveBox=document.getElementById("liveBox");
+
 function getTime(){
 
+const r = Math.random();
+
+/* 20% 확률: 실시간 */
+if(r < 0.1) return "방금 전";
+if(r < 0.2) return "1시간 전";
+
+/* 80% 확률: 최근 5일 날짜 */
 const today = new Date();
 
-// 0~4일 전 (오늘 포함 최근 5일)
+// 0~4일 전 (오늘 포함 5일)
 const daysAgo = Math.floor(Math.random() * 5);
 
 const date = new Date(today);
@@ -282,6 +293,8 @@ const day = date.getDate();
 return `${month}/${day}`;
 
 }
+
+}
 function addLive(){
 const name=names[Math.floor(Math.random()*names.length)];
 const car=carsName[Math.floor(Math.random()*carsName.length)];
@@ -289,8 +302,7 @@ const loc=locs[Math.floor(Math.random()*locs.length)];
 
 const div=document.createElement("div");
 div.className="live-item";
-div.innerHTML=`${loc} ${name} 고객님 <b>${car}</b> 승인 완료 <span>(${getTime()})</span>`;
-
+div.innerHTML=`${loc} ${name} 고객님 <b>${car}</b> 승인 완료 <span>[${getTime()}]</span>`;
 liveBox.prepend(div);
 
 if(liveBox.children.length>10){
