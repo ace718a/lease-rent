@@ -1,226 +1,280 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>신차 장기렌트 리스 가격비교 성지</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>신차 장기렌트 리스 가격비교 성지</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background: #111; 
+            color: #fff;
+        }
+        header { 
+            background: #000; 
+            padding: 15px; 
+            text-align: center; 
+            font-weight: 900; 
+            font-size: 20px;
+            color: #fff;
+            border-bottom: 2px solid #ff3b30;
+        }
+        
+        /* 메인 비주얼 배너 */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop') no-repeat center/cover;
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+        .hero .badge {
+            background: #ff3b30;
+            color: #fff;
+            padding: 5px 12px;
+            font-weight: bold;
+            font-size: 13px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .hero h1 { 
+            font-size: 32px; 
+            margin: 0 0 10px 0; 
+            font-weight: 900;
+            line-height: 1.3;
+        }
+        .hero p {
+            margin: 0;
+            font-size: 16px;
+            color: #ccc;
+        }
 
-<style>
-body { 
-    margin: 0; 
-    font-family: 'Noto Sans KR', sans-serif; 
-    background: #111; 
-    color: #fff;
-}
+        /* 실시간 현황판 연출 (전환율 상승 치트키) */
+        .live-status {
+            background: #222;
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            text-align: center;
+            border: 1px dashed #555;
+        }
+        .live-status span { color: #ff3b30; font-weight: bold; }
 
-header { 
-    background: #000; 
-    padding: 15px; 
-    text-align: center; 
-    font-weight: 900; 
-    font-size: 20px;
-    color: #fff;
-    border-bottom: 2px solid #ff3b30;
-}
+        /* 특판 차량 6종 그리드 */
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            text-align: center;
+        }
+        .section-title span { color: #ff3b30; }
 
-.hero { 
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop') no-repeat center/cover;
-    padding: 60px 20px; 
-    text-align: center; 
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .car-card {
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .car-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .car-detail {
+            padding: 15px;
+        }
+        .car-tag {
+            background: #444;
+            color: #fff;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .car-tag.hot { background: #ff3b30; }
+        .car-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 8px 0 4px 0;
+        }
+        .price-del {
+            font-size: 12px;
+            color: #777;
+            text-decoration: line-through;
+        }
+        .price-main {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff3b30;
+        }
 
-.hero .badge {
-    background: #ff3b30;
-    color: #fff;
-    padding: 5px 12px;
-    font-weight: bold;
-    font-size: 13px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 15px;
-}
+        /* 🔴 내 리플알바 DB 잡히는 iframe 영역 */
+        .db-section {
+            background: #fff;
+            color: #333;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 40px 0 100px 0;
+            box-shadow: 0 4px 20px rgba(255,59,48,0.2);
+            border: 3px solid #ff3b30;
+        }
+        
+        /* 하단 고정 바 */
+        .footer-bar { 
+            position: fixed; 
+            bottom: 0; 
+            left: 0;
+            width: 100%; 
+            display: flex; 
+            z-index: 1000;
+        }
+        .footer-bar a { 
+            flex: 1; 
+            text-align: center; 
+            padding: 18px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 18px;
+        }
+        .btn-tel { background: #000; color: #fff; }
+        .btn-form { background: #ff3b30; color: #fff; }
 
-.hero h1 { 
-    font-size: 32px; 
-    margin: 0 0 10px 0; 
-    font-weight: 900;
-    line-height: 1.3;
-}
-
-.hero p {
-    margin: 0;
-    font-size: 16px;
-    color: #ccc;
-}
-
-.live-status {
-    background: #222;
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 13px;
-    text-align: center;
-    border: 1px dashed #555;
-}
-
-.live-status span { 
-    color: #ff3b30; 
-    font-weight: bold; 
-}
-
-.container {
-    max-width: 960px;
-    margin: auto;
-    padding: 20px;
-}
-
-.section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 30px 0 15px 0;
-    text-align: center;
-}
-
-.section-title span { 
-    color: #ff3b30; 
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.car-card {
-    background: #222;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #333;
-}
-
-.car-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.car-detail {
-    padding: 15px;
-}
-
-.car-tag {
-    background: #444;
-    color: #fff;
-    font-size: 11px;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.car-tag.hot { 
-    background: #ff3b30; 
-}
-
-.car-name {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 8px 0 4px 0;
-}
-
-.price-del {
-    font-size: 12px;
-    color: #777;
-    text-decoration: line-through;
-}
-
-.price-main {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ff3b30;
-}
-
-.db-section {
-    background: #fff;
-    color: #333;
-    border-radius: 12px;
-    padding: 15px;
-    margin: 40px 0 100px 0;
-    box-shadow: 0 4px 20px rgba(255,59,48,0.2);
-    border: 3px solid #ff3b30;
-}
-
-/* ✔ 전화 버튼만 제거 */
-.footer-bar { 
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .hero h1 { font-size: 24px; }
-    .car-card img { height: 120px; }
-}
-
-@media (max-width: 480px) {
-    .grid { grid-template-columns: 1fr; }
-}
-</style>
+        /* 모바일 최적화 대응 */
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .hero h1 { font-size: 24px; }
+            .car-card img { height: 120px; }
+        }
+        @media (max-width: 480px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>국산·수입 장기렌트/리스 공식 특판센터</header>
+    <header>국산·수입 장기렌트/리스 공식 특판센터</header>
+    
+    <div class="hero">
+        <div class="badge">모든 캐피탈사 실시간 비교</div>
+        <h1>초기비용 0원 최저가 보장<br>🚨 6월 한정 특별 프로모션</h1>
+        <p>비공개 추가 할인 적용, 심사 승인율 98% 달성!</p>
+    </div>
 
-<div class="hero">
-    <div class="badge">모든 캐피탈사 실시간 비교</div>
-    <h1>초기비용 0원 최저가 보장<br>🚨 6월 한정 특별 프로모션</h1>
-    <p>비공개 추가 할인 적용, 심사 승인율 98% 달성!</p>
-</div>
+    <div class="container">
+        <div class="live-status">
+            [실시간] 서울 강남구 김*우 고객님 <b>그랜저 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (방금 전)
+        </div>
 
-<div class="container">
+        <div class="section-title">이달의 <span>인기 차종 특판 리스트</span></div>
+        
+        <div class="grid">
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400" alt="그랜저">
+                <div class="car-detail">
+                    <span class="car-tag hot">즉시출고</span>
+                    <div class="car-name">현대 디 올 뉴 그랜저</div>
+                    <div class="price-del">월 490,000원</div>
+                    <div class="price-main">월 310,000원 ~</div>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400" alt="쏘렌토">
+                <div class="car-detail">
+                    <span class="car-tag hot">인기폭발</span>
+                    <div class="car-name">기아 더 뉴 쏘렌토</div>
+                    <div class="price-del">월 510,000원</div>
+                    <div class="price-main">월 340,000원 ~</div>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400" alt="카니발">
+                <div class="car-detail">
+                    <span class="car-tag">패밀리카</span>
+                    <div class="car-name">기아 더 뉴 카니발</div>
+                    <div class="price-del">월 580,000원</div>
+                    <div class="price-main">월 390,000원 ~</div>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400" alt="BMW 5">
+                <div class="car-detail">
+                    <span class="car-tag hot">수입차1위</span>
+                    <div class="car-name">BMW 5시리즈 (520i)</div>
+                    <div class="price-del">월 890,000원</div>
+                    <div class="price-main">월 520,000원 ~</div>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400" alt="벤츠 E">
+                <div class="car-detail">
+                    <span class="car-tag">법인우대</span>
+                    <div class="car-name">벤츠 E-클래스 E200</div>
+                    <div class="price-del">월 980,000원</div>
+                    <div class="price-main">월 610,000원 ~</div>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400" alt="스포티지">
+                <div class="car-detail">
+                    <span class="car-tag">사회초년생</span>
+                    <div class="car-name">기아 더 뉴 스포티지</div>
+                    <div class="price-del">월 390,000원</div>
+                    <div class="price-main">월 260,000원 ~</div>
+                </div>
+            </div>
+        </div>
 
-<div class="live-status">
-    <span id="liveText">[실시간] 상담 요청이 접수되었습니다...</span>
-</div>
+        <div class="section-title" id="consultation">🚨 <span>30초 실시간 견적 신청</span></div>
+        <div class="db-section">
+            <iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"></iframe>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <a class="btn-tel" href="tel:01000000000">📞 직통 전화상담</a>
+        <a class="btn-form" href="#consultation">✏️ 실시간 최저가 신청</a>
+    </div>
 
-<div class="section-title">이달의 <span>인기 차종 특판 리스트</span></div>
-
-<div class="grid">
-    <!-- 기존 그대로 유지 -->
-</div>
-
-<div class="section-title">🚨 <span>30초 실시간 견적 신청</span></div>
-
-<div class="db-section">
-<iframe 
-    name="ifrm_icode"
-    id="ifrCCAl"
-    scrolling="no"
-    frameborder="0"
-    width="100%"
-    src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs">
-</iframe>
-</div>
-
-</div>
-
-<script>
-const messages = [
-"[실시간] 서울 강남 김** 고객 상담 접수",
-"[실시간] 부산 해운대 박** 견적 확인중",
-"[실시간] 인천 남동구 최** 승인 완료",
-"[실시간] 대구 달서구 정** 상담 진행중",
-"[실시간] 경기 수원 이** 최저가 요청",
-"[실시간] 울산 남구 이** 빠른 처리중"
-];
-
-let i = 0;
-
-setInterval(() => {
-    document.getElementById("liveText").innerText = messages[i];
-    i = (i + 1) % messages.length;
-}, 2500);
-</script>
-
+    <script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script>
+    <script type="text/javascript">
+        $("#ifrCCAl").iFrameResize({
+            autoResize: true,
+            bodyBackground: null,
+            bodyMargin: null,
+            bodyMarginV1: 0,
+            bodyPadding: null,
+            checkOrigin: true,
+            enablePublicMethods: false,
+            heightCalculationMethod: "offset",
+            interval: 32,
+            log: false,
+            maxHeight: Infinity,
+            maxWidth: Infinity,
+            minHeight: 0,
+            minWidth: 0,
+            scrolling: false,
+            sizeHeight: true,
+            sizeWidth: false,
+            tolerance: 0,
+            closedCallback: function () { },
+            initCallback: function () { },
+            messageCallback: function () { },
+            resizedCallback: function () { },
+            callback: function (messageData) {return true;}
+        });
+    </script>
 </body>
 </html>
