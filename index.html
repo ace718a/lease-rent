@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>신차 장기렌트 리스 가격비교 성지</title>
+<title>신차 장기렌트 리스 비교센터</title>
 
 <style>
 body{margin:0;font-family:'Noto Sans KR',sans-serif;background:#111;color:#fff;}
@@ -16,7 +16,7 @@ font-weight:900;font-size:20px;border-bottom:2px solid #ff3b30;
 .hero{
 background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
 url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200') center/cover;
-padding:60px 20px;text-align:center;
+padding:55px 20px;text-align:center;
 }
 
 .hero .badge{
@@ -24,57 +24,108 @@ background:#ff3b30;padding:5px 12px;border-radius:20px;
 font-size:13px;font-weight:bold;display:inline-block;margin-bottom:10px;
 }
 
-.hero h1{font-size:32px;margin:10px 0;}
-.hero p{color:#ccc;margin:0;}
+.hero h1{font-size:30px;margin:10px 0;line-height:1.3;}
+.hero p{color:#ccc;margin:0;font-size:14px;}
 
 .container{max-width:960px;margin:auto;padding:20px;}
 
 .section-title{
-font-size:24px;font-weight:bold;text-align:center;margin:30px 0 15px;
+font-size:22px;font-weight:bold;text-align:center;margin:28px 0 14px;
 }
 .section-title span{color:#ff3b30;}
 
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;margin-bottom:40px;
+gap:18px;
+margin-bottom:35px;
 }
 
 .car-card{
-background:#222;border-radius:10px;overflow:hidden;border:1px solid #333;
+background:#222;border-radius:10px;overflow:hidden;
+border:1px solid #333;
 }
 
 .car-card img{
-width:100%;height:150px;object-fit:cover;
+width:100%;height:140px;object-fit:cover;
 }
 
-.car-detail{padding:15px;}
+.car-detail{padding:14px;}
 
 .car-tag{
-background:#444;font-size:11px;padding:2px 6px;border-radius:4px;
+display:inline-block;
+background:#444;
+font-size:11px;
+padding:2px 6px;
+border-radius:4px;
+margin-bottom:6px;
 }
 .car-tag.hot{background:#ff3b30;}
 
-.price-del{font-size:12px;color:#777;text-decoration:line-through;}
-.price-main{font-size:18px;color:#ff3b30;font-weight:bold;}
+.car-name{font-size:15px;font-weight:700;margin:4px 0;}
+
+.price-del{
+font-size:12px;color:#777;text-decoration:line-through;
+}
+
+.price-main{
+font-size:17px;color:#ff3b30;font-weight:bold;
+}
+
+/* live */
+.live-box{
+background:#1a1a1a;
+padding:12px;
+border-radius:10px;
+border:1px solid #2a2a2a;
+margin-bottom:20px;
+height:170px;
+overflow:hidden;
+}
+
+.live-item{
+font-size:13px;
+padding:5px 0;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.live-item span{
+color:#ff3b30;font-weight:bold;
+}
+
+/* ⭐ 수정된 담당자 안내 */
+.form-guide{
+background:#0f0f0f;
+border-left:3px solid #ff3b30;
+padding:16px;
+font-size:16px;
+margin-bottom:12px;
+color:#fff;
+text-align:center;   /* 가운데 정렬 */
+font-weight:700;     /* 굵게 */
+line-height:1.5;
+}
 
 /* iframe */
 .db-section{
-background:#1a1a1a;padding:15px;border-radius:12px;
-margin:20px 0 100px;border:1px solid rgba(255,59,48,0.4);
-}
-
-.form-guide{
-background:#111;border-left:3px solid #ff3b30;
-padding:10px;font-size:13px;margin-bottom:10px;color:#ddd;
+background:#1a1a1a;
+padding:15px;
+border-radius:12px;
+margin:20px 0 100px;
+border:1px solid rgba(255,59,48,0.4);
 }
 
 #ifrCCAl{
-width:100%;min-height:750px;border:none;
+width:100%;
+min-height:720px;
+border:none;
 }
 
 .footer-bar{
-position:fixed;bottom:0;width:100%;display:flex;
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
 }
 
 .footer-bar a{
@@ -85,112 +136,115 @@ font-weight:bold;text-decoration:none;
 .btn-tel{background:#000;color:#fff;}
 .btn-form{background:#ff3b30;color:#fff;}
 
-@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:480px){.grid{grid-template-columns:1fr;}}
+@media(max-width:768px){
+.grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+.grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
 <body>
 
-<header>국산·수입 장기렌트/리스 공식 특판센터</header>
+<header>국산·수입 장기렌트·리스 비교센터</header>
 
 <div class="hero">
-<div class="badge">모든 캐피탈사 실시간 비교</div>
-<h1>초기비용 0원 최저가 보장<br>🚨 6월 한정 특별 프로모션</h1>
-<p>비공개 추가 할인 적용, 최근 30일 상담 기준 승인율 98%</p>
+<div class="badge">모든 캐피탈 실시간 비교</div>
+<h1>초기비용 0원 · 최저가 특가 진행중</h1>
+<p>최근 30일 상담 기준 승인율 98% 기반 데이터</p>
 </div>
 
 <div class="container">
 
-<div class="section-title">이달의 <span>인기 차종 특판 리스트</span></div>
+<div class="section-title">이달의 <span>인기 특판 차량</span></div>
 
 <div class="grid" id="carGrid"></div>
 
-<div class="section-title">🚨 30초 견적 신청</div>
+<div class="section-title">🚨 실시간 승인 현황</div>
 
-<div class="db-section">
+<div class="live-box" id="liveBox"></div>
+
+<div class="section-title">🚨 30초 빠른 상담 신청</div>
 
 <div class="form-guide">
 👉 담당자 선택은 비워두셔도 됩니다.<br>
-자동으로 빠른 상담 담당자가 연결됩니다.
+자동으로 가장 빠른 상담 담당자가 연결됩니다.
 </div>
 
+<div class="db-section">
 <iframe id="ifrCCAl"
 src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"></iframe>
-
 </div>
 
 </div>
 
 <div class="footer-bar">
 <a class="btn-tel" href="tel:01000000000">전화상담</a>
-<a class="btn-form" href="#consultation">신청하기</a>
+<a class="btn-form" href="#consultation">빠른신청</a>
 </div>
 
 <script>
 
-/* 🔥 핵심: 단일 데이터 소스 */
+/* 차량 데이터 */
 const cars = [
-{
-img:"https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400",
-tag:"즉시출고",
-name:"현대 그랜저",
-old:"490,000원",
-price:"310,000원~"
-},
-{
-img:"https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400",
-tag:"인기",
-name:"쏘렌토",
-old:"510,000원",
-price:"340,000원~"
-},
-{
-img:"https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400",
-tag:"패밀리",
-name:"카니발",
-old:"580,000원",
-price:"390,000원~"
-},
-{
-img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
-tag:"수입",
-name:"BMW 5시리즈",
-old:"890,000원",
-price:"520,000원~"
-},
-{
-img:"https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400",
-tag:"법인",
-name:"벤츠 E클래스",
-old:"980,000원",
-price:"610,000원~"
-},
-{
-img:"https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400",
-tag:"초보",
-name:"스포티지",
-old:"390,000원",
-price:"260,000원~"
-}
+{name:"현대 그랜저",tag:"즉시출고",img:"https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600",price:"310,000원~",old:"490,000원"},
+{name:"기아 쏘렌토",tag:"인기SUV",img:"https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600",price:"340,000원~",old:"510,000원"},
+{name:"기아 카니발",tag:"패밀리",img:"https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=600",price:"390,000원~",old:"580,000원"},
+{name:"BMW 5시리즈",tag:"수입1위",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600",price:"520,000원~",old:"890,000원"},
+{name:"벤츠 E클래스",tag:"법인추천",img:"https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=600",price:"610,000원~",old:"980,000원"},
+{name:"기아 스포티지",tag:"가성비",img:"https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600",price:"260,000원~",old:"390,000원"}
 ];
 
-/* 🔥 위 카드 자동 생성 */
-const grid = document.getElementById("carGrid");
+const grid=document.getElementById("carGrid");
 
 cars.forEach(c=>{
-grid.innerHTML += `
+grid.innerHTML+=`
 <div class="car-card">
 <img src="${c.img}">
 <div class="car-detail">
-<span class="car-tag">${c.tag}</span>
-<div>${c.name}</div>
+<div class="car-tag">${c.tag}</div>
+<div class="car-name">${c.name}</div>
 <div class="price-del">${c.old}</div>
 <div class="price-main">${c.price}</div>
 </div>
-</div>
-`;
+</div>`;
 });
+
+/* live */
+const names=["김*우","이*준","박*현","최*석","정*호","오*민","강*우","윤*서","홍*진","장*훈"];
+const carsName=["그랜저","쏘렌토","카니발","BMW 5","벤츠 E","스포티지","G80","쏘나타"];
+const locs=["부산","서울","대구","인천","울산","창원"];
+
+function getTime(){
+const r=Math.random();
+if(r<0.4) return "오늘";
+if(r<0.7) return "어제";
+if(r<0.85) return "2시간 전";
+if(r<0.95) return "5시간 전";
+return "방금 전";
+}
+
+const liveBox=document.getElementById("liveBox");
+
+function addLive(){
+const name=names[Math.floor(Math.random()*names.length)];
+const car=carsName[Math.floor(Math.random()*carsName.length)];
+const loc=locs[Math.floor(Math.random()*locs.length)];
+
+const div=document.createElement("div");
+div.className="live-item";
+div.innerHTML=`${loc} ${name} 고객님 <b>${car}</b> 승인 완료 <span>(${getTime()})</span>`;
+
+liveBox.prepend(div);
+
+if(liveBox.children.length>10){
+liveBox.removeChild(liveBox.lastChild);
+}
+}
+
+for(let i=0;i<6;i++) addLive();
+setInterval(addLive,2500);
 
 </script>
 
