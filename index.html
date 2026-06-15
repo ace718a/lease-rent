@@ -85,6 +85,7 @@ font-size:12px;color:#777;text-decoration:line-through;
 font-size:17px;color:#ff3b30;font-weight:bold;
 }
 
+/* FIX: live-box 스타일 추가 */
 .live-box{
 background:#1a1a1a;
 padding:12px;
@@ -168,7 +169,6 @@ word-break:keep-all;
 
 <div class="hero">
 <div class="badge">모든 캐피탈 실시간 비교</div>
-
 <h1 class="hero-title">초기비용 0원 · 최저가 특가 진행중</h1>
 <p class="hero-sub">최근 30일 상담 기준 승인율 98%</p>
 </div>
@@ -219,10 +219,12 @@ const cars = [
 {name:"기아 스포티지",tag:"가성비",img:"https://github.com/ace718a/lease-rent/blob/main/%5B%EA%BE%B8%EB%AF%B8%EA%B8%B0%5Dspo.jpg?raw=true",price:"204,700원~",old:"390,000원"}
 ];
 
+/* render 최적화 */
 const grid=document.getElementById("carGrid");
 
+let html="";
 cars.forEach(c=>{
-grid.innerHTML+=`
+html+=`
 <div class="car-card">
 <img src="${c.img}">
 <div class="car-detail">
@@ -233,8 +235,10 @@ grid.innerHTML+=`
 </div>
 </div>`;
 });
+grid.innerHTML=html;
 
-/* 시간 함수 추가 (핵심 수정) */
+
+/* 시간 */
 function getTime(){
 const r=Math.random();
 if(r<0.1) return "방금 전";
@@ -249,9 +253,26 @@ return `${date.getMonth()+1}/${date.getDate()}`;
 }
 
 /* live */
-const names=["김*우","이*준","박*현","최*석","정*호","오*민","강*우","윤*서","홍*진","장*훈"];
-const carsName=["그랜저","쏘렌토","카니발","BMW 5","벤츠 E","스포티지","G80","쏘나타"];
-const locs=["부산","서울","대구","인천","울산","창원"];
+const names=[
+"김*우","이*준","박*현","최*석","정*호","오*민","강*우","윤*서","홍*진","장*훈",
+"이*민","박*준","최*윤","정*민","김*준","송*현","조*우","한*결","윤*호","임*서",
+"장*우","배*진","문*호","신*영","오*현","강*민","서*준","백*호","허*준","남*윤"
+];
+
+const carsName=[
+"그랜저","쏘렌토","카니발","BMW 5","벤츠 E","스포티지","G80","쏘나타",
+"아반떼","투싼","싼타페","K8","K5","팰리세이드","GV70","GV80",
+"BMW 3","BMW X3","BMW X5","벤츠 C","벤츠 S","EQS","아우디 A6","아우디 Q5",
+"테슬라 모델3","테슬라 모델Y","렉서스 ES","렉서스 RX","볼보 XC60","볼보 XC90",
+"캐스퍼","레이"
+];
+
+const locs=[
+"부산","서울","대구","인천","울산","창원",
+"광주","대전","수원","성남","용인","고양",
+"천안","청주","전주","포항","김해","양산",
+"진주","구미","안산","부천","남양주","평택"
+];
 
 const liveBox=document.getElementById("liveBox");
 
@@ -270,11 +291,11 @@ div.innerHTML =
 liveBox.prepend(div);
 
 if(liveBox.children.length>10){
-liveBox.removeChild(liveBox.lastChild);
+liveBox.lastElementChild.remove();
 }
 }
 
-/* 초기 + 반복 */
+/* init */
 for(let i=0;i<6;i++) addLive();
 setInterval(addLive,2500);
 
