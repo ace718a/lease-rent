@@ -24,7 +24,7 @@
         }
 
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
             url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop') no-repeat center/cover;
             padding: 60px 20px; 
             text-align: center; 
@@ -132,7 +132,7 @@
             color: #ff3b30;
         }
 
-        /* ✅ iframe 영역 (흰 박스 제거 + 톤 통일) */
+        /* ✅ iframe (흰박스 제거 + 다크 통일) */
         .db-section {
             background: #1a1a1a;
             color: #fff;
@@ -201,7 +201,9 @@
 
     <div class="section-title">이달의 <span>인기 차종 특판 리스트</span></div>
 
+    <!-- ✅ 원본 6카드 유지 -->
     <div class="grid">
+
         <div class="car-card">
             <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400" alt="">
             <div class="car-detail">
@@ -231,6 +233,37 @@
                 <div class="price-main">월 390,000원 ~</div>
             </div>
         </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400" alt="">
+            <div class="car-detail">
+                <span class="car-tag hot">수입차1위</span>
+                <div class="car-name">BMW 5시리즈 (520i)</div>
+                <div class="price-del">월 890,000원</div>
+                <div class="price-main">월 520,000원 ~</div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400" alt="">
+            <div class="car-detail">
+                <span class="car-tag">법인우대</span>
+                <div class="car-name">벤츠 E-클래스 E200</div>
+                <div class="price-del">월 980,000원</div>
+                <div class="price-main">월 610,000원 ~</div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400" alt="">
+            <div class="car-detail">
+                <span class="car-tag">사회초년생</span>
+                <div class="car-name">기아 더 뉴 스포티지</div>
+                <div class="price-del">월 390,000원</div>
+                <div class="price-main">월 260,000원 ~</div>
+            </div>
+        </div>
+
     </div>
 
     <div class="section-title" id="consultation">
@@ -255,7 +288,7 @@
 </div>
 
 <script>
-/* 🔥 실시간 로그 (10개 유지, 구조 고정) */
+/* ✅ 실시간 승인 로그 */
 const logs = [
 '부산 해운대구 이*준 고객님 <b>쏘렌토 하이브리드</b> <span class="status-txt">심사 승인 완료</span> (방금 전)',
 '서울 강서구 박*현 고객님 <b>그랜저 IG</b> <span class="status-txt">심사 승인 완료</span> (1분 전)',
@@ -279,7 +312,7 @@ function renderLog() {
 renderLog();
 setInterval(renderLog, 2500);
 
-/* iframe fallback only (기존 resize 의존 제거 없이 보완) */
+/* iframe fallback */
 window.addEventListener("load", function () {
     const iframe = document.getElementById("ifrCCAl");
     if (iframe) iframe.style.minHeight = "750px";
