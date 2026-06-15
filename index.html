@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>리스렌트 비교견적 | 실시간 최저가 조회</title>
+    <title>장기렌트 리스 성지 | 전국 최저가 비교견적</title>
     <style>
         body { 
             margin: 0; 
@@ -18,106 +18,113 @@
             text-align: center; 
             font-weight: bold; 
             font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .hero { 
-            background: linear-gradient(135deg, #1c1c1e, #3a3a3c); 
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
             color: #fff; 
-            padding: 40px 20px; 
+            padding: 50px 20px; 
             text-align: center; 
         }
         .hero h1 { 
             font-size: 28px; 
             margin: 0 0 10px 0; 
             font-weight: 800;
+            letter-spacing: -1px;
         }
         .hero p {
             margin: 0;
             font-size: 16px;
-            color: #aeaeacf;
+            color: #b0bec5;
         }
         
-        /* 자동차 이미지 3장 섹션 */
+        /* 캐피탈 특판 차량 섹션 (레퍼런스 스타일) */
+        .section-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 40px 0 20px 0;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #ff3b30;
+            margin: 8px auto 0 auto;
+        }
+
         .car-container {
-            max-width: 900px;
-            margin: -20px auto 20px auto;
+            max-width: 1000px;
+            margin: auto;
             padding: 0 20px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            gap: 20px;
         }
         .car-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+        }
+        .car-card:hover {
+            transform: translateY(-5px);
         }
         .car-card img {
             width: 100%;
-            height: 150px;
+            height: 160px;
             object-fit: cover;
         }
-        .car-card .car-name {
-            padding: 10px;
+        .car-info {
+            padding: 15px;
+        }
+        .car-tag {
+            display: inline-block;
+            background: #ff3b30;
+            color: #fff;
+            font-size: 11px;
             font-weight: bold;
-            font-size: 14px;
-            background: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .car-name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-transform: ellipsis;
+        }
+        .car-price-del {
+            font-size: 13px;
+            color: #aaa;
+            text-decoration: line-through;
+        }
+        .car-price-main {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ff3b30;
+            margin-top: 2px;
         }
 
-        .section { 
-            max-width: 900px; 
-            margin: auto; 
-            padding: 20px; 
+        /* DB 수집용 아이프레임 컨테이너 */
+        .iframe-section { 
+            max-width: 700px; 
+            margin: 40px auto; 
+            padding: 0 20px;
             padding-bottom: 100px; /* 하단 바 가려짐 방지 */
         }
-        .card { 
+        .iframe-card { 
             background: #fff; 
-            padding: 30px 20px; 
+            padding: 10px; 
             border-radius: 12px; 
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
-        }
-        .card h2 {
-            margin-top: 0;
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        label {
-            font-size: 14px;
-            font-weight: bold;
-            display: block;
-            margin-top: 12px;
-            color: #555;
-        }
-        input { 
-            width: 100%; 
-            padding: 14px; 
-            margin: 6px 0 16px 0; 
-            border: 1px solid #ddd; 
-            border-radius: 8px; 
-            box-sizing: border-box;
-            font-size: 15px;
-        }
-        button { 
-            width: 100%; 
-            padding: 16px; 
-            background: #ff3b30; 
-            color: #fff; 
-            border: none; 
-            font-weight: bold; 
-            font-size: 16px;
-            border-radius: 8px; 
-            cursor: pointer; 
-            box-shadow: 0 4px 6px rgba(255, 59, 48, 0.3);
-        }
-        button:hover {
-            background: #e03228;
-        }
-        .note { 
-            font-size: 12px; 
-            color: #8e8e93; 
-            margin-top: 12px; 
-            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+            border: 2px solid #ff3b30;
         }
         
         /* 하단 고정 바 */
@@ -125,9 +132,9 @@
             position: fixed; 
             bottom: 0; 
             width: 100%; 
-            max-width: 100%;
             display: flex; 
             z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
         }
         .footer a { 
             flex: 1; 
@@ -138,7 +145,7 @@
             font-size: 16px;
         }
         .call { 
-            background: #1c1c1e; 
+            background: #111; 
             color: #fff; 
         }
         .consult { 
@@ -147,59 +154,60 @@
         }
 
         /* 모바일 반응형 조절 */
-        @media (max-width: 768px){ 
+        @media (max-width: 768px) { 
             .car-container {
-                grid-template-columns: 1fr; /* 모바일에선 세로로 나열 혹은 1열 */
-                gap: 10px;
-                padding: 0 15px;
+                grid-template-columns: 1fr; /* 모바일에선 1열 세로 정렬 */
+                gap: 15px;
             }
-            .car-card img {
-                height: 180px;
-            }
-            .section { padding: 15px; padding-bottom: 100px; } 
+            .hero h1 { font-size: 24px; }
+            .iframe-section { padding-bottom: 90px; }
         }
     </style>
 </head>
 <body>
 
-    <header> 🚗 국산·수입 리스/장기렌트 대형 플랫폼 </header>
+    <header> 🚗 리스 / 장기렌트 전국 특판 성지 </header>
     
     <div class="hero">
-        <h1>선납금 0원부터, 즉시출고 특가</h1>
-        <p>전 금융사 실시간 비교로 최저가를 보장합니다.</p>
+        <h1>초기비용 0원, 로켓출고 프로모션</h1>
+        <p>캐피탈 공식 제휴 최저가 보장 시스템</p>
     </div>
     
+    <div class="section-title">캐피탈 한정수량 특판차량</div>
     <div class="car-container">
         <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500&auto=format&fit=crop" alt="세단">
-            <div class="car-name">🔥 프리미엄 세단 특가</div>
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500&auto=format&fit=crop" alt="그랜저">
+            <div class="car-info">
+                <span class="car-tag">즉시출고 가능</span>
+                <div class="car-name">현대 디 올 뉴 그랜저</div>
+                <div class="car-price-del">월 420,000원</div>
+                <div class="car-price-main">월 315,170원 ~</div>
+            </div>
         </div>
         <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop" alt="SUV">
-            <div class="car-name">⚡ 패밀리 SUV 패키지</div>
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop" alt="쏘렌토">
+            <div class="car-info">
+                <span class="car-tag">인기 급상승</span>
+                <div class="car-name">기아 더 뉴 쏘렌토</div>
+                <div class="car-price-del">월 480,000원</div>
+                <div class="car-price-main">월 358,200원 ~</div>
+            </div>
         </div>
         <div class="car-card">
             <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&auto=format&fit=crop" alt="수입차">
-            <div class="car-name">👑 수입 럭셔리 기획전</div>
+            <div class="car-info">
+                <span class="car-tag">법인/개인 특가</span>
+                <div class="car-name">BMW 5시리즈 (520i)</div>
+                <div class="car-price-del">월 790,000원</div>
+                <div class="car-price-main">월 542,000원 ~</div>
+            </div>
         </div>
     </div>
     
-    <div class="section">
-        <div class="card" id="consultation">
-            <h2>📊 30초 간편 최저가 견적 신청</h2>
-            <form id="leadForm">
-                <label for="name">고객명</label>
-                <input type="text" id="name" name="name" placeholder="성함을 입력해주세요" required>
-                
-                <label for="phone">연락처</label>
-                <input type="text" id="phone" name="phone" placeholder="번호만 입력 (예: 01012345678)" required>
-                
-                <label for="car">희망 차종</label>
-                <input type="text" id="car" name="car" placeholder="관심 있는 차량을 적어주세요 (선택)">
-                
-                <button type="submit">실시간 최저가 확인하기</button>
-            </form>
-            <div class="note">* 본 상담 신청은 개인정보 보호법을 준수하며, 견적 안내 외의 용도로 사용되지 않습니다.</div>
+    <div class="section-title" id="consultation">실시간 무료 비교견적 신청</div>
+    <div class="iframe-section">
+        <div class="iframe-card">
+            <iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=ISviBzViFs"></iframe>
         </div>
     </div>
     
@@ -208,34 +216,33 @@
         <a class="consult" href="#consultation">✏️ 모바일 빠른상담</a>
     </div>
 
-    <script>
-        document.getElementById("leadForm").addEventListener("submit", async function (e) {
-            e.preventDefault();
-            
-            const data = {
-                name: this.name.value,
-                phone: this.phone.value,
-                car: this.car.value
-            };
-            
-            try {
-                const res = await fetch("/api/lead", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                if (res.ok) {
-                    alert("성공적으로 접수되었습니다. 담당자가 곧 연락드리겠습니다!");
-                    this.reset();
-                } else {
-                    alert("서버 전송에 실패했습니다. 잠시 후 다시 시도해주세요.");
-                }
-            } catch (err) {
-                alert("네트워크 연결이 원활하지 않습니다.");
-            }
+    <script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script>
+    <script type="text/javascript">
+        $("#ifrCCAl").iFrameResize({
+            autoResize: true,
+            bodyBackground: null,
+            bodyMargin: null,
+            bodyMarginV1: 0,
+            bodyPadding: null,
+            checkOrigin: true,
+            enablePublicMethods: false,
+            heightCalculationMethod: "offset",
+            interval: 32,
+            log: false,
+            maxHeight: Infinity,
+            maxWidth: Infinity,
+            minHeight: 0,
+            minWidth: 0,
+            scrolling: false,
+            sizeHeight: true,
+            sizeWidth: false,
+            tolerance: 0,
+            closedCallback: function () { },
+            initCallback: function () { },
+            messageCallback: function () { },
+            resizedCallback: function () { },
+            callback: function (messageData) { return true; }
         });
     </script>
 </body>
