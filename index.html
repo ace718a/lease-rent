@@ -111,4 +111,40 @@
     
     <div class="footer">
         <a class="call" href="tel:01000000000">전화상담</a>
-        <a class="consult" href="#leadForm">빠
+        <a class="consult" href="#leadForm">빠른상담</a>
+    </div>
+
+    <script>
+        document.getElementById("leadForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            
+            // 폼 데이터 수집
+            const data = {
+                name: this.name.value,
+                phone: this.phone.value,
+                car: this.car.value
+            };
+            
+            try {
+                // 내 서버/Worker API로 데이터 전송
+                const res = await fetch("/api/lead", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (res.ok) {
+                    alert("상담 신청이 완료되었습니다.");
+                    this.reset(); // 폼 초기화
+                } else {
+                    alert("전송 실패 (서버 오류)");
+                }
+            } catch (err) {
+                alert("네트워크 오류가 발생했습니다.");
+            }
+        });
+    </script>
+</body>
+</html>
