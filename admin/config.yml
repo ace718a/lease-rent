@@ -8,11 +8,10 @@ public_folder: "/images"
 
 collections:
   - name: "rent"
-    label: "렌트 블로그"
+    label: "렌트"
     folder: "rent/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "제목", name: "title", widget: "string" }
-      - { label: "발행일", name: "date", widget: "datetime" }
       - { label: "본문", name: "body", widget: "markdown" }
