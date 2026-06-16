@@ -8,23 +8,10 @@ public_folder: "/images"
 
 collections:
   - name: "rent"
-    label: "자동차 렌트 블로그"
+    label: "렌트 블로그"
     folder: "rent/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "제목", name: "title", widget: "string" }
-      - { label: "발행일", name: "date", widget: "datetime" }
-      - { label: "대표 이미지", name: "thumbnail", widget: "image", required: false }
-      - { label: "본문 내용", name: "body", widget: "markdown" }
-
-  - name: "24"
-    label: "24시 대리/이사 블로그"
-    folder: "24/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "제목", name: "title", widget: "string" }
-      - { label: "발행일", name: "date", widget: "datetime" }
-      - { label: "대표 이미지", name: "thumbnail", widget: "image", required: false }
-      - { label: "본문 내용", name: "body", widget: "markdown" }
+      - { label: "본문", name: "body", widget: "markdown" }
