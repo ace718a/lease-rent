@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: 내_깃허브_아이디/내_리포지토리_이름 # 👈 여기를 꼭 본인 계정/저장소명으로 바꿔주세요!
+  branch: main # 깃허브 기본 브랜치 이름 (보체나 main 또는 master)
+
+media_folder: "images" # 사진이 저장될 폴더 위치
+public_folder: "/images"
+
+collections:
+  - name: "rent"
+    label: "자동차 렌트 블로그"
+    folder: "rent/blog" # 렌트 글이 저장될 위치
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "발행일", name: "date", widget: "datetime" }
+      - { label: "대표 이미지", name: "thumbnail", widget: "image", required: false }
+      - { label: "본문 내용", name: "body", widget: "markdown" }
+
+  - name: "24"
+    label: "24시 대리/이사 블로그"
+    folder: "24/blog" # 24시 글이 저장될 위치
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "발행일", name: "date", widget: "datetime" }
+      - { label: "대표 이미지", name: "thumbnail", widget: "image", required: false }
+      - { label: "본문 내용", name: "body", widget: "markdown" }
