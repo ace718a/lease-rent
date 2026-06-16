@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>post</title>
+
+<style>
+body{
+margin:0;
+font-family:Noto Sans KR;
+background:#111;
+color:#fff;
+padding:20px;
+line-height:1.7;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+h1{color:#ff3b30;}
+pre{
+white-space:pre-wrap;
+background:#1a1a1a;
+padding:15px;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1 id="title">loading...</h1>
+<div id="content">loading...</div>
+</div>
+
+<script>
+// URL ?file=rent/post-001.md
+const params = new URLSearchParams(location.search);
+const file = params.get("file");
+
+if(!file){
+document.getElementById("content").innerHTML="파일 없음";
+throw new Error("no file");
+}
+
+fetch(file)
+.then(res=>res.text())
+.then(text=>{
+
+// frontmatter 제거 (--- ---)
+text = text.replace(/---[\s\S]*?---/,"");
+
+document.getElementById("content").innerHTML =
+"<pre>"+text+"</pre>";
+
+document.getElementById("title").innerText =
+file.split("/").pop();
+
+});
+</script>
+
+</body>
+</html>
