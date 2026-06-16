@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: 내_깃허브_아이디/내_리포지토리_이름 # 👈 여기를 꼭 본인 계정/저장소명으로 바꿔주세요!
-  branch: main # 깃허브 기본 브랜치 이름 (보체나 main 또는 master)
+  repo: ace718a/lease-rent
+  branch: main
+  auth_type: token
 
 media_folder: "images" # 사진이 저장될 폴더 위치
 public_folder: "/images"
