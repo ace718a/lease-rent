@@ -3,19 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>모아픽 관리자 대시보드</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/static-cms/4.2.1/main.css" />
-  <link rel="netlify-identity-widget" href="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+  <title>모아픽 관리자</title>
+
+  <!-- Decap CMS (정식) -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
+
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/static-cms/4.2.1/main.js"></script>
-  <script>
-    // 현재 폴더(admin) 안에 있는 config.yml을 정확히 바라보도록 강제 세팅
-    window.CMS.init({
-      config: {
-        config_url: '/admin/config.yml'
-      }
-    });
-  </script>
+  <!-- CMS는 자동으로 mount됨 -->
 </body>
 </html>
