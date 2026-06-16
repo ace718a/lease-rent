@@ -4,13 +4,13 @@ backend:
   branch: main
   auth_type: token
 
-media_folder: "images" # 사진이 저장될 폴더 위치
+media_folder: "images"
 public_folder: "/images"
 
 collections:
   - name: "rent"
     label: "자동차 렌트 블로그"
-    folder: "rent/blog" # 렌트 글이 저장될 위치
+    folder: "rent/blog"
     create: true
     slug: "{{slug}}"
     fields:
@@ -21,7 +21,7 @@ collections:
 
   - name: "24"
     label: "24시 대리/이사 블로그"
-    folder: "24/blog" # 24시 글이 저장될 위치
+    folder: "24/blog"
     create: true
     slug: "{{slug}}"
     fields:
