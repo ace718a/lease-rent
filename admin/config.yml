@@ -2,7 +2,6 @@ backend:
   name: github
   repo: ace718a/lease-rent
   branch: main
-  auth_type: token
 
 media_folder: "images"
 public_folder: "/images"
