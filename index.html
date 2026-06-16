@@ -210,13 +210,6 @@ FAX : 070-4758-8210 ㅣ E-mail : replyalba@nate.com<br>
 
 <script>
 
-// 주소창에 /rent 가 없으면 화면 비우고 코드 멈춤
-if (window.location.pathname !== '/rent' && window.location.pathname !== '/rent/') {
-    document.body.innerHTML = ''; 
-    window.stop();
-}
-
-
 /* 차량 데이터 */
 const cars = [
 {name:"현대 그랜저",tag:"즉시출고",img:"https://github.com/ace718a/lease-rent/blob/main/%5B%EA%BE%B8%EB%AF%B8%EA%B8%B0%5DGr.jpg?raw=true",price:"253,960원~",old:"490,000원"},
