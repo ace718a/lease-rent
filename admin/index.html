@@ -5,9 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin</title>
 
-  <!-- ✔ 정식 Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- 안정 CDN (unpkg 고정 버전) -->
+  <script src="https://unpkg.com/decap-cms@3.1.9/dist/decap-cms.js"></script>
 </head>
+
 <body>
+  <!-- CMS mount point (필수) -->
+  <div id="nc-root"></div>
+
+  <script>
+    // 안전 초기화 (필요 시만 사용됨)
+    window.CMS_MANUAL_INIT = false;
+  </script>
 </body>
 </html>
