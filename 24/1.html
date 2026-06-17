@@ -11,11 +11,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1d4ed8', // v0의 진한 파란색 대입
-                        accent: '#eab308',  // 노란색 포인트
+                        primary: '#1d4ed8', 
+                        accent: '#eab308',  
                         secondary: '#f3f4f6',
                         card: '#ffffff',
-                        'muted-foreground': '#4b5563'
                     }
                 }
             }
@@ -36,6 +35,12 @@
                     <div>
                         <p class="text-lg font-medium text-blue-100/80">나쁜이사 당하기 전에</p>
                         <h1 class="mt-1 text-3xl font-extrabold leading-tight">이사업체 후기 비교!</h1>
+                    </div>
+                    <div class="relative w-32 h-32 shrink-0 bg-accent/20 rounded-full flex items-center justify-center border-2 border-dashed border-accent/40 animate-pulse">
+                        <i class="fa-solid fa-truck-moving text-accent text-4xl absolute -bottom-1 -right-1"></i>
+                        <i class="fa-solid fa-box-open text-amber-200 text-3xl"></i>
+                        <i class="fa-solid fa-star text-white text-xs absolute top-2 right-4"></i>
+                        <i class="fa-solid fa-star text-white text-sm absolute top-6 left-2"></i>
                     </div>
                 </div>
 
@@ -107,8 +112,27 @@
                         <p class="text-sm font-bold text-gray-900">아래 정보를 입력해 주세요</p>
                     </div>
                     
-                    <div class="px-3 pb-4 pt-3">
-                        <iframe src="https://m.modoo24.net/reqFrm" class="w-full h-[650px] border-0" scrolling="no"></iframe>
+                    <div class="p-5 bg-white">
+                        <div class="bg-[#1e293b] text-white text-center py-3.5 font-bold text-base rounded-t-2xl tracking-wide">
+                            모두이사 무료상담
+                        </div>
+                        <div class="border border-t-0 border-gray-200 p-5 rounded-b-2xl bg-gray-50/40 flex flex-col gap-4">
+                            <p class="text-xs text-right text-gray-400"><span class="text-red-500">*</span> 필수 입력항목입니다.</p>
+                            
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1.5"><span class="text-red-500">*</span> 이름</label>
+                                <input type="text" placeholder="이름을 입력하세요" class="w-full border border-gray-300 p-2.5 text-sm rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-primary/20">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1.5"><span class="text-red-500">*</span> 연락처</label>
+                                <input type="tel" placeholder="휴대폰 번호 입력" class="w-full border border-gray-300 p-2.5 text-sm rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-primary/20">
+                            </div>
+
+                            <button type="button" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-extrabold py-4 rounded-xl mt-2 text-base shadow transition-colors">
+                                무료 상담 신청하기
+                            </button>
+                        </div>
                     </div>
 
                     <p class="flex items-center justify-center gap-1.5 border-t border-gray-200 bg-gray-50/50 px-6 py-3.5 text-xs text-gray-500">
@@ -118,7 +142,7 @@
             </div>
         </section>
 
-        <section class="bg-blue-50/60">
+        <section class="bg-blue-600/[0.08]">
             <div class="mx-auto max-w-md px-6 py-12">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-shield-halved text-xl text-primary"></i>
@@ -173,47 +197,32 @@
             </div>
         </section>
 
-        <section class="bg-blue-50/60">
+        <section class="bg-blue-600/[0.08]">
             <div class="mx-auto max-w-md px-6 py-12">
                 <h2 class="text-2xl font-bold">실이용자 후기</h2>
                 <div class="mt-6 flex flex-col gap-4">
-                    
                     <div class="rounded-2xl border-2 border-blue-100 bg-white p-5 shadow-sm">
-                        <div class="flex items-center gap-0.5 text-accent text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
+                        <div class="flex items-center gap-0.5 text-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="mt-3 text-sm leading-relaxed text-gray-800">포장이사 여러번 했는데 이번이 제일 만족스러웠어요 특히 주방쪽 정리 진짜 최고!</p>
                         <span class="mt-3 block text-xs font-medium text-gray-400">정O아 님</span>
                     </div>
-
                     <div class="rounded-2xl border-2 border-blue-100 bg-white p-5 shadow-sm">
-                        <div class="flex items-center gap-0.5 text-accent text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
+                        <div class="flex items-center gap-0.5 text-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="mt-3 text-sm leading-relaxed text-gray-800">서비스나 가격 모두 좋게 이사 잘 끝냈음^^ 추가비용, 밥값 같은 요청도 없어서 만족.</p>
                         <span class="mt-3 block text-xs font-medium text-gray-400">최O민 님</span>
                     </div>
-
                     <div class="rounded-2xl border-2 border-blue-100 bg-white p-5 shadow-sm">
-                        <div class="flex items-center gap-0.5 text-accent text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
+                        <div class="flex items-center gap-0.5 text-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="mt-3 text-sm leading-relaxed text-gray-800">3개 업체 견적을 한 번에 받아서 100만원 가까이 아꼈어요. 후기 보고 고른 업체라 믿음이 갔습니다.</p>
                         <span class="mt-3 block text-xs font-medium text-gray-400">김O정 님</span>
                     </div>
-
                     <div class="rounded-2xl border-2 border-blue-100 bg-white p-5 shadow-sm">
-                        <div class="flex items-center gap-0.5 text-accent text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
+                        <div class="flex items-center gap-0.5 text-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="mt-3 text-sm leading-relaxed text-gray-800">전화 돌릴 필요 없이 1분 만에 신청 끝. 방문견적도 빠르게 잡혔고 포장이사 깔끔했어요.</p>
                         <span class="mt-3 block text-xs font-medium text-gray-400">이O호 님</span>
                     </div>
-
                     <div class="rounded-2xl border-2 border-blue-100 bg-white p-5 shadow-sm">
-                        <div class="flex items-center gap-0.5 text-accent text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
+                        <div class="flex items-center gap-0.5 text-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         <p class="mt-3 text-sm leading-relaxed text-gray-800">실제 후기 키워드가 너무 정확했어요. 친절하고 꼼꼼한 팀 만나서 이사 스트레스 없었습니다.</p>
                         <span class="mt-3 block text-xs font-medium text-gray-400">박O경 님</span>
                     </div>
