@@ -3,19 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>포장이사 비교 서비스</title>
+<title>포장이사 비교견적</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 /* =========================
-   DESIGN SYSTEM
+   DESIGN SYSTEM (MOAPICK-STYLE)
 ========================= */
 
 :root{
+--bg:#f4f6fb;
+--card:#ffffff;
+--text:#0f172a;
+--muted:#64748b;
+--line:#e6e8ef;
 
-/* spacing */
+--primary:#111827;
+--accent:#facc15;
+
+--r1:10px;
+--r2:14px;
+--r3:18px;
+
 --s1:4px;
 --s2:8px;
 --s3:12px;
@@ -24,20 +35,8 @@
 --s6:32px;
 --s7:48px;
 
-/* colors */
---bg:#f5f7fb;
---card:#ffffff;
---text:#111;
---muted:#6b7280;
---line:#e5e7eb;
-
-/* radius */
---r1:10px;
---r2:14px;
---r3:18px;
-
-/* shadow */
---shadow:0 10px 30px rgba(0,0,0,0.06);
+--shadow:0 12px 30px rgba(0,0,0,0.06);
+--shadow2:0 20px 50px rgba(0,0,0,0.08);
 }
 
 *{box-sizing:border-box;}
@@ -47,66 +46,66 @@ margin:0;
 font-family:'Inter','Noto Sans KR',sans-serif;
 background:var(--bg);
 color:var(--text);
-line-height:1.5;
 }
 
 /* =========================
-   TOP BAR
+   HEADER (minimal brand)
 ========================= */
 
 .topbar{
-background:#0f1115;
+background:#0b0f19;
 color:#fff;
-padding:14px 20px;
+padding:12px 18px;
 display:flex;
 justify-content:space-between;
-font-size:13px;
+font-size:12px;
 }
 
-.topbar strong{font-weight:700;}
+.topbar strong{font-weight:800;}
 .topbar span{opacity:0.7;}
 
 /* =========================
-   HERO
+   HERO (MOAPICK STYLE)
 ========================= */
 
 .hero{
-background:linear-gradient(135deg,#0f1115,#1f2937);
+background:linear-gradient(135deg,#0b0f19,#1f2937);
 color:#fff;
-padding:80px 20px 60px;
+padding:90px 20px 70px;
 text-align:center;
 }
 
 .hero h1{
 margin:0;
-font-size:38px;
+font-size:42px;
 font-weight:900;
-letter-spacing:-0.8px;
+letter-spacing:-1px;
+line-height:1.2;
 }
 
 .hero p{
 margin-top:14px;
 font-size:15px;
-opacity:0.85;
+opacity:0.8;
 }
 
-.hero-badge{
+.badge{
 display:inline-block;
 margin-top:18px;
 padding:6px 14px;
 border-radius:999px;
-background:#facc15;
+background:var(--accent);
 color:#111;
-font-weight:700;
+font-weight:800;
 font-size:12px;
 }
 
 /* =========================
-   WRAP
+   WRAP (tight system spacing)
 ========================= */
 
 .wrap{
-max-width:1100px;
+max-width:1140px;
 margin:-40px auto 0;
 padding:20px;
 }
@@ -116,33 +115,34 @@ padding:20px;
 ========================= */
 
 .section-title{
-font-size:15px;
+font-size:14px;
 font-weight:800;
-margin:30px 0 14px;
+margin:28px 0 14px;
 color:#111;
 }
 
 /* =========================
-   GRID
+   GRID (UI SYSTEM)
 ========================= */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:16px;
+gap:14px;
 }
 
 .card{
 background:var(--card);
 border:1px solid var(--line);
 border-radius:var(--r3);
-padding:20px;
+padding:18px;
 box-shadow:var(--shadow);
-transition:0.2s;
+transition:0.2s ease;
 }
 
 .card:hover{
 transform:translateY(-3px);
+box-shadow:var(--shadow2);
 }
 
 .card h3{
@@ -155,35 +155,49 @@ font-weight:800;
 margin:0;
 font-size:13px;
 color:var(--muted);
+line-height:1.5;
 }
 
 /* =========================
-   FEATURE STRIP
+   META STRIP (MOAPICK STYLE)
 ========================= */
 
 .strip{
-margin-top:18px;
+margin-top:16px;
 background:#fff;
 border:1px solid var(--line);
-border-radius:var(--r3);
-padding:16px 18px;
+border-radius:16px;
+padding:14px 18px;
 display:flex;
 justify-content:space-between;
 font-size:13px;
-color:#444;
+color:#555;
 }
 
 /* =========================
-   CTA BLOCK (IMPORTANT)
+   CTA BLOCK (PRODUCT STYLE)
 ========================= */
 
 .cta{
-margin-top:26px;
+margin-top:24px;
 background:#fff;
 border-radius:20px;
-border:1px solid #e5e7eb;
-box-shadow:0 20px 40px rgba(0,0,0,0.06);
+border:1px solid var(--line);
+box-shadow:var(--shadow2);
 padding:22px;
+position:relative;
+overflow:hidden;
+}
+
+/* top accent bar */
+.cta::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:linear-gradient(90deg,#facc15,#f97316,#facc15);
 }
 
 .cta-title{
@@ -194,21 +208,23 @@ margin-bottom:6px;
 
 .cta-sub{
 font-size:13px;
-color:#6b7280;
+color:var(--muted);
 margin-bottom:14px;
+line-height:1.5;
 }
 
-/* iframe container (핵심 안정화) */
-.iframe-box{
+/* FORM FRAME (IMPORTANT FIX) */
+.frame{
 width:100%;
-min-height:720px;
+min-height:780px;
 border-radius:14px;
 overflow:hidden;
 background:#fff;
+border:1px solid #eee;
 }
 
 /* =========================
-   TRUST BAR
+   TRUST BLOCK
 ========================= */
 
 .trust{
@@ -221,7 +237,7 @@ gap:12px;
 .trust div{
 background:#fff;
 border:1px solid var(--line);
-border-radius:12px;
+border-radius:14px;
 padding:14px;
 font-size:12px;
 color:#555;
@@ -234,17 +250,17 @@ color:#555;
 .footer{
 text-align:center;
 font-size:11px;
-color:#9ca3af;
+color:#94a3b8;
 padding:30px 10px;
 }
 
 /* =========================
-   MOBILE
+   MOBILE SYSTEM
 ========================= */
 
 @media(max-width:768px){
 
-.hero h1{font-size:24px;}
+.hero h1{font-size:26px;}
 
 .grid{
 grid-template-columns:1fr;
@@ -259,8 +275,8 @@ gap:6px;
 grid-template-columns:1fr;
 }
 
-.iframe-box{
-min-height:850px;
+.frame{
+min-height:900px;
 }
 
 }
@@ -272,41 +288,41 @@ min-height:850px;
 
 <div class="topbar">
   <strong>Moving Compare</strong>
-  <span>조건 기반 견적 시스템</span>
+  <span>Condition-based quotation system</span>
 </div>
 
 <div class="hero">
   <h1>포장이사 비용은 조건에 따라 달라집니다</h1>
-  <p>지역 / 일정 / 짐량에 따라 업체별 견적 차이가 발생합니다</p>
-  <div class="hero-badge">비교 기반 시스템</div>
+  <p>지역 · 일정 · 짐량에 따라 업체별 견적이 달라질 수 있습니다</p>
+  <div class="badge">COMPARE SYSTEM</div>
 </div>
 
 <div class="wrap">
 
-  <div class="section-title">서비스 구성</div>
+  <div class="section-title">핵심 서비스</div>
 
   <div class="grid">
 
     <div class="card">
       <h3>지역 자동 매칭</h3>
-      <p>입력된 지역 기준으로 가능한 업체가 자동 연결됩니다.</p>
+      <p>입력한 지역 기반으로 가능한 업체를 자동 연결합니다.</p>
     </div>
 
     <div class="card">
       <h3>조건 기반 견적</h3>
-      <p>이사 조건에 따라 비용이 달라집니다.</p>
+      <p>이사 조건에 따라 비용이 구조적으로 달라집니다.</p>
     </div>
 
     <div class="card">
-      <h3>비교 선택 구조</h3>
-      <p>여러 업체 조건을 비교 후 선택할 수 있습니다.</p>
+      <h3>비교 선택 시스템</h3>
+      <p>여러 조건을 비교하고 선택할 수 있는 구조입니다.</p>
     </div>
 
   </div>
 
   <div class="strip">
     <div>업체별 견적은 조건에 따라 차이가 발생합니다</div>
-    <div>비교 기반 선택 시스템</div>
+    <div>비교 기반 선택 구조</div>
   </div>
 
   <div class="section-title">상담 진행</div>
@@ -314,10 +330,9 @@ min-height:850px;
   <div class="cta">
 
     <div class="cta-title">이사 조건 입력</div>
-    <div class="cta-sub">간단한 정보 입력 후 상담이 연결됩니다</div>
+    <div class="cta-sub">간단한 정보 입력 후 조건에 맞는 상담이 진행됩니다</div>
 
-    <div class="iframe-box">
-
+    <div class="frame">
       <iframe name="ifrm_icode"
               id="ifrCCAl"
               scrolling="no"
@@ -325,16 +340,15 @@ min-height:850px;
               width="100%"
               src="https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope">
       </iframe>
-
     </div>
 
   </div>
 
   <div class="trust">
 
-    <div>지역 기반 매칭</div>
-    <div>조건 자동 분석</div>
-    <div>빠른 상담 연결</div>
+    <div>UI 시스템 적용</div>
+    <div>조건 기반 구조</div>
+    <div>자동 상담 연결</div>
 
   </div>
 
@@ -348,11 +362,11 @@ min-height:850px;
 <script src="https://replyalba.com/js/iframeResizer.min.js"></script>
 <script>
 $("#ifrCCAl").iFrameResize({
-  autoResize:true,
-  checkOrigin:true,
-  heightCalculationMethod:"offset",
-  scrolling:false,
-  sizeHeight:true
+autoResize:true,
+checkOrigin:true,
+heightCalculationMethod:"offset",
+scrolling:false,
+sizeHeight:true
 });
 </script>
 
