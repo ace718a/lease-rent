@@ -1,374 +1,245 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>포장이사 비교견적</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-
-/* =========================
-   DESIGN SYSTEM (MOAPICK-STYLE)
-========================= */
-
-:root{
---bg:#f4f6fb;
---card:#ffffff;
---text:#0f172a;
---muted:#64748b;
---line:#e6e8ef;
-
---primary:#111827;
---accent:#facc15;
-
---r1:10px;
---r2:14px;
---r3:18px;
-
---s1:4px;
---s2:8px;
---s3:12px;
---s4:16px;
---s5:24px;
---s6:32px;
---s7:48px;
-
---shadow:0 12px 30px rgba(0,0,0,0.06);
---shadow2:0 20px 50px rgba(0,0,0,0.08);
-}
-
-*{box-sizing:border-box;}
-
-body{
-margin:0;
-font-family:'Inter','Noto Sans KR',sans-serif;
-background:var(--bg);
-color:var(--text);
-}
-
-/* =========================
-   HEADER (minimal brand)
-========================= */
-
-.topbar{
-background:#0b0f19;
-color:#fff;
-padding:12px 18px;
-display:flex;
-justify-content:space-between;
-font-size:12px;
-}
-
-.topbar strong{font-weight:800;}
-.topbar span{opacity:0.7;}
-
-/* =========================
-   HERO (MOAPICK STYLE)
-========================= */
-
-.hero{
-background:linear-gradient(135deg,#0b0f19,#1f2937);
-color:#fff;
-padding:90px 20px 70px;
-text-align:center;
-}
-
-.hero h1{
-margin:0;
-font-size:42px;
-font-weight:900;
-letter-spacing:-1px;
-line-height:1.2;
-}
-
-.hero p{
-margin-top:14px;
-font-size:15px;
-opacity:0.8;
-}
-
-.badge{
-display:inline-block;
-margin-top:18px;
-padding:6px 14px;
-border-radius:999px;
-background:var(--accent);
-color:#111;
-font-weight:800;
-font-size:12px;
-}
-
-/* =========================
-   WRAP (tight system spacing)
-========================= */
-
-.wrap{
-max-width:1140px;
-margin:-40px auto 0;
-padding:20px;
-}
-
-/* =========================
-   SECTION TITLE
-========================= */
-
-.section-title{
-font-size:14px;
-font-weight:800;
-margin:28px 0 14px;
-color:#111;
-}
-
-/* =========================
-   GRID (UI SYSTEM)
-========================= */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-}
-
-.card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:var(--r3);
-padding:18px;
-box-shadow:var(--shadow);
-transition:0.2s ease;
-}
-
-.card:hover{
-transform:translateY(-3px);
-box-shadow:var(--shadow2);
-}
-
-.card h3{
-margin:0 0 8px;
-font-size:15px;
-font-weight:800;
-}
-
-.card p{
-margin:0;
-font-size:13px;
-color:var(--muted);
-line-height:1.5;
-}
-
-/* =========================
-   META STRIP (MOAPICK STYLE)
-========================= */
-
-.strip{
-margin-top:16px;
-background:#fff;
-border:1px solid var(--line);
-border-radius:16px;
-padding:14px 18px;
-display:flex;
-justify-content:space-between;
-font-size:13px;
-color:#555;
-}
-
-/* =========================
-   CTA BLOCK (PRODUCT STYLE)
-========================= */
-
-.cta{
-margin-top:24px;
-background:#fff;
-border-radius:20px;
-border:1px solid var(--line);
-box-shadow:var(--shadow2);
-padding:22px;
-position:relative;
-overflow:hidden;
-}
-
-/* top accent bar */
-.cta::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:4px;
-background:linear-gradient(90deg,#facc15,#f97316,#facc15);
-}
-
-.cta-title{
-font-size:18px;
-font-weight:900;
-margin-bottom:6px;
-}
-
-.cta-sub{
-font-size:13px;
-color:var(--muted);
-margin-bottom:14px;
-line-height:1.5;
-}
-
-/* FORM FRAME (IMPORTANT FIX) */
-.frame{
-width:100%;
-min-height:780px;
-border-radius:14px;
-overflow:hidden;
-background:#fff;
-border:1px solid #eee;
-}
-
-/* =========================
-   TRUST BLOCK
-========================= */
-
-.trust{
-margin-top:18px;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-}
-
-.trust div{
-background:#fff;
-border:1px solid var(--line);
-border-radius:14px;
-padding:14px;
-font-size:12px;
-color:#555;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-text-align:center;
-font-size:11px;
-color:#94a3b8;
-padding:30px 10px;
-}
-
-/* =========================
-   MOBILE SYSTEM
-========================= */
-
-@media(max-width:768px){
-
-.hero h1{font-size:26px;}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.strip{
-flex-direction:column;
-gap:6px;
-}
-
-.trust{
-grid-template-columns:1fr;
-}
-
-.frame{
-min-height:900px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포장이사 무료견적 비교 | 1분 만에 최저가 매칭</title>
+  <meta name="description" content="검증된 전문 이사업체들의 견적을 1분 만에 무료로 비교하세요. 최대 50% 비용 절감!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe',
+              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes pulse-cta { 0%,100%{transform:scale(1)} 50%{transform:scale(1.03)} }
+    .animate-cta { animation: pulse-cta 2s ease-in-out infinite; }
+  </style>
 </head>
+<body class="bg-white text-slate-800 antialiased">
 
-<body>
-
-<div class="topbar">
-  <strong>Moving Compare</strong>
-  <span>Condition-based quotation system</span>
-</div>
-
-<div class="hero">
-  <h1>포장이사 비용은 조건에 따라 달라집니다</h1>
-  <p>지역 · 일정 · 짐량에 따라 업체별 견적이 달라질 수 있습니다</p>
-  <div class="badge">COMPARE SYSTEM</div>
-</div>
-
-<div class="wrap">
-
-  <div class="section-title">핵심 서비스</div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>지역 자동 매칭</h3>
-      <p>입력한 지역 기반으로 가능한 업체를 자동 연결합니다.</p>
+  <!-- 상단 고정 바 -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100">
+    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+      <span class="font-extrabold text-lg text-brand-700">이사<span class="text-slate-800">견적비교</span></span>
+      <a href="#apply" class="text-sm font-bold bg-brand-600 text-white px-4 py-2 rounded-full">무료 견적받기</a>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>조건 기반 견적</h3>
-      <p>이사 조건에 따라 비용이 구조적으로 달라집니다.</p>
-    </div>
+  <main class="max-w-md mx-auto">
 
-    <div class="card">
-      <h3>비교 선택 시스템</h3>
-      <p>여러 조건을 비교하고 선택할 수 있는 구조입니다.</p>
-    </div>
+    <!-- 1. 히어로 섹션 -->
+    <section class="relative px-5 pt-10 pb-12 bg-gradient-to-b from-brand-50 to-white text-center">
+      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+        🚚 전국 검증된 이사 전문업체 비교
+      </span>
+      <h1 class="text-3xl font-extrabold leading-snug text-slate-900 text-balance">
+        포장이사,<br/>
+        <span class="text-brand-600">단 1분</span>이면<br/>
+        최저가 견적 비교 끝!
+      </h1>
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        여러 업체에 일일이 전화할 필요 없이<br/>
+        클릭 한 번으로 <b class="text-slate-900">최대 50% 저렴한 견적</b>을<br/>
+        무료로 받아보세요.
+      </p>
 
+      <!-- 혜택 요약 -->
+      <div class="mt-6 grid grid-cols-3 gap-2">
+        <div class="bg-white rounded-xl border border-brand-100 py-3 shadow-sm">
+          <p class="text-xl font-extrabold text-brand-600">100%</p>
+          <p class="text-xs text-slate-500 mt-1">무료 상담</p>
+        </div>
+        <div class="bg-white rounded-xl border border-brand-100 py-3 shadow-sm">
+          <p class="text-xl font-extrabold text-brand-600">최대 50%</p>
+          <p class="text-xs text-slate-500 mt-1">비용 절감</p>
+        </div>
+        <div class="bg-white rounded-xl border border-brand-100 py-3 shadow-sm">
+          <p class="text-xl font-extrabold text-brand-600">1분</p>
+          <p class="text-xs text-slate-500 mt-1">빠른 매칭</p>
+        </div>
+      </div>
+
+      <!-- 대형 CTA -->
+      <a href="#apply" class="animate-cta mt-8 block w-full bg-brand-600 hover:bg-brand-700 text-white text-lg font-extrabold py-4 rounded-2xl shadow-lg shadow-brand-200 transition">
+        👇 무료 견적 신청하기
+      </a>
+      <p class="mt-3 text-xs text-slate-400">* 신청 후 30초 내 견적 비교 안내</p>
+    </section>
+
+    <!-- 2. 서비스 특장점 -->
+    <section class="px-5 py-12">
+      <h2 class="text-2xl font-extrabold text-center text-slate-900">왜 여기서<br/>견적을 받아야 할까요?</h2>
+      <p class="text-center text-slate-500 mt-2 text-sm">번거로운 이사 견적, 똑똑하게 비교하세요</p>
+
+      <div class="mt-8 space-y-4">
+        <div class="flex items-start gap-4 bg-slate-50 p-4 rounded-2xl">
+          <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center text-2xl">⚡</div>
+          <div>
+            <h3 class="font-bold text-slate-900">단 1분 만에 즉시 매칭</h3>
+            <p class="text-sm text-slate-600 mt-1 leading-relaxed">간단한 정보 입력만으로 우리 동네 우수 업체를 자동으로 연결해 드립니다.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-slate-50 p-4 rounded-2xl">
+          <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center text-2xl">🛡️</div>
+          <div>
+            <h3 class="font-bold text-slate-900">100% 검증된 전문가 구성</h3>
+            <p class="text-sm text-slate-600 mt-1 leading-relaxed">엄격한 심사를 통과한 정식 등록 이사업체만 매칭하여 안심하고 맡길 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-slate-50 p-4 rounded-2xl">
+          <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center text-2xl">💰</div>
+          <div>
+            <h3 class="font-bold text-slate-900">최대 50% 비용 절감</h3>
+            <p class="text-sm text-slate-600 mt-1 leading-relaxed">여러 업체가 경쟁 견적을 제시하여 가장 합리적인 가격으로 이사할 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-slate-50 p-4 rounded-2xl">
+          <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center text-2xl">📞</div>
+          <div>
+            <h3 class="font-bold text-slate-900">무료 상담 & 부담 ZERO</h3>
+            <p class="text-sm text-slate-600 mt-1 leading-relaxed">견적 비교와 상담은 전액 무료이며, 계약 의무가 전혀 없습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 신뢰도 섹션 (Social Proof) -->
+    <section class="px-5 py-12 bg-brand-50">
+      <h2 class="text-2xl font-extrabold text-center text-slate-900">고객님들의<br/>생생한 이용 후기</h2>
+      <div class="flex items-center justify-center gap-1 mt-3">
+        <span class="text-yellow-400 text-xl">★★★★★</span>
+        <span class="font-bold text-slate-900 ml-1">4.9</span>
+        <span class="text-slate-500 text-sm">/ 5.0 (2,847건)</span>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center font-bold text-brand-700">김</div>
+            <div>
+              <p class="font-bold text-sm text-slate-900">김O연 님 <span class="text-slate-400 font-normal">· 서울 강서구</span></p>
+              <p class="text-yellow-400 text-sm">★★★★★</p>
+            </div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">"3곳 견적을 한 번에 받아보고 비교하니까 너무 편했어요. 생각보다 20만원이나 아꼈습니다!"</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center font-bold text-brand-700">박</div>
+            <div>
+              <p class="font-bold text-sm text-slate-900">박O준 님 <span class="text-slate-400 font-normal">· 경기 성남시</span></p>
+              <p class="text-yellow-400 text-sm">★★★★★</p>
+            </div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">"기사님들이 정말 전문가시더라고요. 짐 정리부터 배치까지 깔끔하게 끝났습니다. 강추해요!"</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center font-bold text-brand-700">이</div>
+            <div>
+              <p class="font-bold text-sm text-slate-900">이O희 님 <span class="text-slate-400 font-normal">· 인천 부평구</span></p>
+              <p class="text-yellow-400 text-sm">★★★★★</p>
+            </div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">"전화 한 통 없이 문자로 견적 비교받고 바로 예약했어요. 신청 정말 간단합니다."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 비포앤애프터 섹션 -->
+    <section class="px-5 py-12">
+      <h2 class="text-2xl font-extrabold text-center text-slate-900">전문가의 손길,<br/>이렇게 달라집니다</h2>
+      <p class="text-center text-slate-500 mt-2 text-sm">포장부터 정리정돈까지 완벽하게</p>
+
+      <div class="mt-8 grid grid-cols-2 gap-3">
+        <div class="relative rounded-2xl overflow-hidden border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1530712855109-94aff9b66a4b?w=600&q=80" alt="이사 전 정리되지 않은 짐 상자들" class="w-full h-48 object-cover" />
+          <span class="absolute top-2 left-2 bg-slate-900/80 text-white text-xs font-bold px-3 py-1 rounded-full">BEFORE</span>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden border-2 border-brand-500">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=80" alt="이사 후 깔끔하게 정리된 거실" class="w-full h-48 object-cover" />
+          <span class="absolute top-2 left-2 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">AFTER</span>
+        </div>
+      </div>
+      <p class="mt-4 text-center text-sm text-slate-600 leading-relaxed">
+        뒤죽박죽 짐들이 <b class="text-brand-600">전문가의 손길</b>로<br/>새 집처럼 깔끔하게 정리됩니다.
+      </p>
+    </section>
+
+    <!-- 5. 하단 DB 신청 폼 섹션 -->
+    <section id="apply" class="px-5 py-12 bg-gradient-to-b from-brand-600 to-brand-700">
+      <div class="text-center text-white">
+        <h2 class="text-2xl font-extrabold">지금 바로<br/>무료 견적 신청하세요</h2>
+        <!-- 실시간 신청 문구 -->
+        <div class="mt-4 inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
+          </span>
+          현재 <b class="font-extrabold">3,124명</b>이 견적 비교를 신청했습니다
+        </div>
+      </div>
+
+      <!-- 폼 카드 -->
+      <div class="mt-6 bg-white rounded-3xl p-5 shadow-2xl">
+        <div class="flex items-center justify-center gap-4 pb-4 mb-4 border-b border-slate-100 text-center">
+          <div>
+            <p class="text-xl font-extrabold text-brand-600">무료</p>
+            <p class="text-xs text-slate-500">상담 비용</p>
+          </div>
+          <div class="w-px h-8 bg-slate-200"></div>
+          <div>
+            <p class="text-xl font-extrabold text-brand-600">30초</p>
+            <p class="text-xs text-slate-500">신청 시간</p>
+          </div>
+          <div class="w-px h-8 bg-slate-200"></div>
+          <div>
+            <p class="text-xl font-extrabold text-brand-600">즉시</p>
+            <p class="text-xs text-slate-500">견적 매칭</p>
+          </div>
+        </div>
+
+        <!-- ▼▼▼ 제공된 iframe & 스크립트 삽입 영역 ▼▼▼ -->
+        <iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope"></iframe>
+        <script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script>
+        <script type="text/javascript">
+          $("#ifrCCAl").iFrameResize({autoResize: true,bodyBackground: null,bodyMargin: null,bodyMarginV1: 0,bodyPadding: null,checkOrigin: true,enablePublicMethods: false,heightCalculationMethod: "offset",interval: 32,log: false,maxHeight: Infinity,maxWidth: Infinity,minHeight: 0,minWidth: 0,scrolling: false,sizeHeight: true,sizeWidth: false,tolerance: 0,closedCallback: function () { },initCallback: function () { },messageCallback: function () { },resizedCallback: function () { },callback: function (messageData) {return true;}});
+        </script>
+        <!-- ▲▲▲ 삽입 영역 끝 ▲▲▲ -->
+
+        <p class="mt-4 text-center text-xs text-slate-400 leading-relaxed">
+          🔒 입력하신 정보는 견적 상담 목적으로만 사용되며<br/>안전하게 보호됩니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="px-5 py-8 bg-slate-900 text-center text-xs text-slate-400 leading-relaxed">
+      <p class="font-bold text-slate-200 mb-2">이사견적비교</p>
+      <p>본 페이지는 광고 목적의 견적 비교 서비스입니다.</p>
+      <p class="mt-1">상담 신청 시 제휴 이사업체로부터 연락을 받으실 수 있습니다.</p>
+      <p class="mt-3">© 2026 이사견적비교. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <!-- 모바일 하단 고정 CTA -->
+  <div class="fixed bottom-0 inset-x-0 z-50 max-w-md mx-auto p-3 bg-white/95 backdrop-blur border-t border-slate-100">
+    <a href="#apply" class="block w-full bg-brand-600 hover:bg-brand-700 text-white text-center text-base font-extrabold py-3.5 rounded-2xl shadow-lg transition">
+      1분 만에 무료 견적 비교받기 →
+    </a>
   </div>
-
-  <div class="strip">
-    <div>업체별 견적은 조건에 따라 차이가 발생합니다</div>
-    <div>비교 기반 선택 구조</div>
-  </div>
-
-  <div class="section-title">상담 진행</div>
-
-  <div class="cta">
-
-    <div class="cta-title">이사 조건 입력</div>
-    <div class="cta-sub">간단한 정보 입력 후 조건에 맞는 상담이 진행됩니다</div>
-
-    <div class="frame">
-      <iframe name="ifrm_icode"
-              id="ifrCCAl"
-              scrolling="no"
-              frameborder="0"
-              width="100%"
-              src="https://replyalba.com/intros/_frm/index.php?code=WrHxEC3ope">
-      </iframe>
-    </div>
-
-  </div>
-
-  <div class="trust">
-
-    <div>UI 시스템 적용</div>
-    <div>조건 기반 구조</div>
-    <div>자동 상담 연결</div>
-
-  </div>
-
-</div>
-
-<div class="footer">
-본 페이지는 제휴 마케팅이 포함될 수 있습니다.
-</div>
-
-<script src="https://replyalba.com/js/jquery-1.11.0.min.js"></script>
-<script src="https://replyalba.com/js/iframeResizer.min.js"></script>
-<script>
-$("#ifrCCAl").iFrameResize({
-autoResize:true,
-checkOrigin:true,
-heightCalculationMethod:"offset",
-scrolling:false,
-sizeHeight:true
-});
-</script>
+  <div class="h-20"></div>
 
 </body>
 </html>
