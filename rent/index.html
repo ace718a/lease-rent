@@ -237,8 +237,8 @@ let html="";
 cars.forEach(c=>{
 html+=`
 <div class="car-card">
-<img src="${c.img}">
-<div class="car-detail">
+ <img src="${c.img}" alt="${c.name}">
+ <div class="car-detail">
 <div class="car-tag">${c.tag}</div>
 <div class="car-name">${c.name}</div>
 <div class="price-del">${c.old}</div>
