@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 메인 -->
+  <url>
+    <loc>https://moapick.co.kr/</loc>
+  </url>
+
+  <!-- 랜딩페이지 -->
+  <url>
+    <loc>https://moapick.co.kr/24</loc>
+  </url>
+
+  <url>
+    <loc>https://moapick.co.kr/rent</loc>
+  </url>
+
+  <!-- 일반 정보 -->
+  <url>
+    <loc>https://moapick.co.kr/info/1</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/info/2</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/info/3</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/info/4</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/info/5</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/info/6</loc>
+  </url>
+
+  <!-- 이사 가이드 -->
+  <url>
+    <loc>https://moapick.co.kr/24-guide/1</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/2</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/3</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/4</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/5</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/6</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/7</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/8</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/9</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/10</loc>
+  </url>
+
+  <!-- 장기렌트 가이드 -->
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/1</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/2</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/3</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/4</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/5</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/6</loc>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/7</loc>
+  </url>
+
+</urlset>
