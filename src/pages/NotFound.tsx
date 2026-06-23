@@ -8,3 +8,15 @@ export default function NotFound() {
       </h1>
       <div className="relative z-10">
         <h2 className="text-xl md:text-2xl font-semibold mt-6 text-foreground-950">
+          This page has not been generated
+        </h2>
+        <p className="mt-2 text-base text-foreground-500 font-mono">
+          {location.pathname}
+        </p>
+        <p className="mt-4 text-lg md:text-xl text-foreground-600">
+          Tell me more about this page, so I can generate it
+        </p>
+      </div>
+    </div>
+  );
+}
