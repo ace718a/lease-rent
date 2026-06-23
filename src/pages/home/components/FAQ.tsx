@@ -1,5 +1,9 @@
 import { useState } from "react";
-const faqs = [
+type FaqItem = {
+  q: string;
+  a: string;
+};
+const faqs: FaqItem[] = [
   {
     q: "모아픽 서비스는 정말 무료인가요?",
     a: "네, 모아픽의 모든 견적 비교와 상담은 100% 무료입니다. 신청 후 별도의 가입비나 수수료가 청구되지 않으며, 최종 계약은 본인이 직접 비교 후 결정하시면 됩니다.",
@@ -49,3 +53,33 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? null : idx)}
                   className="w-full flex items-center justify-between gap-4 px-5 md:px-6 py-5 text-left cursor-pointer"
                 >
+                  <span className="flex items-start gap-3">
+                    <span className="mt-0.5 w-6 h-6 flex items-center justify-center rounded-full bg-primary-500 text-background-50 text-xs font-bold">
+                      Q
+                    </span>
+                    <span className="font-semibold text-foreground-950 text-base md:text-lg">
+                      {item.q}
+                    </span>
+                  </span>
+                  <i className={"ri-arrow-down-s-line text-2xl text-foreground-500 transition-transform shrink-0" + (isOpen ? " rotate-180 text-primary-500" : "")} />
+                </button>
+                {isOpen && (
+                  <div className="px-5 md:px-6 pb-6 pt-0">
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 w-6 h-6 flex items-center justify-center rounded-full bg-accent-100 text-accent-800 text-xs font-bold">
+                        A
+                      </span>
+                      <p className="text-foreground-700 text-sm md:text-base leading-relaxed">
+                        {item.a}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
