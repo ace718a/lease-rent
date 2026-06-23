@@ -4,28 +4,24 @@ const quickServices = [
     desc: "검증된 업체에서\n무료 최저가 견적",
     href: "https://moapick.co.kr/24",
     icon: "ri-truck-line",
-    seq: "moapick-hero-card-moving-01",
   },
   {
     title: "장기렌트카",
     desc: "전 차종 비교\n월 납입금 한눈에",
     href: "https://moapick.co.kr/rent",
     icon: "ri-roadster-line",
-    seq: "moapick-hero-card-rent-01",
   },
   {
     title: "인터넷가입",
     desc: "통신 3사 최대\n현금 사은품 안내",
     href: "#internet",
     icon: "ri-wifi-line",
-    seq: "moapick-hero-card-internet-01",
   },
   {
     title: "정수기렌탈",
     desc: "월 렌탈료부터\n관리 서비스까지",
     href: "#water",
     icon: "ri-drop-line",
-    seq: "moapick-hero-card-water-01",
   },
 ];
 export default function Hero() {
@@ -93,6 +89,40 @@ export default function Hero() {
         <div className="lg:col-span-5">
           <div className="relative rounded-2xl overflow-hidden border border-background-200">
             <img
-              src="https://readdy.ai/api/search-image?width=900&height=900&seq=moapick-hero-main-2026-01&orientation=squarish&query=Stylized editorial illustration of a cheerful Korean family moving into a new sunny apartment with cardboard boxes a small car a water purifier and a wifi router floating softly around them on a warm cream coral gold pastel background clean minimal composition soft natural light warm tones friendly mood high detail product editorial photography style"
+              src="https://readdy.ai/api/search-image?width=900&height=900&seq=moapick-hero-main-2026-01&orientation=squarish&query=Stylized%20editorial%20illustration%20of%20a%20cheerful%20Korean%20family%20moving%20into%20a%20new%20sunny%20apartment%20with%20cardboard%20boxes%20a%20small%20car%20a%20water%20purifier%20and%20a%20wifi%20router%20floating%20softly%20around%20them%20on%20a%20warm%20cream%20coral%20gold%20pastel%20background%20clean%20minimal%20composition%20soft%20natural%20light%20warm%20tones%20friendly%20mood%20high%20detail"
               alt="모아픽 - 생활 서비스 한곳에"
-              className="w-full h-[420px] m
+              className="w-full h-[420px] md:h-[520px] object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground-950/10 to-transparent" />
+          </div>
+        </div>
+      </div>
+      <div id="services" className="relative mx-auto max-w-7xl px-4 md:px-8 mt-12 md:mt-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+          {quickServices.map((s) => (
+            <a
+              key={s.title}
+              href={s.href}
+              target={s.href.startsWith("http") ? "_blank" : undefined}
+              rel={s.href.startsWith("http") ? "noopener" : undefined}
+              className="group relative rounded-xl bg-background-50 hover:bg-background-100 border border-background-200/80 hover:border-primary-300 p-5 transition-colors cursor-pointer"
+            >
+              <div className="flex items-center justify-between">
+                <span className="w-11 h-11 flex items-center justify-center rounded-md bg-primary-100 text-primary-700 group-hover:bg-primary-500 group-hover:text-background-50 transition-colors">
+                  <i className={s.icon + " text-xl"} />
+                </span>
+                <i className="ri-arrow-right-up-line text-foreground-400 group-hover:text-primary-500 text-lg" />
+              </div>
+              <h3 className="mt-4 font-heading font-bold text-foreground-950 text-base md:text-lg">
+                {s.title}
+              </h3>
+              <p className="mt-1 text-xs md:text-sm text-foreground-600 whitespace-pre-line leading-relaxed">
+                {s.desc}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
