@@ -1,21 +1,14 @@
-const modules = import.meta.glob('./*/*.ts', { eager: true });
+const modules = import.meta.glob('./*/*.ts', { eager: true }) as Record<string, { default?: Record<string, string> }>;
 const messages: Record<string, { translation: Record<string, string> }> = {};
-Object.keys(modules).forEach((path) => {
-  const match = path.match(/\.\/([^/]+)\/([^/]+)\.ts$/);
-  if (match) {
-    const [, lang] = match;
-    const module = modules[path] as { default?: Record<string, string> };
-  <br>
-    if (!messages[lang]) {
-      messages[lang] = { translation: {} };
-    }
-  <br>
-    if (module.default) {
-      messages[lang].translation = {
-        ...messages[lang].translation,
-        ...module.default
-      };
-    }
+for (const path of Object.keys(modules)) {
+  const parts = path.split('/');
+  const lang = parts[1];
+  if (!messages[lang]) {
+    messages[lang] = { translation: {} };
   }
-});
+  const mod = modules[path];
+  if (mod.default) {
+    Object.assign(messages[lang].translation, mod.default);
+  }
+}
 export default messages;
