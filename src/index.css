@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --background-50: 0.992 0.004 90;
+  --background-100: 0.976 0.008 85;
+  --background-200: 0.948 0.012 80;
+  --background-300: 0.910 0.016 78;
+  --background-400: 0.842 0.018 75;
+  --background-500: 0.760 0.020 72;
+  --background-600: 0.640 0.020 70;
+  --background-700: 0.500 0.018 68;
+  --background-800: 0.360 0.014 65;
+  --background-900: 0.240 0.012 60;
+  --background-950: 0.160 0.010 55;
+  --foreground-50: 0.985 0.003 80;
+  --foreground-100: 0.955 0.005 78;
+  --foreground-200: 0.900 0.008 70;
+  --foreground-300: 0.820 0.010 65;
+  --foreground-400: 0.700 0.012 62;
+  --foreground-500: 0.560 0.014 60;
+  --foreground-600: 0.440 0.014 58;
+  --foreground-700: 0.340 0.012 55;
+  --foreground-800: 0.240 0.010 50;
+  --foreground-900: 0.170 0.010 45;
+  --foreground-950: 0.120 0.012 40;
+  --primary-50: 0.975 0.012 28;
+  --primary-100: 0.945 0.030 28;
+  --primary-200: 0.890 0.070 27;
+  --primary-300: 0.820 0.120 27;
+  --primary-400: 0.730 0.170 26;
+  --primary-500: 0.640 0.205 25;
+  --primary-600: 0.560 0.210 24;
+  --primary-700: 0.470 0.190 23;
+  --primary-800: 0.380 0.160 22;
+  --primary-900: 0.290 0.120 21;
+  --primary-950: 0.200 0.090 20;
+  --accent-50: 0.985 0.018 90;
+  --accent-100: 0.960 0.040 90;
+  --accent-200: 0.920 0.080 88;
+  --accent-300: 0.870 0.130 86;
+  --accent-400: 0.820 0.165 84;
+  --accent-500: 0.770 0.180 80;
+  --accent-600: 0.680 0.170 75;
+  --accent-700: 0.560 0.150 70;
+  --accent-800: 0.440 0.120 65;
+  --accent-900: 0.320 0.090 60;
+  --accent-950: 0.220 0.070 55;
+  --secondary-50: 0.975 0.008 220;
+  --secondary-100: 0.945 0.014 220;
+  --secondary-200: 0.895 0.022 220;
+  --secondary-300: 0.820 0.034 220;
+  --secondary-400: 0.700 0.048 220;
+  --secondary-500: 0.560 0.060 220;
+  --secondary-600: 0.460 0.056 222;
+  --secondary-700: 0.370 0.048 224;
+  --secondary-800: 0.280 0.038 226;
+  --secondary-900: 0.200 0.028 228;
+  --secondary-950: 0.140 0.020 230;
+  --font-heading: "Gmarket Sans", "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  --font-body: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  --font-label: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+}
+html,
+body {
+  background-color: oklch(var(--background-50));
+  color: oklch(var(--foreground-900));
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.mp-extra-field {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes mp-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.mp-marquee-track {
+  animation: mp-marquee 35s linear infinite;
+}
+@keyframes mp-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mp-fade-up {
+  animation: mp-fade-up 0.8s ease-out both;
+}
