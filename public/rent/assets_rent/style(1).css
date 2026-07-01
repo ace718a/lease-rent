@@ -19,7 +19,7 @@ body{ font-family: 'Pretendard', sans-serif; font-weight:400; font-size: 16px; l
 section{ display:block; }
 a{ color:inherit; }
 
-.inner{ width:1200px; margin:0 auto; }
+.inner{ width:100%; max-width:1200px; margin:0 auto; padding:0 15px; }
 
 .paging_box{ padding:10px 0; display:flex; align-items: center; justify-content: center; }
 
@@ -70,7 +70,7 @@ p.title { font-size: 32px; padding-bottom: 40px; font-family: 'Gmarket Sans'; fo
 /* --- 카슐랭 헤더 --- */
 header { width: 100%; position: fixed; top: 0; left: 0; background: #fff; z-index: 9999; color: var(--gray); padding: 10px 0; border-bottom: 1px solid var(--gray); }
 /* header.on { color: var(--orange); } */
-header .inner { display: flex; align-items: center; justify-content: space-between; }
+header .inner { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0 15px; }
 header .headerLogoImg { width: ; }
 header ul.headerUl { display: flex; align-items: center; gap: 60px; }
 header ul.headerUl li.headerList {  }
@@ -144,13 +144,13 @@ section.mainVisual.mainVisual_mo { display: none; }
 }
 
 @media screen and (max-width: 720px) {
-    section.mainVisual { padding: 18vw 0 0; }
+    section.mainVisual { padding: 18vw 0 0; display: block !important; }
     section.mainVisual .mainSwiper .pageBox img { width: 10px; }
     section.mainVisual .mainSwiper .pageBox .main-pagination {  font-size: 14px; padding-top: 5px; }
     section.mainVisual .mainSwiper .pageBox { bottom: 10px; }
     section.mainVisual .mainSwiper .swiper-slide .item { width: 100%; aspect-ratio: 4 / 5.4; }
-    section.mainVisual.mainVisual_mo { display: block; }
-    section.mainVisual { display: none; }
+    /* section.mainVisual.mainVisual_mo { display: none !important; } */
+    /* section.mainVisual { display: block; } */
     section.mainVisual.mainVisual_mo .mainSwiper .pageBox { bottom: 10px; right: -50px; justify-content: center; }
 
 }
