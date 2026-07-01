@@ -48,7 +48,7 @@ export async function onRequestPost(context) {
     replyAlbaData.append("hp2", hp2);
     replyAlbaData.append("hp3", hp3);
     replyAlbaData.append("item2", model);
-    replyAlbaData.append("code", "T2KCXF94DF");
+    replyAlbaData.append("code", env.REPLY_ALBA_CODE || "T2KCXF94DF");
 
     for (let i = 0; i < 3; i++) {
         try {
