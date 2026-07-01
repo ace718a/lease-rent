@@ -77,7 +77,7 @@ const applyPopupHandler = () => {
             var wr_subject=$('#phone').val();
             var wr_content=$('#car').val();
             $.ajax({
-                url:g5_bbs_url + '/quick_inquiry_update.php',
+                url: '/rent/api/submit',
                 type:'POST',
                 data:{
                     'wr_name' : wr_name,
@@ -85,6 +85,8 @@ const applyPopupHandler = () => {
                     'wr_content' : wr_content,  
                     'wr_3' : wr_3 ,
                     'bo_table' : 'apply', 
+                    'source': 'popup',
+                    'code': 'T2KCXF94DF'
                 },
                 success:function(result){
                     console.log(result);

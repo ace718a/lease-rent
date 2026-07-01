@@ -7,7 +7,7 @@
 <meta name="robots" content="index,follow">
 <meta name="description" lang="ko" content="카슐랭, 신차장기렌트, 오토리스, 롯데렌터카, 현대캐피탈장기렌트, 삼성카드장기렌트, 하나캐피탈장기렌트, 아마존카, 오릭스장기렌트, 장기렌트카, 수입차장기렌트">
 <meta name="keywords" lang="ko" content="카슐랭, 신차장기렌트, 오토리스, 롯데렌터카, 현대캐피탈장기렌트, 삼성카드장기렌트, 하나캐피탈장기렌트, 아마존카, 오릭스장기렌트, 장기렌트카, 수입차장기렌트">
-<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
 
 
 <meta property="og:description" content="신차장기렌트/리스 맛집 카슐랭">
@@ -1602,8 +1602,12 @@ $(document).ready(function() {
             type: 'POST',
             data: $form.serialize() + "&source=web",
             success: function(res) {
-                $('#customModal').fadeIn();
-                $form[0].reset();
+                if(res === 'OK') {
+                    $('#customModal').fadeIn();
+                    $form[0].reset();
+                } else {
+                    alert('신청 처리 중 오류가 발생했습니다.');
+                }
             },
             error: function() {
                 alert('신청 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');

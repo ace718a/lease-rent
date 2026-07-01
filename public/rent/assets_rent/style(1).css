@@ -126,7 +126,7 @@ header.wh { color: white; background: #071D39; }
 main {  }
 
 /* 메인비쥬얼 섹션 */
-section.mainVisual { max-width: 100%; width: 1600px; margin: 0 auto; padding: 120px 0 0; overflow: hidden; }
+section.mainVisual { max-width: 100%; width: 100%; margin: 0 auto; padding: 120px 0 0; overflow: hidden; }
 section.mainVisual .inner {  }
 section.mainVisual .mainSwiper { position: relative; }
 section.mainVisual .mainSwiper .swiper-wrapper {  }
