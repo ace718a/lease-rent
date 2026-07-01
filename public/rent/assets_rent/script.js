@@ -77,7 +77,7 @@ const applyPopupHandler = () => {
             var wr_subject=$('#phone').val();
             var wr_content=$('#car').val();
             $.ajax({
-                url: '/rent/api/submit',
+                url: './api/submit',
                 type:'POST',
                 data:{
                     'wr_name' : wr_name,
