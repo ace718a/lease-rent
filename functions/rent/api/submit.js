@@ -108,7 +108,7 @@ export async function onRequestPost(context) {
         }
     }
 
-    return new Response(JSON.stringify({ res: true, alba: albaStatus }), {
-        headers: { "Content-Type": "application/json" }
+    return new Response("OK", {
+        headers: { "Content-Type": "text/plain" }
     });
 }
