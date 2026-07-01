@@ -19,7 +19,15 @@ body{ font-family: 'Pretendard', sans-serif; font-weight:400; font-size: 16px; l
 section{ display:block; }
 a{ color:inherit; }
 
-.inner{ width:100%; max-width:1200px; margin:0 auto; padding:0 15px; }
+.inner{ width:100%; max-width:1200px; margin:0 auto; padding:0 15px; box-sizing: border-box; }
+@media screen and (max-width: 720px) {
+    .form_table, .form_table tbody, .form_table tr, .form_table td { display: block !important; width: 100% !important; }
+    .form_table td { padding: 5px 0 !important; }
+    .form_table colgroup { display: none; }
+    .formArea { padding: 10px !important; }
+    .input_style { height: 45px !important; font-size: 16px !important; }
+    .btn01 { width: 100% !important; height: 50px !important; margin-top: 10px; }
+}
 
 .paging_box{ padding:10px 0; display:flex; align-items: center; justify-content: center; }
 
@@ -149,8 +157,8 @@ section.mainVisual.mainVisual_mo { display: none; }
     section.mainVisual .mainSwiper .pageBox .main-pagination {  font-size: 14px; padding-top: 5px; }
     section.mainVisual .mainSwiper .pageBox { bottom: 10px; }
     section.mainVisual .mainSwiper .swiper-slide .item { width: 100%; aspect-ratio: 4 / 5.4; }
-    /* section.mainVisual.mainVisual_mo { display: none !important; } */
-    /* section.mainVisual { display: block; } */
+    section.mainVisual.mainVisual_mo { display: block !important; }
+    section.mainVisual { display: none !important; }
     section.mainVisual.mainVisual_mo .mainSwiper .pageBox { bottom: 10px; right: -50px; justify-content: center; }
 
 }
