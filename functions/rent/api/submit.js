@@ -34,7 +34,7 @@ export async function onRequestPost(context) {
                     headers: { "Content-Type": "application/json" }
                 });
             }
-            await env.CAR_DB.put(lockKey, "true", { expirationTtl: 30 });
+            await env.CAR_DB.put(lockKey, "true", { expirationTtl: 60 });
         } catch (kvError) {
             console.error("KV Error:", kvError);
         }
@@ -84,13 +84,13 @@ export async function onRequestPost(context) {
     if (env.SUPABASE_URL && env.SUPABASE_KEY) {
         try {
             const sbUrl = env.SUPABASE_URL.replace(/\/$/, "");
-            await fetch(`${sbUrl}/rest/v1/quotations`, {
+            const sbResponse = await fetch(`${sbUrl}/rest/v1/quotations`, {
                 method: "POST",
                 headers: {
                     "apikey": env.SUPABASE_KEY,
                     "Authorization": `Bearer ${env.SUPABASE_KEY}`,
                     "Content-Type": "application/json",
-                    "Prefer": "return=minimal"
+                    "Prefer": "return=representation"
                 },
                 body: JSON.stringify({
                     name: name || "이름없음",
@@ -100,9 +100,15 @@ export async function onRequestPost(context) {
                     source: source,
                     ip: ip,
                     created_at: formattedTime,
-                    alba_result: albaStatus // 전송 결과 기록 (success/error 등)
+                    alba_result: albaStatus
                 })
             });
+            if (!sbResponse.ok) {
+                const errorText = await sbResponse.text();
+                console.error(`Supabase Save Failed: ${sbResponse.status} ${errorText}`);
+            } else {
+                console.log("Supabase Save Success");
+            }
         } catch (sbError) {
             console.error("Supabase Error:", sbError);
         }
