@@ -1569,21 +1569,26 @@ body { padding-bottom: 80px !important; }
 .m_wrap { padding-bottom: 20px; }
 </style>
 
+<!-- 1. 제이쿼리가 차단될 경우를 대비해 외부 CDN에서 강제로 불러옴 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <script>
-/* 3. 자바스크립트 강제 노출 로직 추가 */
-$(document).ready(function() {
-    // 페이지 로드 즉시 모든 .ani 요소에 'on' 클래스 추가 및 스타일 강제 적용
-    $('.ani, section').addClass('on').css({
-        'opacity': '1',
-        'visibility': 'visible',
-        'transform': 'none'
-    });
-    
-    // 스크롤 시 라이브러리가 다시 숨기는 것을 방지하기 위해 반복 실행
-    $(window).on('scroll', function() {
-        $('.ani').addClass('on');
-    });
-});
+/* 2. 제이쿼리 없이도 작동하는 순수 자바스크립트 노출 로직 */
+(function() {
+    function forceShow() {
+        var elements = document.querySelectorAll('.ani, section, .mainVisual, .contents');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.opacity = "1";
+            elements[i].style.visibility = "visible";
+            elements[i].style.transform = "none";
+            elements[i].classList.add('on');
+        }
+    }
+    // 즉시 실행 및 로드 후 실행
+    forceShow();
+    window.addEventListener('load', forceShow);
+    window.addEventListener('scroll', forceShow);
+})();
 </script>
 
 
