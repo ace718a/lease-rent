@@ -1524,8 +1524,22 @@ $(document).ready (function () {
 </script>
 
 <style>
-/* 모바일 섹션 강제 노출 설정 */
-section.ani { opacity: 1 !important; visibility: visible !important; transform: none !important; transition: none !important; }
+/* 1. 모든 섹션 및 애니메이션 요소 강제 노출 (최우선 순위) */
+html body .m_wrap main section.ani,
+html body .m_wrap section.ani,
+section.ani, 
+.ani, 
+[data-aos],
+.mainVisual,
+.contents { 
+    opacity: 1 !important; 
+    visibility: visible !important; 
+    transform: none !important; 
+    transition: none !important;
+    display: block !important;
+}
+
+/* 2. 기존 하단 고정바 스타일 (유지) */
 .final_fixed_bar {
     position: fixed;
     bottom: 0;
@@ -1554,6 +1568,24 @@ section.ani { opacity: 1 !important; visibility: visible !important; transform: 
 body { padding-bottom: 80px !important; }
 .m_wrap { padding-bottom: 20px; }
 </style>
+
+<script>
+/* 3. 자바스크립트 강제 노출 로직 추가 */
+$(document).ready(function() {
+    // 페이지 로드 즉시 모든 .ani 요소에 'on' 클래스 추가 및 스타일 강제 적용
+    $('.ani, section').addClass('on').css({
+        'opacity': '1',
+        'visibility': 'visible',
+        'transform': 'none'
+    });
+    
+    // 스크롤 시 라이브러리가 다시 숨기는 것을 방지하기 위해 반복 실행
+    $(window).on('scroll', function() {
+        $('.ani').addClass('on');
+    });
+});
+</script>
+
 
 <!-- 하단 고정바 -->
 <div class="final_fixed_bar" onclick="fnMove('1')" style="display: block !important; visibility: visible !important;">
