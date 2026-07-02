@@ -27,8 +27,15 @@ function popup() {
 
 <script>
     function fnMove(seq){
-        var offset = $("#sec" + seq).offset();
-        $('html, body').animate({scrollTop : offset.top-100/*스크롤된 위치에서 상단네비 길이만큼 -60*/}, 400/*스크롤시간*/);
+        var target = $("#sec" + seq);
+        if(target.length) {
+            var offset = target.offset().top;
+            $('html, body').animate({scrollTop : offset - 50}, 400);
+        } else {
+            // sec1이 없을 경우 대비하여 폼 위치로 직접 이동
+            var formOffset = $(".contents").first().offset().top;
+            $('html, body').animate({scrollTop : formOffset - 50}, 400);
+        }
     }
 </script>
 <script>
@@ -1542,11 +1549,12 @@ $(document).ready (function () {
     letter-spacing: -1px;
 }
 .final_fixed_bar .yellow_text { color: #ffcc00 !important; }
-body { padding-bottom: 60px !important; }
+body { padding-bottom: 80px !important; }
+.m_wrap { padding-bottom: 20px; }
 </style>
 
 <!-- 하단 고정바 -->
-<div class="final_fixed_bar" onclick="fnMove('1')">
+<div class="final_fixed_bar" onclick="fnMove('1')" style="display: block !important; visibility: visible !important;">
     <div class="inner">
         <h2>[카슐랭] <span class="yellow_text">실시간 무료 견적 신청하기</span> (클릭)</h2>
     </div>
