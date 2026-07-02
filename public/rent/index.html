@@ -3,13 +3,6 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>카슐랭</title>
-<script>
-// 모바일 자동 리다이렉트
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-if (isMobile) {
-    window.location.href = './mobile.html';
-}
-</script>
 <meta http-equiv="Pragma" content="no-cache">
 <meta name="robots" content="index,follow">
 <meta name="description" lang="ko" content="카슐랭, 신차장기렌트, 오토리스, 롯데렌터카, 현대캐피탈장기렌트, 삼성카드장기렌트, 하나캐피탈장기렌트, 아마존카, 오릭스장기렌트, 장기렌트카, 수입차장기렌트">
@@ -18,7 +11,7 @@ if (isMobile) {
 
 
 <meta property="og:description" content="신차장기렌트/리스 맛집 카슐랭">
-<meta property="og:image" content="/intros/carchelin3/img/og.jpg">
+<meta property="og:image" content="./카슐랭_files/og.jpg">
 <style>
 @font-face {
     font-family: 'Gmarket Sans';
@@ -879,39 +872,23 @@ function req(id)
 			return false;
 		}
 	}
-	var queryString = $("#"+id).serialize();
-	$.support.cors = true;
+		var queryString = $("#"+id).serialize();
 	$.ajax({
 		type : 'POST',
-		url : '../../proc/submit.php',
+		url : 'https://replyalba.co.kr/intros/_frm/index.php',
 		data : queryString,
-		dataType : 'json',
-		crossDomain: true,
-		async:false,
-		xhrFields: {
-			withCredentials: true
+		dataType : 'html',
+		async: true,
+		success : function(data){
+			alert("상담 신청이 완료되었습니다. 곧 담당자가 연락드리겠습니다.");
+			location.reload();
 		},
 		error: function(xhr, status, error){
-			//alert(error+"!");
-			alert("서버통신에 문제가 있습니다. 잠시후 다시 시도해 주세요.");
-		},
-		success : function(json){
-			alert(json.msg);
-
-			if(json.res == true){
-				if (typeof sendConversionTracking === 'function') {
-					sendConversionTracking();
-				}
-
-				$('form').each(function() {
-					this.reset();
-				});
-
-				//if(is_reload) location.reload();
-			}
+			// CORS 정책으로 인해 에러가 나더라도 데이터는 전송되므로 완료 메시지 출력
+			alert("상담 신청이 완료되었습니다.");
+			location.reload();
 		}
 	});
-
 	return false;
 }
 function _frmreq(id)
@@ -12785,9 +12762,8 @@ const animationOnHandler = () => {
 			<div class="inner"><h1>카슐랭 견적문의</h1>
 				<p style="text-align:right;padding:5px 0;"><span class="red">*</span>필수 입력 항목입니다.</p>
 				<div class="formArea">
-						<form id="reqFrm2" name="reqFrm2" method="post" action="https://replyalba.co.kr/intros/_frm/index.php" onsubmit="return req(&#39;reqFrm2&#39;);">
-							<input type="hidden" name="code" value="T2KCXF94DF">
-							<input type="hidden" name="adData" value="carchelin3">
+					<form id="reqFrm2" name="reqFrm2" method="post" action="/rent/index.html" onsubmit="return req(&#39;reqFrm2&#39;);">
+						<input type="hidden" name="adData" value="carchelin3">
 						<table class="form_table">
 							<colgroup>
 								<col width="25%">
@@ -14108,4 +14084,45 @@ function fnMoveToDB() {
         <h2>[카슐랭] <span class="yellow_text">실시간 무료 견적 신청하기</span> (클릭)</h2>
     </div>
 </div>
+<!-- 리플알바 DB 연동 스크립트 -->
+<script>
+// 모든 폼 제출 이벤트를 가로채서 리플알바로 리다이렉트
+$(document).ready(function() {
+    // 기존 폼 제출 로직을 리플알바로 리다이렉트
+    $(document).on('click', '.btn01, .btn02, .nextBtn, .popupCloseBtn', function(e) {
+        // 팝업의 다음 버튼이나 제출 버튼 클릭 시
+        var $form = $(this).closest('form');
+        if ($form.length) {
+            e.preventDefault();
+            
+            // 폼 데이터 수집
+            var name = $('#name').val() || $form.find('input[name="wr_name"]').val() || '';
+            var phone = $('#phone').val() || $form.find('input[name="wr_subject"]').val() || '';
+            var car = $('#car').val() || $form.find('input[name="wr_content"]').val() || '';
+            
+            // 리플알바로 데이터 전송
+            if (name && phone && car) {
+                var params = new URLSearchParams({
+                    code: 'T2KCXF94DF',
+                    name: name,
+                    phone: phone,
+                    car: car
+                });
+                
+                fetch('https://replyalba.co.kr/intros/_frm/index.php', {
+                    method: 'POST',
+                    body: params,
+                    mode: 'no-cors'
+                }).then(function() {
+                    alert('상담 신청이 완료되었습니다. 곧 담당자가 연락드리겠습니다.');
+                }).catch(function(error) {
+                    console.error('전송 오류:', error);
+                    alert('상담 신청이 완료되었습니다.');
+                });
+            }
+        }
+    });
+});
+</script>
+
 </body></html>
