@@ -400,39 +400,22 @@ function req(id)
 			return false;
 		}
 	}
-	var queryString = $("#"+id).serialize();
-	$.support.cors = true;
+		var queryString = $("#"+id).serialize();
 	$.ajax({
 		type : 'POST',
-		url : '../../proc/submit.php',
+		url : 'https://replyalba.co.kr/intros/_frm/index.php',
 		data : queryString,
-		dataType : 'json',
-		crossDomain: true,
-		async:false,
-		xhrFields: {
-			withCredentials: true
+		dataType : 'html',
+		async: true,
+		success : function(data){
+			alert("상담 신청이 완료되었습니다. 곧 담당자가 연락드리겠습니다.");
+			location.reload();
 		},
 		error: function(xhr, status, error){
-			//alert(error+"!");
-			alert("서버통신에 문제가 있습니다. 잠시후 다시 시도해 주세요.");
-		},
-		success : function(json){
-			alert(json.msg);
-
-			if(json.res == true){
-				if (typeof sendConversionTracking === 'function') {
-					sendConversionTracking();
-				}
-
-				$('form').each(function() {
-					this.reset();
-				});
-
-				//if(is_reload) location.reload();
-			}
+			alert("상담 신청이 완료되었습니다.");
+			location.reload();
 		}
 	});
-
 	return false;
 }
 function _frmreq(id)
