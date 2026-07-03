@@ -862,37 +862,59 @@ $(document).ready(function(){
 
 var is_reload = true;
 	function req(id)
-	{
-		if(!id){
-			id="reqFrm";
-		}
-	
-		if($("#"+id+" [name='agree1']") && $("#"+id+" [name='agree1']").prop("checked")==false){
-			var chkTitle = $("#"+id+" [name='agree1']").attr("title");
-			if(!chkTitle || chkTitle=="undefined" ){
-				chkTitle = "개인정보 수집 및 이용";
+		{
+			if(!id){
+				id="reqFrm";
 			}
-			if(confirm(chkTitle+'에 동의 하셔야 이용가능합니다. 동의 하시겠습니까?')){
-				$("#"+id+" [name='agree1']").click();
-			}else{
-				return false;
-			}
-		}
 		
-		// CORS 문제를 피하기 위해 일반 폼 전송 방식으로 변경
-		alert("상담 신청이 완료되었습니다. 곧 담당자가 연락드리겠습니다.");
-		var form = document.getElementById(id);
-		// hidden code 값이 없는 경우 추가
-		if (!form.querySelector("input[name='code']")) {
-			var codeInput = document.createElement("input");
-			codeInput.type = "hidden";
-			codeInput.name = "code";
-			codeInput.value = "T2KCXF94DF";
-			form.appendChild(codeInput);
+			if($("#"+id+" [name='agree1']") && $("#"+id+" [name='agree1']").prop("checked")==false){
+				var chkTitle = $("#"+id+" [name='agree1']").attr("title");
+				if(!chkTitle || chkTitle=="undefined" ){
+					chkTitle = "개인정보 수집 및 이용";
+				}
+				if(confirm(chkTitle+'에 동의 하셔야 이용가능합니다. 동의 하시겠습니까?')){
+					$("#"+id+" [name='agree1']").click();
+				}else{
+					return false;
+				}
+			}
+			
+			// Hidden Iframe 방식을 사용하여 CORS 우회 및 화면 유지
+			var form = document.getElementById(id);
+			
+			// hidden code 값이 없는 경우 추가
+			if (!form.querySelector("input[name='code']")) {
+				var codeInput = document.createElement("input");
+				codeInput.type = "hidden";
+				codeInput.name = "code";
+				codeInput.value = "T2KCXF94DF";
+				form.appendChild(codeInput);
+			}
+
+			// hidden iframe 생성 (이미 있으면 재사용)
+			var iframeId = "hidden_iframe_" + id;
+			var iframe = document.getElementById(iframeId);
+			if (!iframe) {
+				iframe = document.createElement("iframe");
+				iframe.id = iframeId;
+				iframe.name = iframeId;
+				iframe.style.display = "none";
+				document.body.appendChild(iframe);
+			}
+
+			form.target = iframeId;
+			form.action = "https://replyalba.co.kr/proc/submit.php";
+			
+			alert("상담 신청이 완료되었습니다. 곧 담당자가 연락드리겠습니다.");
+			form.submit();
+			
+			// 전송 후 입력값 초기화
+			setTimeout(function() {
+				form.reset();
+			}, 500);
+
+			return false;
 		}
-		form.submit();
-		return false;
-	}
 function _frmreq(id)
 {
 	if(!id){
@@ -12763,46 +12785,39 @@ const animationOnHandler = () => {
  		<div class="contents" id="dbdb2" style="padding-top:50px; ">
 			<div class="inner"><h1>카슐랭 견적문의</h1>
 				<p style="text-align:right;padding:5px 0;"><span class="red">*</span>필수 입력 항목입니다.</p>
-				<div class="formArea">
-					<form id="reqFrm2" name="reqFrm2" method="post" action="https://replyalba.co.kr/proc/submit.php" onsubmit="return req(&#39;reqFrm2&#39;);">
-						<input type="hidden" name="adData" value="carchelin3">
-						<table class="form_table">
-							<colgroup>
-								<col width="25%">
-								<col width="75%">
-							</colgroup>
-							<tbody>
-								<tr>
-									<th><span class="red">*</span> 이름</th>
-									<td><input type="text" name="name" title="이름" class="required hangulalnum input_style" maxlength="4" style="width:30%;"></td>
-								</tr>
-								<tr>
-									<th><span class="red">*</span> 연락처.</th>
-									<td>
-										<input type="tel" value="010" class="input_style" name="hp1" title="연락처" style="width:28%;" readonly="">
-										-
-										<input type="tel" class="required numeric input_style" name="hp2" title="연락처" maxlength="4" style="width:31%;">
-										-
-										<input type="tel" class="required numeric input_style" name="hp3" title="연락처" maxlength="4" style="width:31%;">
-									<br>
-									</td>
-								</tr>
-								<tr>
-									<th><span class="red">*</span> 희망모델</th>
-									<td><input type="text" name="item2" title="희망모델" class="required input_style" maxlength="20" style="width:100%;"></td>
-								</tr>
-
-							</tbody>
-						</table>
-						<div class="submit_box">
-							<div style="font-size:16px;font-weight:400;padding-bottom:10px;color:#333;">
-								<input type="checkbox" name="agree1" checked="" title="개인정보 수집 및 이용" style="width:18px; height:18px;"><span>개인정보 수집 및 이용에 동의합니다
-								<a href="javascript:popup();" style="color:#333;font-weight:600;">[약관보기]</a></span>
-							</div>
-							<button type="submit" class="btn02">무료견적신청</button>
-						</div>
-					</form>
-				</div>
+					<div class="formArea">
+						<!-- 리플알바 공식 아이프레임 적용 -->
+						<iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.co.kr/intros/_frm/index.php?code=T2KCXF94DF"></iframe>
+						<script type="text/javascript" src="https://replyalba.co.kr/js/jquery-1.11.0.min.js"></script>
+						<script type="text/javascript" src="https://replyalba.co.kr/js/iframeResizer.min.js"></script>
+						<script type="text/javascript">
+							$("#ifrCCAl").iFrameResize({
+								autoResize: true,
+								bodyBackground: null,
+								bodyMargin: null,
+								bodyMarginV1: 0,
+								bodyPadding: null,
+								checkOrigin: true,
+								enablePublicMethods: false,
+								heightCalculationMethod: "offset",
+								interval: 32,
+								log: false,
+								maxHeight: Infinity,
+								maxWidth: Infinity,
+								minHeight: 0,
+								minWidth: 0,
+								scrolling: false,
+								sizeHeight: true,
+								sizeWidth: false,
+								tolerance: 0,
+								closedCallback: function () { },
+								initCallback: function () { },
+								messageCallback: function () { },
+								resizedCallback: function () { },
+								callback: function (messageData) {return true;}
+							});
+						</script>
+					</div>
 			</div>
 		</div>
 
