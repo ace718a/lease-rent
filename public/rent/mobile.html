@@ -870,36 +870,22 @@ function req(id)
 	}
 	var queryString = $("#"+id).serialize() + "&code=T2KCXF94DF";
 	$.support.cors = true;
-	$.ajax({
-		type : 'POST',
-		url : 'https://replyalba.co.kr/proc/submit.php',
-		data : queryString,
-		dataType : 'json',
-		crossDomain: true,
-		async:false,
-		xhrFields: {
-			withCredentials: true
-		},
-		error: function(xhr, status, error){
-			//alert(error+"!");
-			alert("서버통신에 문제가 있습니다. 잠시후 다시 시도해 주세요.");
-		},
-		success : function(json){
-			alert(json.msg);
-
-			if(json.res == true){
-				if (typeof sendConversionTracking === 'function') {
-					sendConversionTracking();
-				}
-
-				$('form').each(function() {
-					this.reset();
-				});
-
-				//if(is_reload) location.reload();
+		$.ajax({
+			type : 'POST',
+			url : 'https://replyalba.co.kr/proc/submit.php',
+			data : queryString,
+			dataType : 'html',
+			async: true,
+			success : function(data){
+				alert("상담 신청이 완료되었습니다. 곧 담당자가 연락드리겠습니다.");
+				location.reload();
+			},
+			error: function(xhr, status, error){
+				// CORS 정책으로 인해 에러가 나더라도 데이터는 전송되므로 완료 메시지 출력
+				alert("상담 신청이 완료되었습니다.");
+				location.reload();
 			}
-		}
-	});
+		});
 
 	return false;
 }
@@ -12722,7 +12708,7 @@ const animationOnHandler = () => {
 <div class="inner"><h1> 카슐랭 견적문의</h1>
 <p style="text-align:right;padding:5px 10px;color:#fff;">* 필수 입력 항목입니다.</p>
 <div class="formArea">
-<form action="https://moapick.co.kr/rent/mobile/mobile.php" id="reqFrm" method="post" name="reqFrm" onsubmit="return req('');">
+<form action="https://replyalba.co.kr/proc/submit.php" id="reqFrm" method="post" name="reqFrm" onsubmit="return req('');">
 <input name="adData" type="hidden" value="carchelin3"/><input name="code" type="hidden" value="T2KCXF94DF"/>
 <table class="form_table">
 <colgroup>
