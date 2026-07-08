@@ -1,19 +1,11 @@
 [
     {
-        "url": "sabongsosul.html",
-        "title": "전설의 사봉낙타",
-        "summary": "사막 너머에 존재했다는 이름, 기록되지 않은 이야기",
+        "url": "8.html",
+        "title": "장마 시작, 전국에 많은 비 예보",
+        "summary": "기상청 예보에 따르면 정체전선의 영향으로 전국 대부분 지역에서 장마가 본격적으로 시작될 전망이다.\n중부와 남부 지방 모두 비가 확대되며 일부 지역에는 시간당 강한 비가 집중될 가능성이 제기되고 있다.\n올해 장마는 평년보다 다소 늦게 시작됐지만 본격적인 강수 구간에 접어",
         "date": "2026.07.08",
         "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "sabonkt1.html",
-        "title": "사봉낙타: 사막을 걷는 자의 전설",
-        "summary": "사봉낙타는 단순한 이름이 아니라 강호의 기록 속에서 금기처럼 떠도는 존재다.\n그는 사막의 네 봉우리를 넘으며 태어난 인물이라 전해지며, 누구도 그의 본래 출신을 정확히 알지 못한다.",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1585829365234-781fcd04c83e?q=80&w=800&auto=format&fit=crop"
+        "image": "https://moapick.co.kr/news/img/rain2026.png"
     },
     {
         "url": "7.html",
@@ -24,17 +16,17 @@
         "image": "https://moapick.co.kr/news/img/20260708_184623.png"
     },
     {
-        "url": "5.html",
-        "title": "2026 장기렌트 시장 변화",
-        "summary": "한눈에 보기\n\n✔ 렌트사별 프로모션 경쟁 확대\n✔ 인기 차종 중심 견적 비교 수요 증가\n✔ 계약 조건 확인의 중요성 확대\n✔ 월 렌트료보다 총 계약 조건 비교 필요",
+        "url": "6.html",
+        "title": "유럽 폭염 확산과 에어컨 부족의 현실",
+        "summary": "최근 유럽은 기록적인 폭염이 반복되면서 생활 환경이 크게 악화되고 있다. 하지만 의외로 많은 지역에서 에어컨 보급률은 매우 낮은 편이다. \n특히 프랑스, 독일, 영국 등 주요 국가들은 여전히 선풍기나 자연 환기에 의존하는 경우가 많다.",
         "date": "2026.07.08",
         "category": "뉴스",
         "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     },
     {
-        "url": "6.html",
-        "title": "유럽 폭염 확산과 에어컨 부족의 현실",
-        "summary": "최근 유럽은 기록적인 폭염이 반복되면서 생활 환경이 크게 악화되고 있다. 하지만 의외로 많은 지역에서 에어컨 보급률은 매우 낮은 편이다. \n특히 프랑스, 독일, 영국 등 주요 국가들은 여전히 선풍기나 자연 환기에 의존하는 경우가 많다.",
+        "url": "5.html",
+        "title": "2026 장기렌트 시장 변화",
+        "summary": "한눈에 보기\n\n✔ 렌트사별 프로모션 경쟁 확대\n✔ 인기 차종 중심 견적 비교 수요 증가\n✔ 계약 조건 확인의 중요성 확대\n✔ 월 렌트료보다 총 계약 조건 비교 필요",
         "date": "2026.07.08",
         "category": "뉴스",
         "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
@@ -45,7 +37,15 @@
         "summary": "핵심 요약\n\n✔ 대한민국은 A조 3위로 조별리그 종료\n✔ 48개국 체제로 일부 조 3위도 32강 진출 가능\n✔ 현재 승점 3점, 골득실 -1 기록\n✔ 남은 조 경기 결과에 따라 진출 여부 결정",
         "date": "2026.07.08",
         "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "3.html",
+        "title": "박지성, 남아공전 관전 포인트 제시…\"무실점과 선제골 중요\"",
+        "summary": "핵심 요약\n\n✔ 한국 대표팀 충분히 경쟁력 있어\n✔ 선제골과 무실점이 중요\n✔ 남아공 측면 공격 경계 필요\n✔ 김민재 역할 기대\n✔ 손흥민 활용에는 아쉬움",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     },
     {
         "url": "2.html",
@@ -53,15 +53,15 @@
         "summary": "한국 포함 A조 경쟁 구도 변화 심층 분석",
         "date": "2026.07.08",
         "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     },
     {
-        "url": "3.html",
-        "title": "박지성, 남아공전 관전 포인트 제시…\"무실점과 선제골 중요\"",
-        "summary": "핵심 요약\n\n✔ 한국 대표팀 충분히 경쟁력 있어\n✔ 선제골과 무실점이 중요\n✔ 남아공 측면 공격 경계 필요\n✔ 김민재 역할 기대\n✔ 손흥민 활용에는 아쉬움",
-        "date": "2026.06.24",
+        "url": "sabonkt1.html",
+        "title": "사봉낙타: 사막을 걷는 자의 전설",
+        "summary": "사봉낙타는 단순한 이름이 아니라 강호의 기록 속에서 금기처럼 떠도는 존재다.\n그는 사막의 네 봉우리를 넘으며 태어난 인물이라 전해지며, 누구도 그의 본래 출신을 정확히 알지 못한다.",
+        "date": "2026.07.08",
         "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     },
     {
         "url": "1.html",
@@ -70,5 +70,13 @@
         "date": "2026.07.08",
         "category": "뉴스",
         "image": "https://moapick.co.kr/news/img/1255.png"
+    },
+    {
+        "url": "sabongsosul.html",
+        "title": "전설의 사봉낙타",
+        "summary": "사막 너머에 존재했다는 이름, 기록되지 않은 이야기",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     }
 ]
