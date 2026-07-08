@@ -1,61 +1,5 @@
 [
     {
-        "url": "7.html",
-        "title": "홍명보 출국 논란, 왜 여론이 갈렸나",
-        "summary": "최근 홍명보 감독의 출국 장면과 관련된 내용이 온라인을 중심으로 빠르게 확산되면서 논란이 발생했다. 핵심은 단순한 이동 자체가 아니라, 시점과 상황에 대한 해석 차이에서 비롯됐다.",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "6.html",
-        "title": "유럽 폭염 확산과 에어컨 부족의 현실",
-        "summary": "최근 유럽은 기록적인 폭염이 반복되면서 생활 환경이 크게 악화되고 있다. 하지만 의외로 많은 지역에서 에어컨 보급률은 매우 낮은 편이다. \n특히 프랑스, 독일, 영국 등 주요 국가들은 여전히 선풍기나 자연 환기에 의존하는 경우가 많다.",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "1.html",
-        "title": "삼성전자·SK하이닉스 급락, 코스피 동반 하락",
-        "summary": "2026년 6월 23일 국내 증시 시장 분석",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1585829365234-781fcd04c83e?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "2.html",
-        "title": "2026 월드컵 조별리그 긴장 고조",
-        "summary": "한국 포함 A조 경쟁 구도 변화 심층 분석",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1585829365234-781fcd04c83e?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "3.html",
-        "title": "박지성, 남아공전 관전 포인트 제시…\"무실점과 선제골 중요\"",
-        "summary": "핵심 요약\n\n✔ 한국 대표팀 충분히 경쟁력 있어\n✔ 선제골과 무실점이 중요\n✔ 남아공 측면 공격 경계 필요\n✔ 김민재 역할 기대\n✔ 손흥민 활용에는 아쉬움",
-        "date": "2026.06.24",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "4.html",
-        "title": "한국 월드컵 32강 진출 가능성은?",
-        "summary": "핵심 요약\n\n✔ 대한민국은 A조 3위로 조별리그 종료\n✔ 48개국 체제로 일부 조 3위도 32강 진출 가능\n✔ 현재 승점 3점, 골득실 -1 기록\n✔ 남은 조 경기 결과에 따라 진출 여부 결정",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        "url": "5.html",
-        "title": "2026 장기렌트 시장 변화",
-        "summary": "한눈에 보기\n\n✔ 렌트사별 프로모션 경쟁 확대\n✔ 인기 차종 중심 견적 비교 수요 증가\n✔ 계약 조건 확인의 중요성 확대\n✔ 월 렌트료보다 총 계약 조건 비교 필요",
-        "date": "2026.07.08",
-        "category": "뉴스",
-        "image": "https://images.unsplash.com/photo-1585829365234-781fcd04c83e?q=80&w=800&auto=format&fit=crop"
-    },
-    {
         "url": "sabongsosul.html",
         "title": "전설의 사봉낙타",
         "summary": "사막 너머에 존재했다는 이름, 기록되지 않은 이야기",
@@ -69,6 +13,62 @@
         "summary": "사봉낙타는 단순한 이름이 아니라 강호의 기록 속에서 금기처럼 떠도는 존재다.\n그는 사막의 네 봉우리를 넘으며 태어난 인물이라 전해지며, 누구도 그의 본래 출신을 정확히 알지 못한다.",
         "date": "2026.07.08",
         "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1585829365234-781fcd04c83e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "7.html",
+        "title": "홍명보 출국 논란, 왜 여론이 갈렸나",
+        "summary": "최근 홍명보 감독의 출국 장면과 관련된 내용이 온라인을 중심으로 빠르게 확산되면서 논란이 발생했다. 핵심은 단순한 이동 자체가 아니라, 시점과 상황에 대한 해석 차이에서 비롯됐다.",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://moapick.co.kr/news/img/20260708_184623.png"
+    },
+    {
+        "url": "5.html",
+        "title": "2026 장기렌트 시장 변화",
+        "summary": "한눈에 보기\n\n✔ 렌트사별 프로모션 경쟁 확대\n✔ 인기 차종 중심 견적 비교 수요 증가\n✔ 계약 조건 확인의 중요성 확대\n✔ 월 렌트료보다 총 계약 조건 비교 필요",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "6.html",
+        "title": "유럽 폭염 확산과 에어컨 부족의 현실",
+        "summary": "최근 유럽은 기록적인 폭염이 반복되면서 생활 환경이 크게 악화되고 있다. 하지만 의외로 많은 지역에서 에어컨 보급률은 매우 낮은 편이다. \n특히 프랑스, 독일, 영국 등 주요 국가들은 여전히 선풍기나 자연 환기에 의존하는 경우가 많다.",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "4.html",
+        "title": "한국 월드컵 32강 진출 가능성은?",
+        "summary": "핵심 요약\n\n✔ 대한민국은 A조 3위로 조별리그 종료\n✔ 48개국 체제로 일부 조 3위도 32강 진출 가능\n✔ 현재 승점 3점, 골득실 -1 기록\n✔ 남은 조 경기 결과에 따라 진출 여부 결정",
+        "date": "2026.07.08",
+        "category": "뉴스",
         "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "2.html",
+        "title": "2026 월드컵 조별리그 긴장 고조",
+        "summary": "한국 포함 A조 경쟁 구도 변화 심층 분석",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "3.html",
+        "title": "박지성, 남아공전 관전 포인트 제시…\"무실점과 선제골 중요\"",
+        "summary": "핵심 요약\n\n✔ 한국 대표팀 충분히 경쟁력 있어\n✔ 선제골과 무실점이 중요\n✔ 남아공 측면 공격 경계 필요\n✔ 김민재 역할 기대\n✔ 손흥민 활용에는 아쉬움",
+        "date": "2026.06.24",
+        "category": "뉴스",
+        "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "url": "1.html",
+        "title": "삼성전자·SK하이닉스 급락, 코스피 동반 하락",
+        "summary": "2026년 6월 23일 국내 증시 시장 분석",
+        "date": "2026.07.08",
+        "category": "뉴스",
+        "image": "https://moapick.co.kr/news/img/1255.png"
     }
 ]
