@@ -3,7 +3,7 @@ name: Update News Index Automatically
 on:
   push:
     paths:
-      - 'news/**.html'
+      - 'public/news/**.html' # 경로 수정 완료
 
 jobs:
   update-index:
@@ -22,13 +22,13 @@ jobs:
 
       - name: Run auto-update script
         run: |
-          cd news
+          cd public/news          # 경로 수정 완료
           python auto_update.py
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add news/news-data.json
+          git add public/news/news-data.json # 경로 수정 완료
           git diff --quiet && git diff --staged --quiet || git commit -m "Update news index [skip ci]"
           git push
