@@ -181,6 +181,14 @@ a:hover {
     margin: 10px 0;
 }
 
+.container img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 20px auto;
+}
+
 /* Footer */
 footer {
     background: var(--footer-bg);
