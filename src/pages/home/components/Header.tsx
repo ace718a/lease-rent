@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 const navItems = [
   { label: "포장이사", href: "#moving" },
   { label: "장기렌트", href: "#rent" },
-  { label: "인터넷가입", href: "#internet" },
-  { label: "정수기렌탈", href: "#water" },
+  { label: "인터넷가입", href: "https://moapick.co.kr/internet" },
+  { label: "정수기렌탈", href: "https://moapick.co.kr/water" },
   { label: "생활꿀팁", href: "#info" },
   { label: "뉴스", href: "#news" },
 ];

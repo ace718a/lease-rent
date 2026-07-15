@@ -58,8 +58,8 @@ const services: Service[] = [
       "신규/이전/번호이동 모두 최대 사은품 적용",
       "전문 상담사 1:1 맞춤 컨설팅",
     ],
-    cta: { label: "인터넷 가입 상담받기", href: "#internet" },
-    guide: { label: "인터넷 가입 가이드", href: "#internet" },
+    cta: { label: "인터넷 가입 상담받기", href: "https://moapick.co.kr/internet" },
+    guide: { label: "인터넷 가입 가이드", href: "https://moapick.co.kr/internet" },
     image:
       "https://readdy.ai/api/search-image?width=1200&height=900&seq=moapick-service-internet-01&orientation=landscape&query=Cozy home office desk with a stylish wifi router a laptop and a small IPTV remote on a warm wooden surface cream wall background warm sunlight editorial product photography minimal clean composition soft shadows coral accents",
     alt: "인터넷 가입 비교",
@@ -76,8 +76,8 @@ const services: Service[] = [
       "신규 가입 시 첫 달 무료 + 사은품 제공",
       "정기 방문관리·필터교체 자동 예약",
     ],
-    cta: { label: "정수기 렌탈 상담받기", href: "#water" },
-    guide: { label: "정수기 비교 가이드", href: "#water" },
+    cta: { label: "정수기 렌탈 상담받기", href: "https://moapick.co.kr/water" },
+    guide: { label: "정수기 비교 가이드", href: "https://moapick.co.kr/water" },
     image:
       "https://readdy.ai/api/search-image?width=1200&height=900&seq=moapick-service-water-01&orientation=landscape&query=Sleek modern countertop water purifier on a clean bright kitchen counter with a glass of fresh water cream warm kitchen background soft natural daylight editorial product photography minimal clean composition warm tones coral golden accents",
     alt: "정수기 렌탈 비교",

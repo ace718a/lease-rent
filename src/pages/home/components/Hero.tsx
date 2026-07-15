@@ -14,13 +14,13 @@ const quickServices = [
   {
     title: "인터넷가입",
     desc: "통신 3사 최대\n현금 사은품 안내",
-    href: "#internet",
+    href: "https://moapick.co.kr/internet",
     icon: "ri-wifi-line",
   },
   {
     title: "정수기렌탈",
     desc: "월 렌탈료부터\n관리 서비스까지",
-    href: "#water",
+    href: "https://moapick.co.kr/water",
     icon: "ri-drop-line",
   },
 ];
