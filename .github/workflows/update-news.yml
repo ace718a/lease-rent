@@ -4,9 +4,14 @@ on:
   push:
     paths:
       - 'public/news/**/*.html'
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: content-automation-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   update-index:
@@ -17,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,12 +37,15 @@ jobs:
           cd public/news
           python auto_update.py
 
+      - name: Generate sitemap
+        run: python scripts/generate_sitemap.py
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-          git add public/news/news-data.json
+          git add public/news/news-data.json public/sitemap.xml
 
           git diff --quiet && git diff --staged --quiet || git commit -m "Update news index [skip ci]"
 

@@ -1,0 +1,51 @@
+name: Update Sitemap Automatically
+
+on:
+  push:
+    paths:
+      - '*.html'
+      - 'public/24-guide/*.html'
+      - 'public/rent-guide/*.html'
+      - 'public/info/*.html'
+      - 'scripts/generate_sitemap.py'
+      - 'public/robots.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-automation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-sitemap:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate sitemap
+        run: python scripts/generate_sitemap.py
+
+      - name: Commit sitemap when changed
+        run: |
+          if git diff --quiet -- public/sitemap.xml; then
+            echo "sitemap.xml is already up to date."
+            exit 0
+          fi
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/sitemap.xml
+          git commit -m "Update sitemap [skip ci]"
+          git push
