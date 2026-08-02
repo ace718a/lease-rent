@@ -1409,4 +1409,32 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
+
+<script>
+(function () {
+  function updateRealtimeDates() {
+    var rows = document.querySelectorAll('#news-container2 ul li');
+    if (!rows.length) return;
+
+    var today = new Date();
+    rows.forEach(function (row, index) {
+      var dateCell = row.querySelector('p:first-child');
+      if (!dateCell) return;
+
+      // 오늘을 중심으로 최근 3일 날짜가 자연스럽게 섞여 보이도록 표시
+      var daysAgo = index < 7 ? 0 : (index < 14 ? 1 : 2);
+      var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() - daysAgo);
+      var mm = String(d.getMonth() + 1).padStart(2, '0');
+      var dd = String(d.getDate()).padStart(2, '0');
+      dateCell.textContent = mm + '월' + dd + '일';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateRealtimeDates);
+  } else {
+    updateRealtimeDates();
+  }
+})();
+</script>
 </body></html>
