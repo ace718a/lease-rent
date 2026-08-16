@@ -61,6 +61,17 @@ def deployed_path(path: Path) -> str:
     if posix.name.casefold() == "index.html":
         parent = posix.parent.as_posix()
         return "/" if parent == "." else f"/{parent}/"
+
+    # Content files are stored as *.html in Git, but the deployed routes are
+    # extensionless (for example /24-guide/125).
+    if (
+        path.is_relative_to(PUBLIC_ROOT)
+        and posix.parts
+        and posix.parts[0] in PUBLIC_DIRECTORIES
+        and posix.suffix.casefold() == ".html"
+    ):
+        return f"/{posix.with_suffix('').as_posix()}"
+
     return f"/{posix.as_posix()}"
 
 
@@ -97,6 +108,26 @@ def is_disallowed(url_path: str, rules: list[str]) -> bool:
     return False
 
 
+def existing_lastmods() -> dict[str, str]:
+    """Preserve existing sitemap dates for URLs that already exist."""
+    if not SITEMAP_PATH.exists():
+        return {}
+
+    try:
+        root = ET.parse(SITEMAP_PATH).getroot()
+    except (ET.ParseError, OSError):
+        return {}
+
+    values: dict[str, str] = {}
+    for url in root:
+        loc = next((child.text for child in url if child.tag.endswith("loc")), None)
+        lastmod = next((child.text for child in url if child.tag.endswith("lastmod")), None)
+        if loc and lastmod:
+            normalized = loc[:-5] if loc.endswith(".html") else loc
+            values[normalized] = lastmod
+    return values
+
+
 def last_modified(path: Path) -> str:
     relative = path.relative_to(REPOSITORY_ROOT)
     try:
@@ -117,6 +148,7 @@ def last_modified(path: Path) -> str:
 
 def build_entries() -> tuple[list[SitemapEntry], list[Path]]:
     rules = robots_disallow_rules()
+    preserved_dates = existing_lastmods()
     entries: dict[str, SitemapEntry] = {}
     excluded: list[Path] = []
     for path in candidate_files():
@@ -126,7 +158,8 @@ def build_entries() -> tuple[list[SitemapEntry], list[Path]]:
             continue
         encoded_path = quote(url_path, safe="/-._~")
         url = f"{BASE_URL}{encoded_path}"
-        entries[url] = SitemapEntry(url=url, last_modified=last_modified(path))
+        date = preserved_dates.get(url, last_modified(path))
+        entries[url] = SitemapEntry(url=url, last_modified=date)
     return sorted(entries.values(), key=lambda entry: entry.url), excluded
 
 
