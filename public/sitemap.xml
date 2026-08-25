@@ -1169,10 +1169,6 @@
     <lastmod>2026-08-18</lastmod>
   </url>
   <url>
-    <loc>https://moapick.co.kr/rent-guide/79</loc>
-    <lastmod>2026-08-25</lastmod>
-  </url>
-  <url>
     <loc>https://moapick.co.kr/rent-guide/8</loc>
     <lastmod>2026-08-13</lastmod>
   </url>
@@ -1180,4 +1176,4 @@
     <loc>https://moapick.co.kr/rent-guide/9</loc>
     <lastmod>2026-08-13</lastmod>
   </url>
-</urlset>
+  <url>\n    <loc>https://moapick.co.kr/24-guide/149</loc>\n    <lastmod>2026-08-25</lastmod>\n  </url>\n</urlset>
