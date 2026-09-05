@@ -245,26 +245,6 @@
     <lastmod>2026-08-31</lastmod>
   </url>
   <url>
-    <loc>https://moapick.co.kr/24-guide/153</loc>
-    <lastmod>2026-09-04</lastmod>
-  </url>
-  <url>
-    <loc>https://moapick.co.kr/24-guide/154</loc>
-    <lastmod>2026-09-04</lastmod>
-  </url>
-  <url>
-    <loc>https://moapick.co.kr/24-guide/155</loc>
-    <lastmod>2026-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://moapick.co.kr/24-guide/156</loc>
-    <lastmod>2026-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://moapick.co.kr/24-guide/157</loc>
-    <lastmod>2026-09-05</lastmod>
-  </url>
-  <url>
     <loc>https://moapick.co.kr/24-guide/16</loc>
     <lastmod>2026-08-13</lastmod>
   </url>
@@ -896,19 +876,7 @@
     <loc>https://moapick.co.kr/news/9</loc>
     <lastmod>2026-08-13</lastmod>
   </url>
-  <url>
-    <loc>https://moapick.co.kr/news/sabongsosul</loc>
-    <lastmod>2026-08-13</lastmod>
-  </url>
-  <url>
-    <loc>https://moapick.co.kr/news/sabonkt1</loc>
-    <lastmod>2026-08-13</lastmod>
-  </url>
-  <url>
-    <loc>https://moapick.co.kr/post.html</loc>
-    <lastmod>2026-06-16</lastmod>
-  </url>
-  <url>
+<url>
     <loc>https://moapick.co.kr/rent-guide/1</loc>
     <lastmod>2026-08-13</lastmod>
   </url>
@@ -1225,11 +1193,35 @@
     <lastmod>2026-08-31</lastmod>
   </url>
   <url>
+    <loc>https://moapick.co.kr/rent-guide/9</loc>
+    <lastmod>2026-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/153</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/154</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
     <loc>https://moapick.co.kr/rent-guide/81</loc>
     <lastmod>2026-09-04</lastmod>
   </url>
   <url>
-    <loc>https://moapick.co.kr/rent-guide/9</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://moapick.co.kr/24-guide/155</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/156</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/157</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/rent-guide/82</loc>
+    <lastmod>2026-09-05</lastmod>
   </url>
 </urlset>
