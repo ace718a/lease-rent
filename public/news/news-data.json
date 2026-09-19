@@ -320,11 +320,27 @@
         "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     },
     {
+        "url": "sabonkt1.html",
+        "title": "사봉낙타: 사막을 걷는 자의 전설",
+        "summary": "사봉낙타의 운명과 강호에서의 행적을 기록한 무협 서사 문서입니다.",
+        "date": "2026.09.19",
+        "category": "뉴스",
+        "image": "https://moapick.co.kr/news/img/sabong.png"
+    },
+    {
         "url": "1.html",
         "title": "삼성전자·SK하이닉스 급락, 코스피 동반 하락",
         "summary": "2026년 6월 23일 국내 증시 시장 분석",
         "date": "2026.06.24",
         "category": "뉴스",
         "image": "https://moapick.co.kr/news/img/1255.png"
+    },
+    {
+        "url": "sabongsosul.html",
+        "title": "전설의 사봉낙타",
+        "summary": "전설의 사봉낙타 사실은 삼봉이 입니다.",
+        "date": "2026.09.19",
+        "category": "뉴스",
+        "image": "https://moapick.co.kr/news/img/sabong.png"
     }
 ]
