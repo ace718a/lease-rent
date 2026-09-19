@@ -877,10 +877,6 @@
     <lastmod>2026-09-04</lastmod>
   </url>
   <url>
-    <loc>https://moapick.co.kr/news/41</loc>
-    <lastmod>2026-09-19</lastmod>
-  </url>
-  <url>
     <loc>https://moapick.co.kr/news/5</loc>
     <lastmod>2026-08-13</lastmod>
   </url>
@@ -1239,5 +1235,17 @@
   <url>
     <loc>https://moapick.co.kr/rent-guide/9</loc>
     <lastmod>2026-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/news/41</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/158</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://moapick.co.kr/24-guide/159</loc>
+    <lastmod>2026-09-19</lastmod>
   </url>
 </urlset>
