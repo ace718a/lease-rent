@@ -2,7 +2,7 @@
     {
         "url": "42.html",
         "title": "25사단 DMZ 폭발, 북한 매설지뢰로 결론",
-        "summary": "합참 최종조사 발표…MDL 이남 10여m 지점서 북한군 수지반보병지뢰 확인",
+        "summary": "합참 최종조사 발표…MDL 이남 지뢰 제거 작전도 시행",
         "date": "2026.10.06",
         "category": "뉴스",
         "image": "https://moapick.co.kr/news/img/20261006_dmz-mine-final.png"
@@ -328,20 +328,20 @@
         "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop"
     },
     {
-        "url": "sabonkt1.html",
-        "title": "사봉낙타: 사막을 걷는 자의 전설",
-        "summary": "사봉낙타의 운명과 강호에서의 행적을 기록한 무협 서사 문서입니다.",
-        "date": "2026.09.19",
-        "category": "뉴스",
-        "image": "https://moapick.co.kr/news/img/sabong.png"
-    },
-    {
         "url": "1.html",
         "title": "삼성전자·SK하이닉스 급락, 코스피 동반 하락",
         "summary": "2026년 6월 23일 국내 증시 시장 분석",
         "date": "2026.06.24",
         "category": "뉴스",
         "image": "https://moapick.co.kr/news/img/1255.png"
+    },
+    {
+        "url": "sabonkt1.html",
+        "title": "사봉낙타: 사막을 걷는 자의 전설",
+        "summary": "사봉낙타의 운명과 강호에서의 행적을 기록한 무협 서사 문서입니다.",
+        "date": "2026.09.19",
+        "category": "뉴스",
+        "image": "https://moapick.co.kr/news/img/sabong.png"
     },
     {
         "url": "sabongsosul.html",
