@@ -1,0 +1,860 @@
+# MOAPICK 콘텐츠 발행 작업 지침
+
+이 문서는 `moapick` 사이트에 신규 페이지를 작성·수정·배포할 때 반드시
+따라야 하는 작업 규칙이다. 기존 HTML/CSS 디자인 구조는 재사용할 수
+있지만, 콘텐츠 품질·지역성·이미지·링크·배포 파일은 아래 기준으로 반드시
+검수한다.
+
+## 1. 최우선 원칙
+
+1.  **기존 사이트의 디자인과 구조를 임의로 변경하지 않는다.**
+2.  사용자가 요청한 파일만 수정한다. 불필요한 파일, 딜레이, 스크립트,
+    설정값 등을 임의로 건드리지 않는다.
+3.  신규 페이지는 기존 페이지의 **HTML/CSS 골격은 재사용 가능**하지만,
+    본문을 단순 치환해서 만들지 않는다.
+4.  지역 롱테일 페이지는 **지역명만 바꾼 복제 페이지를 절대 만들지
+    않는다.**
+5.  작업 완료를 선언하기 전에 실제 배포 ZIP 기준으로 최종 검수한다.
+6.  검수하지 않은 항목을 `PASS`, `정상`, `문제없음`이라고 표현하지
+    않는다.
+7.  모든 업종 페이지의 최종 목적은 단순 정보 공개가 아니라 **CTA 상담신청 전환**이다. 정보는 검색 의도를 충족하고 신뢰를 만드는 데 충분해야 하지만, 글만 읽고 이탈하도록 완결된 백과사전식 설명으로 끝내지 않는다. 사용자가 자신의 조건은 상담을 통해 비교·확인해야 한다는 점을 자연스럽게 이해하도록 도입부, 요약, 본문 흐름, 상담폼 안내와 하단 CTA를 연결한다. 과장·허위·불필요한 불안 조장은 금지하며 실제 확인이 필요한 계약조건과 선택 차이를 근거로 상담 필요성을 설명한다.
+
+------------------------------------------------------------------------
+
+## 2. 지역 롱테일 콘텐츠 작성 규칙
+
+예: - 부산 강서구 포장이사 - 부산 동래구 포장이사 - 해운대구 코웨이
+정수기렌탈 - 기장군 인터넷가입 사은품 - 사하구 하단동 인터넷가입 사은품
+
+### 반드시 해야 할 것
+
+지역 페이지를 작성하기 전에 해당 지역의 실제 특성을 조사한다.
+
+조사 대상은 주제와 직접 관계있는 정보만 사용한다.
+
+예를 들어 포장이사라면: - 아파트·공동주택 밀집 지역 - 기존 주택/저층
+주거지역 - 주요 생활권 - 차량 진입 및 이동 동선과 관련 있는 지역 구조 -
+신도시/구도심 등 주거 형태 차이
+
+인터넷가입이라면: - 아파트·오피스텔·원룸·다가구 등 주거 형태 -
+대학가/역세권/신도시 등 실제 생활권 - 공동주택과 개별주택의 설치환경
+차이 - 실제 주소 조회가 중요한 이유
+
+정수기렌탈이라면: - 공동주택/기존 주택 등 설치환경 - 주방 구조와 설치
+공간에 영향을 줄 수 있는 주거 형태 - 지역 내 대표적인 주거 생활권
+
+### 지역정보 사용 원칙
+
+지역정보를 단순 장식처럼 나열하지 않는다.
+
+나쁜 예: \> 하단동에는 동아대학교가 있습니다. 인터넷가입 사은품을
+비교하세요.
+
+좋은 예: \> 동아대학교 주변 원룸·다가구 주택은 건물에서 인터넷을 일괄
+제공하는 경우가 있을 수 있으므로 신규가입 전에 관리비 포함 여부와 개별
+회선 설치 가능 여부를 먼저 확인합니다.
+
+즉, **지역 특성 → 해당 서비스 이용 시 실제 확인사항**으로 연결한다.
+
+### 전환율 우선 콘텐츠 배치 규칙
+- 지역형 페이지라도 본문 상단과 핵심 구간은 **사용자가 공통적으로 원하는 비용·혜택·비교·계약조건 정보와 CTA 전환 흐름을 우선**한다.
+- 지역 고유 정보는 신뢰와 차별화를 위한 보강 요소로 사용하되, 사용자의 핵심 의도를 가리지 않도록 **중·하단에 배치해도 된다**. 모든 문단을 지역 고유 내용으로 채우지 않는다.
+- 실제 전환에 필요한 표현은 카테고리 내 여러 글에서 일정 부분 반복되어도 된다. 예: **비교견적을 받아야 조건 차이를 확인하기 쉽다, 여러 업체/상품을 비교하면 더 저렴하거나 유리한 조건을 찾기 쉽다, 비용·혜택·설치·계약조건은 상담으로 비교해야 한다**는 흐름.
+- 단, 같은 문단을 복사해 붙이는 방식은 금지한다. 핵심 메시지는 반복 가능하지만 각 페이지의 문장·사례·구성은 새로 작성해 검색 품질과 가독성을 유지한다.
+- 과장·허위·무조건 최저가 보장 같은 단정은 금지한다. **"비교하면 더 유리한 조건을 찾을 가능성이 높다"**, **"조건 차이가 커서 상담 비교가 필요하다"**처럼 검증 가능한 범위에서 설득한다.
+
+
+### 신규 페이지 분량·FAQ·보조 이미지 기준 (2026-11-04 이후)
+
+- 2026-11-04 이후 새로 발행하는 페이지의 사용자에게 보이는 본문 텍스트는 공백 제외 2,500~3,000자를 목표로 한다. 내비게이션·푸터·스크립트·iframe 코드·메타 태그는 분량에서 제외한다.
+- 상단 설명을 억지로 늘리지 않는다. 핵심 본문은 기존 구조를 유지하고 FAQ를 8개로 구성해 계약 조건·비용·설치·관리·비교 과정의 실제 질문을 보강한다.
+- FAQ 답변은 페이지의 지역·차종·주거 형태·설치 환경에 맞는 고유 문장으로 작성하며, 다른 페이지 답변을 지역명만 바꿔 복사하지 않는다.
+- 기존 발행 페이지는 사용자가 별도 수정을 요청하지 않는 한 이 분량 기준을 소급 적용하지 않는다.
+- 본문 보조 이미지는 `assets/images/support/{rent|moving|internet|water}/`의 업종별 WebP 공용 이미지 25장 중 1~2장을 선택해 재사용할 수 있다. 사진형 보조 이미지는 `.webp`로 저장하고 PNG로 중복 보관하지 않는다.
+- 보조 이미지는 해당 업종만 맞으면 일반적이거나 유사한 장면이어도 허용하며 각 문단과 억지로 1:1 대응시킬 필요가 없다. 다른 업종 이미지 혼입, 읽을 수 있는 문구·로고·브랜드, 심한 형태 왜곡은 금지한다.
+- 같은 페이지 안에서는 동일 파일을 반복하지 않고, `alt`는 이미지 장면을 자연스럽게 설명하며 `loading="lazy"`를 사용한다.
+- 위 보조 이미지는 정사각형 썸네일 제작용 공용 배경과 별도이다. `THUMBNAIL_STANDARD.md`의 썸네일 공용 배경 규칙은 그대로 유지한다.
+------------------------------------------------------------------------
+
+## 3. 본문 재사용 금지
+
+지역 페이지만 바꿔가며 다음과 같이 작업하지 않는다.
+
+-   강서구 → 동래구 지역명만 치환
+-   기장군 → 하단동 지역명만 치환
+-   기존 소제목 순서 그대로 유지하며 지명만 변경
+-   문단 대부분을 복사하고 몇 문장만 변경
+
+HTML 레이아웃, CSS 클래스, CTA 구조는 재사용할 수 있다.
+
+그러나 다음은 신규 작성한다.
+
+-   제목
+-   메타 description
+-   OG description
+-   도입부
+-   요약
+-   각 소제목
+-   각 본문 문단
+-   지역 특화 설명
+-   마지막 체크리스트/정리 문구
+
+### 중복 검사
+
+신규 원고 작성 후 같은 카테고리의 기존 페이지들과 본문 유사도를
+검사한다.
+
+특정 기존 지역 페이지와 지나치게 높은 유사도가 나오면 다시 작성한다.
+
+숫자 하나만으로 품질을 판단하지 말고 실제 공통 문단도 함께 확인한다.
+
+------------------------------------------------------------------------
+
+## 4. 지역명·지역정보 오염 검사 — 필수 차단 규칙
+
+신규 지역 페이지를 기존 지역 페이지의 HTML 골격에서 만들 때 가장 먼저 **원본 페이지의 지역 고유정보 목록**을 기록한다. 단순히 시·구·동 이름만 보는 것이 아니라 아래 항목을 모두 원본 지역 토큰으로 취급한다.
+
+- 시·군·구·동·읍·면 이름
+- 역명, 대학·학교명, 산업단지, 해안·하천·공원·도로 등 생활권 지명
+- 아파트·오피스텔·주거단지 이름
+- `읍·면 지역`, `군 단위`, `신도시`, `해안 생활권`, `산업단지 인접`처럼 특정 지역에서만 자연스러운 지역 설명
+- 원본 페이지에서만 쓰인 생활권·교통·주거환경 설명
+
+### 신규 지역 페이지 작성 전
+
+1. 원본 페이지에서 위 지역 고유정보를 먼저 추출한다.
+2. 새 지역의 실제 특성을 별도로 정리한다.
+3. **원본 지역명을 일괄 치환하는 방식으로 본문을 만들지 않는다.** HTML 구조만 재사용하고 지역 관련 문장·소제목·FAQ·요약은 새 지역 기준으로 다시 작성한다.
+
+### 신규 지역 페이지 작성 후
+
+다음 위치를 모두 검사한다.
+
+- `<title>`, meta description, OG title/description
+- canonical, 구조화 데이터 headline/url/image
+- H1, 도입부, 요약박스
+- 모든 H2/H3와 본문 문단
+- FAQ, 체크리스트, 경고박스, CTA 주변 설명
+- 이미지 `alt`
+
+원본 페이지의 지역 고유정보가 **하나라도 이유 없이 남아 있으면 실패**다.
+
+예:
+
+- 상암동 페이지에 `장안읍`, `철마면`, `정관읍`, `일광읍`, `군 단위`, `읍·면` 설명이 남아 있음 → 실패
+- 명지동 페이지에 기장군의 해안·읍면 생활권 설명이 남아 있음 → 실패
+- 연제구 페이지에 사직동·온천동·명륜동 등 동래구 생활권 설명이 남아 있음 → 실패
+- 대연동 페이지에 `북구 다른 지역으로 이사` 같은 원본 행정구역 문구가 남아 있음 → 실패
+
+단, 비교·이동·인접지역 설명 등 실제 문맥상 필요한 타 지역명은 예외다. 이 경우 왜 필요한지 문맥이 명확해야 한다.
+
+### 카테고리·사이트 전수검사
+
+지역 오염이 한 페이지에서라도 발견되면 해당 페이지만 고치고 끝내지 않는다.
+
+1. 같은 카테고리의 모든 지역 페이지를 우선 전수검색한다.
+2. 최근 같은 템플릿에서 생성한 다른 카테고리 페이지도 확인한다.
+3. 필요하면 사이트 전체 상세페이지를 대상으로 타지역 지명·시설명·단지명 잔존 여부를 검사한다.
+4. 오염이 확인된 페이지는 전부 수정한 뒤 다시 전체 검사한다.
+
+**일반 HTML/링크 QA PASS는 지역 오염 PASS를 의미하지 않는다.** 지역 오염 검사는 별도의 필수 검수 항목이며, 이 검사를 실제로 수행하기 전에는 `콘텐츠 지역성 PASS`, `전체 QA PASS`, `문제없음`이라고 선언하지 않는다.
+
+------------------------------------------------------------------------
+
+## 5. SEO 기본 규칙
+
+신규 페이지마다 다음을 확인한다.
+
+-   `<title>`
+-   `<h1>`
+-   meta description
+-   OG title/description
+-   canonical
+-   구조화 데이터가 존재한다면 headline/url/image
+-   본문 내 핵심 키워드의 자연스러운 사용
+-   과도한 키워드 반복 금지
+
+지역 키워드는 제목에만 넣지 말고 본문에서도 자연스럽게 사용한다.
+
+단, SEO를 이유로 같은 키워드를 억지로 반복하지 않는다.
+
+------------------------------------------------------------------------
+
+## 6. 썸네일 제작 절대 규칙
+
+### 원본 이미지
+
+장기렌트·포장이사·인터넷가입·정수기렌탈 썸네일은 다음 **카테고리별 글자 없는 공용 배경**을 최우선으로 사용한다.
+
+- 장기렌트: `/assets/images/rent-thumbnail-background.png`
+- 포장이사: `/assets/images/moving-thumbnail-background.png`
+- 인터넷가입: `/assets/images/internet-thumbnail-background.png`
+- 정수기렌탈: `/assets/images/water-purifier-thumbnail-background.png`
+
+해당 공용 배경이 없거나 실제로 열었을 때 글자·박스·배너가 들어 있으면 **대체 이미지를 고르지 말고 썸네일 제작을 즉시 중단**한다. 사용자가 별도 원본을 제공했더라도 위 4개 카테고리는 사용자가 명시적으로 공용 배경 규칙을 해제하지 않는 한 지정 공용 배경을 사용한다. 공용 배경은 크롭·블러·인페인팅·생성형 보정 없이 1024×1024 원본 그대로 사용한다.
+
+절대 하지 말 것:
+
+-   이미 텍스트가 박혀 있는 기존 썸네일을 배경으로 재사용
+-   기존 썸네일을 블러 처리해 새 썸네일 배경으로 사용
+-   기존 글자가 희미하게 보이는 상태에서 새 글자를 덮기
+-   지정 공용 배경 대신 임의의 다른 이미지를 사용
+
+### 기본 형식
+
+별도 요청이 없으면:
+
+-   **정사각형**
+-   대표 텍스트는 **정중앙**
+-   작은 화면에서도 보이도록 **크고 굵게**
+-   배경 이미지는 배경 역할에 집중
+-   잡다한 보조문구 최소화
+-   핵심 키워드 중심
+
+### 이미지 생성 후 필수 육안 검수
+
+파일이 존재한다고 이미지 검수가 끝난 것이 아니다.
+
+최종 이미지를 **실제로 열어서 눈으로 확인한다.**
+
+확인 항목:
+
+-   정사각형인가
+-   문구가 정확한가
+-   한글이 깨지지 않았는가
+-   기존 텍스트가 배경에 남아 있지 않은가
+-   중앙 정렬이 자연스러운가
+-   글자가 잘리지 않았는가
+-   모바일 썸네일 크기에서도 읽을 수 있는가
+-   불필요한 문구가 들어가지 않았는가
+-   요청한 배경 이미지가 맞는가
+
+하나라도 문제가 있으면 다시 만든다.
+
+------------------------------------------------------------------------
+
+## 7. 이미지 파일명 및 HTML 경로
+
+이미지를 만든 뒤 반드시 실제 HTML과 경로를 대조한다.
+
+예:
+
+`assets/images/saha-hadan-internet-signup-benefits.png`
+
+HTML: `/assets/images/saha-hadan-internet-signup-benefits.png`
+
+두 경로가 정확히 일치해야 한다.
+
+### 이미지 교체 시 캐시
+
+기존과 동일한 파일명으로 이미지를 교체하면 브라우저/CDN 캐시 때문에 이전
+이미지가 보일 수 있다.
+
+필요하면 다음처럼 버전 쿼리를 변경한다.
+
+`image.png?v=2` → `image.png?v=3`
+
+단, HTML 참조와 실제 파일명을 혼동하지 않는다. 실제 파일은 `.png`,
+쿼리는 HTML URL에만 붙는다.
+
+------------------------------------------------------------------------
+
+## 8. 카테고리별 CTA 검수
+
+2026-11-04 이전에 발행·납품한 기존 페이지와 ZIP은 소급 수정하지 않는다.
+2026-11-04 이후 새로 작성하거나 사용자가 별도로 수정을 요청한 페이지는 아래
+**신규 고정값**을 사용한다. 기존 페이지의 CTA나 iframe을 복사해 새 페이지에
+재사용하지 않는다.
+
+### 신규 페이지 버튼형 CTA 고정 URL
+
+- 장기렌트 → `https://replyalba.com/pt/OFrqeIk6Cx`
+- 포장이사 → `https://modu24.kr/?num=15421040`
+- 인터넷가입 → `https://kinternet.kr/?num=15421040`
+- 정수기렌탈 → `https://replyalba.com/pt/MPhJVqrLHl`
+
+### 신규 페이지 iframe 고정값
+
+- 장기렌트 → `https://replyalba.com/intros/_frm/index.php?code=OFrqeIk6Cx`
+  - iframe `name="ifrm_icode"`, `id="ifrCCAl"`
+  - 스크립트: `https://replyalba.com/js/jquery-1.11.0.min.js`, `https://replyalba.com/js/iframeResizer.min.js`
+  - `#ifrCCAl`에 사용자가 제공한 전체 `iFrameResize` 옵션을 그대로 적용한다.
+- 포장이사 → `https://modu24.kr/frm.php?p_id=d301p`
+  - iframe `name="co10Frm"`, `id="co10Frm"`
+  - 스크립트: `https://co10.kr/gate/js/jquery.min.js`, `https://co10.kr/gate/js/iframeResizer.min.js`
+  - `#co10Frm`에 `iFrameResize({autoResize: true})`를 적용한다.
+- 인터넷가입 → `https://kinternet.kr/frm.php?p_id=d301p`
+  - iframe `name="co10Frm"`, `id="co10Frm"`
+  - 스크립트: `https://co10.kr/gate/js/jquery.min.js`, `https://co10.kr/gate/js/iframeResizer.min.js`
+  - `#co10Frm`에 `iFrameResize({autoResize: true})`를 적용한다.
+- 정수기렌탈 → `https://replyalba.com/intros/_frm/index.php?code=MPhJVqrLHl`
+  - iframe `name="ifrm_icode"`, `id="ifrCCAl"`
+  - 스크립트: `https://replyalba.com/js/jquery-1.11.0.min.js`, `https://replyalba.com/js/iframeResizer.min.js`
+  - `#ifrCCAl`에 사용자가 제공한 전체 `iFrameResize` 옵션을 그대로 적용한다.
+
+### 신규 iframe 삽입 코드
+
+장기렌트:
+
+```html
+<iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=OFrqeIk6Cx"></iframe><script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script><script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script><script type="text/javascript">$("#ifrCCAl").iFrameResize({autoResize: true,bodyBackground: null,bodyMargin: null,bodyMarginV1: 0,bodyPadding: null,checkOrigin: true,enablePublicMethods: false,heightCalculationMethod: "offset",interval: 32,log: false,maxHeight: Infinity,maxWidth: Infinity,minHeight: 0,minWidth: 0,scrolling: false,sizeHeight: true,sizeWidth: false,tolerance: 0,closedCallback: function () { },initCallback: function () { },messageCallback: function () { },resizedCallback: function () { },callback: function (messageData) {return true;}});</script>
+```
+
+포장이사:
+
+```html
+<iframe name="co10Frm" id="co10Frm" scrolling="no" frameborder="0" width="100%" src="https://modu24.kr/frm.php?p_id=d301p"></iframe><script type="text/javascript" src="https://co10.kr/gate/js/jquery.min.js"></script><script type="text/javascript" src="https://co10.kr/gate/js/iframeResizer.min.js"></script><script type="text/javascript">$("#co10Frm").iFrameResize({autoResize: true});</script>
+```
+
+인터넷가입:
+
+```html
+<iframe name="co10Frm" id="co10Frm" scrolling="no" frameborder="0" width="100%" src="https://kinternet.kr/frm.php?p_id=d301p"></iframe><script type="text/javascript" src="https://co10.kr/gate/js/jquery.min.js"></script><script type="text/javascript" src="https://co10.kr/gate/js/iframeResizer.min.js"></script><script type="text/javascript">$("#co10Frm").iFrameResize({autoResize: true});</script>
+```
+
+정수기렌탈:
+
+```html
+<iframe name="ifrm_icode" id="ifrCCAl" scrolling="no" frameborder="0" width="100%" src="https://replyalba.com/intros/_frm/index.php?code=MPhJVqrLHl"></iframe><script type="text/javascript" src="https://replyalba.com/js/jquery-1.11.0.min.js"></script><script type="text/javascript" src="https://replyalba.com/js/iframeResizer.min.js"></script><script type="text/javascript">$("#ifrCCAl").iFrameResize({autoResize: true,bodyBackground: null,bodyMargin: null,bodyMarginV1: 0,bodyPadding: null,checkOrigin: true,enablePublicMethods: false,heightCalculationMethod: "offset",interval: 32,log: false,maxHeight: Infinity,maxWidth: Infinity,minHeight: 0,minWidth: 0,scrolling: false,sizeHeight: true,sizeWidth: false,tolerance: 0,closedCallback: function () { },initCallback: function () { },messageCallback: function () { },resizedCallback: function () { },callback: function (messageData) {return true;}});</script>
+```
+신규/수정 페이지는 배포 전에 버튼 `href`, iframe `src`, iframe `name`·`id`,
+스크립트 URL을 위 고정값과 정확히 대조한다. 예전 코드나 다른 업종 코드가
+하나라도 들어가면 QA FAIL로 처리한다.
+
+### 금지
+
+-   `href=""`
+-   링크 없는 CTA 버튼
+-   다른 카테고리 CTA 연결
+-   기존 정상 링크를 이유 없이 변경
+-   사용자가 지정한 CTA를 임의로 다른 주소로 변경
+
+------------------------------------------------------------------------
+
+## 9. 신규 페이지 발행 시 연결 파일
+
+신규 페이지를 추가할 때 현재 사이트 구조에 맞춰 필요한 연결 파일을
+확인한다.
+
+일반적으로 확인할 항목:
+
+1.  신규 상세페이지 HTML
+2.  신규 썸네일 이미지
+3.  해당 카테고리 목록 페이지
+4.  메인 최신글 목록
+5.  sitemap.xml
+
+기존 사이트 구조가 변경된 경우 현재 최신 ZIP의 구조를 먼저 확인하고 그
+구조를 따른다.
+
+과거 기억만 믿고 경로를 추정하지 않는다.
+
+------------------------------------------------------------------------
+
+## 10. 최종 배포 ZIP 검수
+
+작업 폴더가 정상이라고 바로 전달하지 않는다.
+
+**사용자에게 실제 전달할 ZIP 파일을 만든 뒤 다시 압축을 풀어 최종
+결과물을 검사한다.**
+
+### HTML 검수
+
+-   파일 경로 정상
+-   HTML 문법상 치명적 누락 없음
+-   title/H1 정상
+-   지역명 정상
+-   다른 지역명 오염 없음
+-   이미지 경로 정상
+-   CTA 정상
+-   빈 링크 없음
+-   카테고리 목록 연결 정상
+-   메인 연결 정상
+-   sitemap 연결 정상
+
+### 콘텐츠 검수
+
+-   지역명만 치환한 글이 아닌가
+-   실제 지역 특성이 들어갔는가
+-   지역 특성이 서비스 주제와 연결되는가
+-   기존 글과 문단이 과도하게 겹치지 않는가
+-   다른 페이지 문장이 실수로 남아 있지 않은가
+
+### 이미지 검수
+
+최종 ZIP 안의 이미지를 직접 열어서 확인한다.
+
+-   이미지 자체가 정상인가
+-   올바른 썸네일인가
+-   이전 페이지 글자가 남아 있지 않은가
+-   문구/정렬/가독성이 정상인가
+-   HTML이 그 파일을 실제로 참조하는가
+
+------------------------------------------------------------------------
+
+## 11. PASS 판정 기준
+
+다음처럼 하지 않는다.
+
+> QA PASS 문제없음 검수 완료
+
+위 표현은 **실제로 해당 검사를 수행한 경우에만** 사용한다.
+
+특히 이미지가 포함된 작업에서 이미지를 직접 열어보지 않았다면 이미지
+검수 PASS라고 하지 않는다.
+
+자동 스크립트 PASS와 최종 품질 검수는 별개다.
+
+가능하면 결과를 다음처럼 구분한다.
+
+-   구조 검사: PASS
+-   링크 검사: PASS
+-   콘텐츠 중복/지역 오염 검사: PASS
+-   이미지 파일 검사: PASS
+-   이미지 육안 검사: PASS
+-   최종 ZIP 재검수: PASS
+
+모든 필수 항목이 끝난 뒤에만 최종 완료로 판단한다.
+
+------------------------------------------------------------------------
+
+## 12. 사용자가 최신 ZIP을 제공했을 때
+
+최신 ZIP이 제공되면 그것을 **유일한 기준본**으로 사용한다.
+
+1.  ZIP 구조 확인
+2.  현재 페이지/이미지/CTA/목록 구조 확인
+3.  필요한 파일만 수정
+4.  과거 작업본을 최신 ZIP 위에 무작정 덮어 합치지 않는다.
+5.  최신 ZIP에 없는 과거 파일을 기억에 의존해 복원하지 않는다.
+
+사용자가 "업로드해야 하는 파일만 달라"고 하면 변경된 파일만 ZIP에
+넣는다.
+
+------------------------------------------------------------------------
+
+## 13. 작업 방식 요약
+
+신규 지역 페이지의 기본 순서는 다음과 같다.
+
+**최신본 확인 → 지역 조사 → 원본 페이지 지역 고유정보 목록 작성 → 검색 의도 결정 → 신규 원고 작성 → 기존 디자인에 적용 → 원본 지역 토큰 잔존 검사 → 타지역 시설·단지·생활권 문맥 검사 → 중복 검사 → 썸네일 제작 → 썸네일 육안 검수 → 이미지 경로 확인 → CTA 확인 → 목록/메인/sitemap 연결 → 배포 ZIP 생성 → ZIP 재압축 해제 → 최종 HTML·이미지 육안 검수 → 전달**
+
+이 순서를 생략해서 빠르게 만드는 것보다, 한 페이지씩 정확하게 만드는
+것을 우선한다.
+
+## 정수기렌탈 썸네일 공용 배경 및 제작 규칙
+
+정수기렌탈 썸네일은 아래 공용 무문자 배경을 반드시 사용한다.
+
+- 공용 배경: `/assets/images/water-purifier-thumbnail-background.png`
+- 디자인 기준본: `/assets/images/seoul-gangnam-daechi-water-purifier-rental.png`
+- 공용 배경 자체에는 텍스트·아이콘·배너를 넣지 않는다.
+- 신규·수정 정수기렌탈 썸네일은 공용 배경 위에 대치동 승인 기준본의 텍스트 크기·배치·색상·외곽선·하단 빨간 박스 구조를 따른다.
+- 기존 글자가 들어간 완성 썸네일을 배경으로 재사용하거나 그 위에 새 글자를 덧씌우지 않는다.
+- 기준본과 비교 검수 후 배포한다.
+
+## 포장이사 썸네일 공용 배경 규칙
+
+포장이사 신규·수정 썸네일은 아래 공용 무문자 배경을 기본으로 사용한다.
+
+- 공용 배경: `/assets/images/moving-thumbnail-background.png`
+- 공용 배경은 사람이 없는 밝은 집 안에 포장박스·포장재·이삿짐만 놓인 정사각형 이미지이며 텍스트 없는 원본 상태로 보존한다.
+- 포장이사 썸네일의 디자인 기준은 `assets/images/seoul-songpa-ogum-moving.png` 승인본의 큰 글자 중심 구성이다.
+- 검색결과의 작은 썸네일에서도 지역명과 `포장이사`가 읽히도록 글자 크기와 굵기를 충분히 크게 유지한다.
+- 기존 글자가 들어간 완성 썸네일을 배경으로 다시 사용하지 않는다.
+
+------------------------------------------------------------------------
+
+
+## 지역특화 3개 업종 서울 동 단위 발행 기준과 진행표
+
+### 이 절만 읽고 다음 발행을 이어가는 방법
+
+- 지역형 업종은 `포장이사 / 인터넷가입 / 정수기렌탈` 3개다.
+- 기준 데이터는 행정안전부 주민등록 인구통계의 **서울특별시 행정동별 총인구수**다.
+- 현재 고정 기준월은 **2026년 7월 말**이다. 공식 원본: `https://jumin.mois.go.kr/statMonth.do`의 전체 읍면동 현황.
+- 순위는 매 페이지마다 다시 흔들지 않는다. 아래 대기열을 소진한 뒤 기준월을 갱신한다.
+- 숫자 행정동은 페이지를 여러 개 만들지 않고 대표 통합 동명 1개로 운영한다. 기존 숫자 동 URL은 보존한다.
+- 세 업종의 지역이 영구적으로 서로 달라야 하는 것은 아니다. 실제로 성산동은 포장이사·인터넷, 장안동은 인터넷·정수기, 잠실동과 화곡동도 업종 간 중복 발행되어 있다.
+- 핵심은 **같은 발행 회차에 동일 대표 동 3개가 몰리지 않도록 서로 다른 상위 후보를 배정하는 것**이다. 시간이 지난 뒤 다른 업종에서 같은 동을 다루는 것은 허용한다.
+- 한 회차에 세 업종을 함께 만들면, 전체 대기열에서 이미 해당 업종에 발행된 동을 제외하고 서로 겹치지 않는 첫 3개를 다음 순서로 배정한다.
+  1. 포장이사
+  2. 인터넷가입
+  3. 정수기렌탈
+- 한 업종만 발행할 때도 아래 `다음 확정 배정`을 우선 사용한다. 그 배정이 소진되면 대기열 상단부터 해당 업종의 기존 페이지와 같은 회차의 다른 업종 배정을 제외하고 선택한다.
+- 같은 대표 동의 다른 숫자 행정동은 대기열에서 다시 등장해도 모두 소비된 것으로 본다. 예: 화곡제1동 페이지가 있으면 화곡본동·화곡제2동 등은 신규 후보에서 제외한다.
+- 페이지 발행 직후 `다음 확정 배정`, 업종별 로그, URL을 함께 갱신한다.
+
+### 기존 작업물에서 확인한 발행 흐름
+
+| 업종 | 서울 지역형 발행 기록(오래된 순서) |
+|---|---|
+| 포장이사 | 상도동 → 진관동 → 길동 → 은천동 → 신림동 → 성산동 → 독산동 → 우장산동 → 방화동 → 양재동 → 대치동 → 종암동 → 청룡동 → 신도림동 → 녹번동 → 잠원동 → 강일동 → 노량진동 → 개봉동 → 면목동 → 화곡동 → 세곡동 → 위례동 → 신정동 → 역촌동 → 염창동 → 공릉동 → 목동 → 상도동 → 개포동 → 상일동 |
+| 인터넷가입 | 잠실동 → 화곡동 → 위례동 → 성산동 → 역삼동 → 장안동 → 세곡동 → 염창동 → 목동 → 개포동 → 망우동 → 신내동 → 천호동 → 오류동 → 발산동 → 여의동 → 대방동 → 응암동 → 진관동 → 독산동 → 길동 → 역촌동 → 상도동 → 신정동 → 우장산동 → 공릉동 → 방화동 → 양재동 → 대치동 → 종암동 → 청룡동 → 오금동 |
+| 정수기렌탈 | 신정동 → 상계동 → 잠실동 → 화곡동 → 장안동 → 역촌동 → 공릉동 → 상일동 → 오금동 → 당산동 → 공덕동 → 길음동 → 불광동 → 가양동 → 둔촌동 → 중화동 → 문정동 → 길동 → 진관동 → 독산동 → 세곡동 → 위례동 → 상도동 → 대치동 → 종암동 → 망우동 |
+
+이 기록은 과거 발행분을 삭제하거나 순위에 억지로 다시 맞추기 위한 표가 아니다. 초기 페이지와 순차 운영 도입 전 페이지가 섞여 있으므로 완료 기록은 그대로 보존하고, 아래 확정 배정부터 일관된 규칙을 적용한다.
+
+### 다음 확정 배정
+
+2026년 7월 공식 순위에서 기존 발행 대표 동을 제외하고, 같은 회차 중복을 피한 다음 배정이다.
+
+| 발행 순서 | 업종 | 다음 지역 | 2026-07 인구 | 상태 |
+|---:|---|---|---:|---|
+| 1 | 포장이사 | 서울 금천구 독산동(원자료: 독산제1동) | 47,702명 | 완료 (`/moving/seoul-geumcheon-doksan-moving/`) |
+| 2 | 인터넷가입 | 서울 강남구 세곡동 | 45,664명 | 완료 (`/internet/seoul-gangnam-segok-internet-signup-benefits/`) |
+| 3 | 정수기렌탈 | 서울 은평구 역촌동 | 44,235명 | 완료 (`/water/seoul-eunpyeong-yeokchon-water-purifier-rental/`) |
+| 4 | 포장이사 | 서울 강서구 우장산동 | 43,602명 | 완료 (`/moving/seoul-gangseo-ujangsan-moving/`) |
+| 5 | 인터넷가입 | 서울 강서구 염창동 | 40,954명 | 완료 (`/internet/seoul-gangseo-yeomchang-internet-signup-benefits/`) |
+| 6 | 정수기렌탈 | 서울 노원구 공릉동(원자료: 공릉2동) | 40,661명 | 완료 (`/water/seoul-nowon-gongneung-water-purifier-rental/`) |
+| 7 | 포장이사 | 서울 강서구 방화동(원자료: 방화제1동) | 40,456명 | 완료 (`/moving/seoul-gangseo-banghwa-moving/`) |
+| 8 | 인터넷가입 | 서울 양천구 목동(원자료: 목5동) | 40,345명 | 완료 (`/internet/seoul-yangcheon-mokdong-internet-signup-benefits/`) |
+| 9 | 포장이사 | 서울 서초구 양재동(원자료: 양재1동) | 40,201명 | 완료 (`/moving/seoul-seocho-yangjae-moving/`) |
+| 10 | 인터넷가입 | 서울 강남구 개포동(원자료: 개포2동) | 40,018명 | 완료 (`/internet/seoul-gangnam-gaepo-internet-signup-benefits/`) |
+| 11 | 정수기렌탈 | 서울 강동구 상일동(원자료: 상일제1동) | 38,893명 | 완료 (`/water/seoul-gangdong-sangil-water-purifier-rental/`) |
+| 12 | 포장이사 | 서울 강남구 대치동(원자료: 대치2동) | 38,240명 | 완료 (`/moving/seoul-gangnam-daechi-moving/`) |
+| 13 | 인터넷가입 | 서울 중랑구 망우동(원자료: 망우본동) | 37,934명 | 완료 (`/internet/seoul-jungnang-mangu-internet-signup-benefits/`) |
+| 14 | 정수기렌탈 | 서울 송파구 오금동 | 36,932명 | 완료 (`/water/seoul-songpa-ogum-water-purifier-rental/`) |
+| 15 | 포장이사 | 서울 성북구 종암동 | 36,678명 | 완료 (`/moving/seoul-seongbuk-jongam-moving/`) |
+| 16 | 인터넷가입 | 서울 중랑구 신내동(원자료: 신내1동) | 36,578명 | 완료 (`/internet/seoul-jungnang-sinnae-internet-signup-benefits/`) |
+| 17 | 정수기렌탈 | 서울 영등포구 당산동(원자료: 당산제2동) | 36,231명 | 완료 (`/water/seoul-yeongdeungpo-dangsan-water-purifier-rental/`) |
+| 18 | 포장이사 | 서울 관악구 청룡동 | 36,090명 | 완료 (`/moving/seoul-gwanak-cheongnyong-moving/`) |
+| 19 | 인터넷가입 | 서울 강동구 천호동(원자료: 천호제2동) | 36,061명 | 완료 (`/internet/seoul-gangdong-cheonho-internet-signup-benefits/`) |
+| 20 | 정수기렌탈 | 서울 마포구 공덕동 | 35,752명 | 완료 (`/water/seoul-mapo-gongdeok-water-purifier-rental/`) |
+| 21 | 포장이사 | 서울 구로구 신도림동 | 35,692명 | 완료 (`/moving/seoul-guro-sindorim-moving/`) |
+| 22 | 인터넷가입 | 서울 구로구 오류동(원자료: 오류제2동) | 35,381명 | 완료 (`/internet/seoul-guro-oryu-internet-signup-benefits/`) |
+| 23 | 포장이사 | 서울 은평구 녹번동 | 35,046명 | 완료 (`/moving/seoul-eunpyeong-nokbeon-moving/`) |
+| 24 | 포장이사 | 서울 서초구 잠원동 | 34,321명 | 완료 (`/moving/seoul-seocho-jamwon-moving/`) |
+| 25 | 인터넷가입 | 서울 강서구 발산동(원자료: 발산제1동) | 34,555명 | 완료 (`/internet/seoul-gangseo-balsan-internet-signup-benefits/`) |
+| 26 | 정수기렌탈 | 서울 성북구 길음동(원자료: 길음제1동) | 35,330명 | 완료 (`/water/seoul-seongbuk-gireum-water-purifier-rental/`) |
+| 27 | 포장이사 | 서울 강동구 강일동 | 34,193명 | 완료 (`/moving/seoul-gangdong-gangil-moving/`) |
+| 28 | 인터넷가입 | 서울 영등포구 여의동 | 33,985명 | 완료 (`/internet/seoul-yeongdeungpo-yeoui-internet-signup-benefits/`) |
+| 29 | 정수기렌탈 | 서울 은평구 불광동(원자료: 불광제1동) | 33,607명 | 완료 (`/water/seoul-eunpyeong-bulgwang-water-purifier-rental/`) |
+| 30 | 포장이사 | 서울 동작구 노량진동(원자료: 노량진제1동) | 33,477명 | 완료 (`/moving/seoul-dongjak-noryangjin-moving/`) |
+| 31 | 인터넷가입 | 서울 동작구 대방동 | 33,446명 | 완료 (`/internet/seoul-dongjak-daebang-internet-signup-benefits/`) |
+| 32 | 정수기렌탈 | 서울 강서구 가양동(원자료: 가양제1동) | 33,334명 | 완료 (`/water/seoul-gangseo-gayang-water-purifier-rental/`) |
+| 33 | 포장이사 | 서울 구로구 개봉동(원자료: 개봉제1동) | 33,190명 | 완료 (`/moving/seoul-guro-gaebong-moving/`) |
+| 34 | 인터넷가입 | 서울 서초구 반포동(원자료: 반포1동) | 33,074명 | 완료 (`/internet/seoul-seocho-banpo-internet-signup-benefits/`) |
+| 35 | 정수기렌탈 | 서울 강동구 둔촌동(원자료: 둔촌제1동) | 33,033명 | 완료 (`/water/seoul-gangdong-dunchon-water-purifier-rental/`) |
+| 36 | 포장이사 | 서울 서대문구 연희동 | 33,004명 | 완료 (`/moving/seoul-seodaemun-yeonhui-moving/`) |
+| 37 | 인터넷가입 | 서울 중랑구 묵동(원자료: 묵제1동) | 32,873명 | 완료 (`/internet/seoul-jungnang-muk-internet-signup-benefits/`) |
+| 38 | 정수기렌탈 | 서울 중랑구 중화동(원자료: 중화제2동) | 25,570명 | 완료 (`/water/seoul-jungnang-junghwa-water-purifier-rental/`) |
+| 39 | 포장이사 | 서울 중랑구 면목동(원자료: 면목본동) | 후속 대기열 | 완료 (`/moving/seoul-jungnang-myeonmok-moving/`) |
+| 40 | 인터넷가입 | 서울 은평구 응암동 | 후속 대기열 | 완료 (`/internet/seoul-eunpyeong-eungam-internet-signup-benefits/`) |
+| 41 | 정수기렌탈 | 서울 송파구 문정동 | 후속 대기열 | 완료 (`/water/seoul-songpa-munjeong-water-purifier-rental/`) |
+
+| 42 | 포장이사 | 서울 강서구 화곡동 | 49,649명(기존 기준월) | 완료 (`/moving/seoul-gangseo-hwagok-moving/`) |
+| 43 | 인터넷가입 | 서울 은평구 진관동 | 53,557명(기존 기준월) | 완료 (`/internet/seoul-eunpyeong-jingwan-internet-signup-benefits/`) |
+| 44 | 정수기렌탈 | 서울 강동구 길동 | 47,421명(기존 기준월) | 완료 (`/water/seoul-gangdong-gildong-water-purifier-rental/`) |
+| 45 | 포장이사 | 서울 강남구 세곡동 | 45,664명(기존 기준월) | 완료 (`/moving/seoul-gangnam-segok-moving/`) |
+| 46 | 인터넷가입 | 서울 금천구 독산동 | 47,702명(기존 기준월) | 완료 (`/internet/seoul-geumcheon-doksan-internet-signup-benefits/`) |
+| 47 | 정수기렌탈 | 서울 은평구 진관동 | 53,557명(기존 기준월) | 완료 (`/water/seoul-eunpyeong-jingwan-water-purifier-rental/`) |
+| 48 | 포장이사 | 서울 송파구 위례동 | 44,828명(기존 기준월) | 완료 (`/moving/seoul-songpa-wirye-moving/`) |
+| 49 | 인터넷가입 | 서울 강동구 길동 | 47,421명(기존 기준월) | 완료 (`/internet/seoul-gangdong-gildong-internet-signup-benefits/`) |
+| 50 | 정수기렌탈 | 서울 금천구 독산동 | 47,702명(기존 기준월) | 완료 (`/water/seoul-geumcheon-doksan-water-purifier-rental/`) |
+| 51 | 포장이사 | 서울 양천구 신정동(원자료: 신정3동) | 44,524명(기존 기준월) | 완료 (`/moving/seoul-yangcheon-sinjeong-moving/`) |
+| 52 | 인터넷가입 | 서울 은평구 역촌동 | 44,235명(기존 기준월) | 완료 (`/internet/seoul-eunpyeong-yeokchon-internet-signup-benefits/`) |
+| 53 | 정수기렌탈 | 서울 강남구 세곡동 | 45,664명(기존 기준월) | 완료 (`/water/seoul-gangnam-segok-water-purifier-rental/`) |
+| 54 | 포장이사 | 서울 은평구 역촌동 | 44,235명(기존 기준월) | 완료 (`/moving/seoul-eunpyeong-yeokchon-moving/`) |
+| 55 | 인터넷가입 | 서울 동작구 상도동(원자료: 상도제1동) | 43,918명(기존 기준월) | 완료 (`/internet/seoul-dongjak-sangdo-internet-signup-benefits/`) |
+| 56 | 정수기렌탈 | 서울 송파구 위례동 | 44,828명(기존 기준월) | 완료 (`/water/seoul-songpa-wirye-water-purifier-rental/`) |
+| 57 | 포장이사 | 서울 강서구 염창동 | 40,954명(기존 기준월) | 완료 (`/moving/seoul-gangseo-yeomchang-moving/`) |
+| 58 | 인터넷가입 | 서울 양천구 신정동(원자료: 신정3동) | 44,524명(기존 기준월) | 완료 (`/internet/seoul-yangcheon-sinjeong-internet-signup-benefits/`) |
+| 59 | 정수기렌탈 | 서울 동작구 상도동(원자료: 상도제1동) | 43,918명(기존 기준월) | 완료 (`/water/seoul-dongjak-sangdo-water-purifier-rental/`) |
+| 60 | 포장이사 | 서울 노원구 공릉동(원자료: 공릉2동) | 40,661명(기존 기준월) | 완료 (`/moving/seoul-nowon-gongneung-moving/`) |
+| 61 | 인터넷가입 | 서울 강서구 우장산동 | 43,602명(기존 기준월) | 완료 (`/internet/seoul-gangseo-ujangsan-internet-signup-benefits/`) |
+| 62 | 정수기렌탈 | 서울 강서구 염창동 | 40,954명(기존 기준월) | 완료 (`/water/seoul-gangseo-yeomchang-water-purifier-rental/`) |
+| 63 | 포장이사 | 서울 양천구 목동(원자료: 목5동) | 40,345명(기존 기준월) | 완료 (`/moving/seoul-yangcheon-mokdong-moving/`) |
+| 64 | 인터넷가입 | 서울 노원구 공릉동(원자료: 공릉2동) | 40,661명(기존 기준월) | 완료 (`/internet/seoul-nowon-gongneung-internet-signup-benefits/`) |
+| 65 | 정수기렌탈 | 서울 강서구 우장산동 | 43,602명(기존 기준월) | 완료 (`/water/seoul-gangseo-ujangsan-water-purifier-rental/`) |
+| 66 | 포장이사 | 서울 동작구 상도동(원자료: 상도제1동) | 43,918명(기존 기준월) | 완료 (`/moving/seoul-dongjak-sangdo-moving/`) |
+| 67 | 인터넷가입 | 서울 강서구 방화동(원자료: 방화제1동) | 40,456명(기존 기준월) | 완료 (`/internet/seoul-gangseo-banghwa-internet-signup-benefits/`) |
+| 68 | 정수기렌탈 | 서울 양천구 목동(원자료: 목5동) | 40,345명(기존 기준월) | 완료 (`/water/seoul-yangcheon-mokdong-water-purifier-rental/`) |
+| 69 | 포장이사 | 서울 강남구 개포동(원자료: 개포2동) | 40,018명 | 완료 (`/moving/seoul-gangnam-gaepo-moving/`) |
+| 70 | 인터넷가입 | 서울 서초구 양재동(원자료: 양재1동) | 40,201명 | 완료 (`/internet/seoul-seocho-yangjae-internet-signup-benefits/`) |
+| 71 | 정수기렌탈 | 서울 강서구 방화동(원자료: 방화제1동) | 40,456명 | 완료 (`/water/seoul-gangseo-banghwa-water-purifier-rental/`) |
+| 72 | 포장이사 | 서울 강동구 상일동(원자료: 상일제1동) | 38,893명 | 완료 (`/moving/seoul-gangdong-sangil-moving/`) |
+| 73 | 인터넷가입 | 서울 강남구 대치동(원자료: 대치2동) | 38,240명 | 완료 (`/internet/seoul-gangnam-daechi-internet-signup-benefits/`) |
+| 74 | 정수기렌탈 | 서울 서초구 양재동(원자료: 양재1동) | 40,201명 | 완료 (`/water/seoul-seocho-yangjae-water-purifier-rental/`) |
+| 75 | 포장이사 | 서울 중랑구 망우동(원자료: 망우본동) | 37,934명 | 완료 (`/moving/seoul-jungnang-mangu-moving/`) |
+| 76 | 인터넷가입 | 서울 강동구 상일동(원자료: 상일제1동) | 38,893명 | 완료 (`/internet/seoul-gangdong-sangil-internet-signup-benefits/`) |
+| 77 | 정수기렌탈 | 서울 강남구 개포동(원자료: 개포2동) | 40,018명 | 완료 (`/water/seoul-gangnam-gaepo-water-purifier-rental/`) |
+| 78 | 포장이사 | 서울 송파구 오금동 | 36,932명 | 완료 (`/moving/seoul-songpa-ogum-moving/`) |
+| 79 | 인터넷가입 | 서울 성북구 종암동 | 36,678명 | 완료 (`/internet/seoul-seongbuk-jongam-internet-signup-benefits/`) |
+| 80 | 정수기렌탈 | 서울 강남구 대치동(원자료: 대치2동) | 38,240명 | 완료 (`/water/seoul-gangnam-daechi-water-purifier-rental/`) |
+| 81 | 포장이사 | 서울 중랑구 신내동(원자료: 신내1동) | 36,578명 | 완료 (`/moving/seoul-jungnang-sinnae-moving/`) |
+| 82 | 인터넷가입 | 서울 관악구 청룡동 | 36,090명 | 완료 (`/internet/seoul-gwanak-cheongnyong-internet-signup-benefits/`) |
+| 83 | 정수기렌탈 | 서울 성북구 종암동 | 36,678명 | 완료 (`/water/seoul-seongbuk-jongam-water-purifier-rental/`) |
+| 84 | 포장이사 | 서울 영등포구 당산동(원자료: 당산제2동) | 36,231명 | 완료 (`/moving/seoul-yeongdeungpo-dangsan-moving/`) |
+| 85 | 인터넷가입 | 서울 송파구 오금동 | 36,932명 | 완료 (`/internet/seoul-songpa-ogum-internet-signup-benefits/`) |
+| 86 | 정수기렌탈 | 서울 중랑구 망우동(원자료: 망우본동) | 37,934명 | 완료 (`/water/seoul-jungnang-mangu-water-purifier-rental/`) |
+| 87 | 포장이사 | 서울 구로구 오류동(원자료: 오류제2동) | 35,381명 | 완료 (`/moving/seoul-guro-oryu-moving/`) |
+| 88 | 인터넷가입 | 서울 성북구 길음동(원자료: 길음제1동) | 35,330명 | 완료 (`/internet/seoul-seongbuk-gireum-internet-signup-benefits/`) |
+| 89 | 정수기렌탈 | 서울 강동구 천호동(원자료: 천호제2동) | 36,061명 | 완료 (`/water/seoul-gangdong-cheonho-water-purifier-rental/`) |
+| 90 | 포장이사 | 서울 성북구 길음동(원자료: 길음제1동) | 35,330명 | 완료 (`/moving/seoul-seongbuk-gireum-moving/`) |
+| 91 | 인터넷가입 | 서울 은평구 녹번동 | 35,046명 | 완료 (`/internet/seoul-eunpyeong-nokbeon-internet-signup-benefits/`) |
+| 92 | 정수기렌탈 | 서울 구로구 신도림동 | 35,692명 | 완료 (`/water/seoul-guro-sindorim-water-purifier-rental/`) |
+| 93 | 포장이사 | 서울 강서구 발산동(원자료: 발산제1동) | 34,555명 | 완료 (`/moving/seoul-gangseo-balsan-moving/`) |
+| 94 | 인터넷가입 | 서울 서초구 잠원동 | 34,321명 | 완료 (`/internet/seoul-seocho-jamwon-internet-signup-benefits/`) |
+| 95 | 정수기렌탈 | 서울 구로구 오류동(원자료: 오류제2동) | 35,381명 | 완료 (`/water/seoul-guro-oryu-water-purifier-rental/`) |
+| 96 | 포장이사 | 서울 영등포구 여의도동(원자료: 여의동) | 33,985명 | 완료 (`/moving/seoul-yeongdeungpo-yeouido-moving/`) |
+| 97 | 인터넷가입 | 서울 강동구 강일동 | 34,193명 | 완료 (`/internet/seoul-gangdong-gangil-internet-signup-benefits/`) |
+| 98 | 정수기렌탈 | 서울 은평구 녹번동 | 35,046명 | 완료 (`/water/seoul-eunpyeong-nokbeon-water-purifier-rental/`) |
+
+독산동부터 문정동까지의 배정 이후, 지침에 따라 대기열 상단의 포장이사 미발행 지역 화곡동과 인터넷가입 미발행 지역 진관동과 정수기렌탈 미발행 지역 길동을 완료했다. 다음 회차는 포장이사 세곡동, 인터넷가입 독산동, 정수기렌탈 진관동까지 완료했다. 새 회차는 포장이사 위례동, 인터넷가입 길동, 정수기렌탈 독산동까지 완료했다. 이어지는 회차는 포장이사 신정동, 인터넷가입 역촌동, 정수기렌탈 세곡동까지 완료했다. 새 회차는 포장이사 역촌동, 인터넷가입 상도동, 정수기렌탈 위례동까지 완료했다. 이어지는 새 회차는 포장이사 염창동, 인터넷가입 신정동, 정수기렌탈 상도동까지 완료했고, 다음 회차의 포장이사 공릉동·인터넷가입 우장산동·정수기렌탈 염창동도 완료했다. 이어서 포장이사 목동·인터넷가입 공릉동·정수기렌탈 우장산동을 완료했다. 다음 회차의 포장이사 상도동·인터넷가입 방화동·정수기렌탈 목동을 완료했다. 이어서 포장이사 개포동·인터넷가입 양재동·정수기렌탈 방화동까지 완료했다. 다음 회차의 포장이사 상일동과 인터넷가입 대치동도 완료했다. 이어서 정수기렌탈 양재동도 완료했다. 새 회차는 포장이사 망우동·인터넷가입 상일동·정수기렌탈 개포동까지 완료했다. 이어서 포장이사 오금동·인터넷가입 종암동·정수기렌탈 대치동까지 완료했다. 다음 회차는 포장이사 신내동·인터넷가입 청룡동·정수기렌탈 종암동까지 완료했다. 이어서 새 회차의 포장이사 당산동·인터넷가입 오금동·정수기렌탈 망우동까지 완료했다. 다음 회차의 포장이사 오류동·인터넷가입 길음동·정수기렌탈 천호동까지 강화형 기준으로 완료했다. 이어서 강화형 8페이지 회차에서 포장이사 길음동·발산동, 인터넷가입 녹번동·잠원동, 정수기렌탈 신도림동·오류동을 완료했다. 다음 신규 지역은 대기열 상단부터 해당 업종의 미발행 여부와 회차 내 중복을 다시 확인해 배정한다.
+
+### 2026년 7월 서울 행정동 인구 상위 대기열
+
+아래 표는 공식 원자료 순위다. `제1동`, `1동`, `본동` 등은 원자료 명칭을 표시하되 실제 신규 페이지명은 대표 통합 동명을 사용한다. 이미 발행된 대표 동은 `완료/제외`로 표시했다.
+
+| 원순위 | 구 | 원자료 행정동 | 인구 | 발행 판단 |
+|---:|---|---|---:|---|
+| 1 | 은평구 | 진관동 | 53,557 | 인터넷가입·정수기렌탈 완료/제외 |
+| 2 | 강서구 | 화곡제1동 | 49,649 | 화곡동 기존/제외 |
+| 3 | 금천구 | 독산제1동 | 47,702 | 독산동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 4 | 강동구 | 길동 | 47,421 | 포장이사·인터넷가입 완료/제외 |
+| 5 | 강남구 | 세곡동 | 45,664 | 포장이사·인터넷가입·정수기렌탈 완료/제외 |
+| 6 | 송파구 | 위례동 | 44,828 | 포장이사·정수기렌탈 완료/제외 |
+| 7 | 양천구 | 신정3동 | 44,524 | 포장이사·인터넷가입·정수기렌탈 완료/제외 |
+| 8 | 은평구 | 역촌동 | 44,235 | 포장이사·인터넷가입·정수기렌탈 완료/제외 |
+| 9 | 동작구 | 상도제1동 | 43,918 | 포장이사·인터넷가입·정수기렌탈 완료/제외 |
+| 10 | 강서구 | 우장산동 | 43,602 | 우장산동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 11 | 강서구 | 염창동 | 40,954 | 포장이사·인터넷가입·정수기렌탈 완료/제외 |
+| 12 | 노원구 | 공릉2동 | 40,661 | 공릉동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 13 | 강서구 | 방화제1동 | 40,456 | 방화동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 14 | 양천구 | 목5동 | 40,345 | 목동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 15 | 서초구 | 양재1동 | 40,201 | 양재동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 16 | 강남구 | 개포2동 | 40,018 | 개포동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 17 | 강동구 | 상일제1동 | 38,893 | 상일동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 18 | 강남구 | 대치2동 | 38,240 | 대치동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 19 | 중랑구 | 망우본동 | 37,934 | 망우동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 20 | 마포구 | 성산제2동 | 37,867 | 성산동 기존/제외 |
+| 21 | 동대문구 | 장안제1동 | 37,038 | 장안동 기존/제외 |
+| 22 | 송파구 | 오금동 | 36,932 | 오금동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 23 | 성북구 | 종암동 | 36,678 | 종암동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 24 | 중랑구 | 신내1동 | 36,578 | 신내동 포장이사·인터넷가입 완료 |
+| 25 | 영등포구 | 당산제2동 | 36,231 | 당산동 포장이사·정수기렌탈 완료 |
+| 26 | 관악구 | 청룡동 | 36,090 | 청룡동 포장이사·인터넷가입 완료 |
+| 27 | 강동구 | 천호제2동 | 36,061 | 천호동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 28 | 강남구 | 역삼2동 | 36,001 | 역삼동 기존/제외 |
+| 29 | 노원구 | 상계1동 | 35,830 | 상계동 기존/제외 |
+| 30 | 마포구 | 공덕동 | 35,752 | 공덕동 정수기렌탈 완료 |
+| 31 | 구로구 | 신도림동 | 35,692 | 신도림동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 32 | 구로구 | 오류제2동 | 35,381 | 오류동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 33 | 성북구 | 길음제1동 | 35,330 | 길음동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 34 | 노원구 | 공릉1동 | 35,160 | 공릉동 중복 후보/제외 |
+| 35 | 은평구 | 녹번동 | 35,046 | 녹번동 포장이사·인터넷가입·정수기렌탈 완료 |
+| 36 | 강서구 | 발산제1동 | 34,555 | 발산동 포장이사·인터넷가입 완료 |
+| 37 | 송파구 | 잠실2동 | 34,491 | 잠실동 기존/제외 |
+| 38 | 서초구 | 잠원동 | 34,321 | 잠원동 포장이사·인터넷가입 완료 |
+| 39 | 강남구 | 역삼1동 | 34,281 | 역삼동 기존/제외 |
+| 40 | 강동구 | 강일동 | 34,193 | 강일동 포장이사·인터넷가입 완료 |
+| 41 | 영등포구 | 여의동 | 33,985 | 여의도동 포장이사·인터넷가입 완료 |
+| 42 | 은평구 | 불광제1동 | 33,607 | 불광동 정수기렌탈 완료 |
+| 43 | 동작구 | 노량진제1동 | 33,477 | 노량진동 포장이사 완료 |
+| 44 | 동작구 | 대방동 | 33,446 | 대방동 인터넷가입 완료 |
+| 45 | 송파구 | 잠실3동 | 33,421 | 잠실동 기존/제외 |
+| 46 | 강서구 | 가양제1동 | 33,334 | 가양동 정수기렌탈 완료 |
+| 47 | 구로구 | 개봉제1동 | 33,190 | 개봉동 포장이사 완료 |
+| 48 | 서초구 | 반포1동 | 33,074 | 반포동 인터넷가입 완료 |
+| 49 | 강동구 | 둔촌제1동 | 33,033 | 둔촌동 정수기렌탈 완료 |
+| 50 | 서대문구 | 연희동 | 33,004 | 연희동 포장이사 완료 |
+| 51 | 중랑구 | 묵제1동 | 32,873 | 묵동 인터넷가입 완료 |
+
+> 공식 통계는 행정동 단위이고 페이지는 대표 통합 지역명으로 운영하므로, 원순위 숫자보다 `대표 동 중복 제거 후 대기열 순서`가 실제 발행 기준이다.
+
+------------------------------------------------------------------------
+
+## 썸네일 스타일 계승 및 시각 검수 규칙
+
+썸네일은 `THUMBNAIL_STANDARD.md`의 카테고리별 승인 기준본을 고정 템플릿으로 사용한다. 상단 캡슐, 중앙 핵심어, 하단 박스의 위치·글자 크기·박스 크기·외곽선을 승인본과 동일하게 유지하고 문구만 교체한다. 문구 길이가 달라도 핵심어와 박스를 임의로 축소하지 않으며, 필요한 경우 승인본의 시각적 계층을 유지하는 범위에서 줄바꿈과 자간만 최소 조정한다. 이 절과 다른 썸네일 규칙이 충돌하면 `THUMBNAIL_STANDARD.md`를 우선한다.
+
+### 제작 전에 반드시 할 일
+- 최신 Git에서 `THUMBNAIL_STANDARD.md`가 지정한 해당 카테고리 승인 기준본을 반드시 열고, 필요하면 같은 계열 썸네일을 추가로 열어 비교한다.
+- 배경, 상단 지역표시, 핵심 업종명, 하단 후킹박스의 형태와 색, 글자 굵기, 외곽선, 시각적 우선순위를 파악한다.
+- **완성된 기존 썸네일을 배경으로 재사용하지 않는다.** 글자 없는 공용 배경 원본에서 새로 합성한다.
+- 공용 배경이라고 추정하지 않는다. 지정 파일을 실제로 열어 기존 글자·박스·장식이 없는지 확인한 후 사용한다. 파일이 없거나 무문자 원본이 아니면 작업을 중단한다.
+
+### 정수기 썸네일의 현재 승인 스타일
+정수기 지역페이지는 `THUMBNAIL_STANDARD.md`가 지정한 `seoul-gangnam-daechi-water-purifier-rental.png`를 승인 기준본으로 삼는다. 다른 기존 이미지는 보조 참고만 가능하며 승인 기준본의 위치·크기·색상·외곽선을 바꾸는 근거로 사용하지 않는다.
+
+정수기 지역 썸네일의 시각적 문법:
+- 실제 주방의 정수기 사진을 글자 없는 공용 배경으로 사용한다.
+- 상단에는 **네이비색 둥근 캡슐형 박스**를 두고 지역명을 굵은 흰색 글자로 표시한다.
+- 중앙에는 `정수기 렌탈`을 가장 강한 핵심 키워드로 사용한다. 매우 굵은 네이비 글자와 두꺼운 흰색 외곽선을 사용하며 배경 위에 직접 배치한다.
+- 중앙 핵심 키워드는 상단 지역 박스나 하단 CTA 박스와 겹치지 않아야 한다. 문구가 길면 글자 크기나 줄바꿈을 조정한다.
+- 하단에는 **빨간색 둥근 사각형 CTA/후킹 박스**를 두고 `가격 비교 전 / 확인할 조건`처럼 2줄의 짧고 굵은 흰색 문구를 사용한다.
+- 새로운 네이비 통박스, 임의의 구분선, 새로운 색 조합 등 기존 대표 이미지에 없는 디자인 요소를 자의적으로 추가하지 않는다.
+- 정수기 글자 없는 공용 배경 원본은 `assets/images/water-purifier-thumbnail-background.png`를 우선 사용한다. `water-purifier-rental-guide.webp`처럼 이미 글자나 디자인이 합성된 결과물은 배경으로 사용하지 않는다.
+
+### 최종 시각 검수 — 자동 QA와 별개로 필수
+썸네일은 파일 생성 성공, 이미지 경로 정상, HTML 참조 정상만으로 절대 QA PASS 처리하지 않는다. **저장된 최종 이미지 파일 자체를 다시 열어 실제 화면을 눈으로 확인해야 한다.**
+
+반드시 확인:
+- 기존 배경의 글자나 박스가 남아 새 글자와 겹치지 않는가.
+- 지역명 / 업종명 / 후킹문구가 서로 침범하거나 겹치지 않는가.
+- 글자가 캔버스 밖 또는 박스 밖으로 삐져나오지 않는가.
+- 핵심 업종명이 검색결과 축소 상태에서도 읽힐 정도로 크고 굵은가.
+- 기존 승인 썸네일과 비교했을 때 같은 사이트의 같은 카테고리로 보이는가.
+- 기존 표준에 없는 임의의 패널·선·색·레이아웃을 새로 만들지 않았는가.
+- 최종 결과가 비정상적이면 코드상 문제가 없어도 QA FAIL 처리하고 다시 제작한다.
+
+**사용자에게 썸네일을 전달하기 전에 위 시각 검수를 제작자가 먼저 수행한다. 사용자가 화면을 보고 겹침이나 스타일 불일치를 찾아내도록 넘기지 않는다.**
+
+## 장기렌트카 신규 페이지 운영 규칙
+
+장기렌트카는 포장이사·인터넷·정수기처럼 고정된 지역 순번으로 발행하지 않는다.
+
+- 신규 페이지를 만들기 전에 최신 Git의 `rent/` 상세페이지와 발행 목록을 먼저 확인한다.
+- 이미 발행된 주제와 중복되지 않도록 한다.
+- 사이트 구성과 기존 발행 비중을 보고 AI가 `차종형 / 정보형 / 비교형 / 필요 시 지역형` 중 적절한 유형을 자율적으로 선택한다.
+- 차종형만 연속해서 기계적으로 늘리지 말고, 필요하면 계약조건·비용비교·이용방법 같은 정보형/비교형을 섞는다.
+- 지역형은 렌트카의 주력 확장 방식으로 고정하지 않고 필요할 때만 사용한다.
+- 디자인, CTA와 상담 iframe 구조는 최신 정상 렌트카 페이지를 기준으로 유지한다.
+- 콘텐츠는 선택한 주제에 맞게 고유하게 작성하며 기존 차종명만 치환한 복제문서로 만들지 않는다.
+- 발행 후 아래 로그에 주제·유형·URL을 기록해 다음 신규 페이지 선택 시 중복 방지에 사용한다.
+
+### 장기렌트카 발행 로그
+| 주제 | 유형 | 상태 | URL |
+|---|---|---|---|
+| 쏘렌토 장기렌트 가격 | 차종형 | 기존 발행 | `/rent/sorento-long-term-rental-price/` |
+| 카니발 장기렌트 가격 | 차종형 | 기존 발행 | `/rent/carnival-long-term-rental-price/` |
+| 싼타페 장기렌트 가격 | 차종형 | 기존 발행 | `/rent/hyundai-santa-fe-long-term-rental/` |
+| 장기렌트 가격비교·계약 체크 | 정보/비교형 | 기존 발행 | `/rent/long-term-rental-contract-checklist/` |
+| 스포티지 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-sportage-long-term-rental/` |
+| 장기렌트 보증금 vs 선수금 | 정보/비교형 | 완료 | `/rent/long-term-rental-deposit-vs-advance-payment/` |
+| 그랜저 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-grandeur-long-term-rental/` |
+| K5 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-k5-long-term-rental/` |
+| 장기렌트 만기 인수 vs 반납 | 정보/비교형 | 완료 | `/rent/long-term-rental-buyout-vs-return/` |
+| 아반떼 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-avante-long-term-rental/` |
+| 장기렌트 중도해지 vs 승계 | 정보/비교형 | 완료 | `/rent/long-term-rental-early-termination-vs-transfer/` |
+| 장기렌트 신용심사 준비 | 정보형 | 완료 | `/rent/long-term-rental-credit-review-guide/` |
+| 투싼 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-tucson-long-term-rental/` |
+| 장기렌트 사고 처리·면책금 | 정보/비교형 | 완료 | `/rent/long-term-rental-accident-claim-guide/` |
+| K8 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-k8-long-term-rental/` |
+| 장기렌트 주행거리 제한·초과요금 | 정보/비교형 | 완료 | `/rent/long-term-rental-mileage-limit-guide/` |
+| 장기렌트 정비 포함 vs 미포함 | 정보/비교형 | 완료 | `/rent/long-term-rental-maintenance-included-vs-excluded/` |
+| 팰리세이드 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-palisade-long-term-rental/` |
+| 장기렌트 보험 조건·운전자 범위·사고부담금 | 정보/비교형 | 완료 | `/rent/long-term-rental-insurance-coverage-guide/` |
+| 쏘나타 장기렌트 가격 | 차종형 | 완료 | `/rent/hyundai-sonata-long-term-rental/` |
+| 장기렌트 즉시출고 vs 일반출고 | 정보/비교형 | 완료 | `/rent/long-term-rental-immediate-delivery-vs-factory-order/` |
+| 장기렌트 계약기간 36·48·60개월 비교 | 정보/비교형 | 완료 | `/rent/long-term-rental-contract-period-guide/` |
+| 가솔린 vs 하이브리드 장기렌트 | 정보/비교형 | 완료 | `/rent/gasoline-vs-hybrid-long-term-rental/` |
+| 장기렌트 vs 자동차리스 차이 | 정보/비교형 | 완료 | `/rent/long-term-rental-vs-auto-lease/` |
+| 제네시스 G80 장기렌트 가격 | 차종형 | 완료 | `/rent/genesis-g80-long-term-rental/` |
+| 제네시스 GV80 하이브리드 장기렌트 가격 | 차종형 | 완료 | `/rent/genesis-gv80-hybrid-long-term-rental/` |
+| 제네시스 GV70 장기렌트 가격 | 차종형 | 완료 | `/rent/genesis-gv70-long-term-rental/` |
+| 기아 셀토스 장기렌트 가격 | 차종형 | 완료 | `/rent/kia-seltos-long-term-rental/` |
+| 장기렌트 월 렌트료 포함 비용 | 정보/비교형 | 완료 | `/rent/long-term-rental-monthly-fee-inclusions/` |
+| 전기차 장기렌트 충전환경·주행거리·계약조건 | 정보/비교형 | 완료 | `/rent/electric-vehicle-long-term-rental-guide/` |
+| 장기렌트 반납 점검·외관·실내·정산 기준 | 정보/비교형 | 완료 | `/rent/long-term-rental-return-inspection-guide/` |
+| 장기렌트 재계약 vs 신규 계약 | 정보/비교형 | 완료 | `/rent/long-term-rental-renewal-vs-new-contract/` |
+
+
+## 페이지 이미지 경로와 실제 파일 일치 검수
+
+신규/수정 페이지는 이미지 URL 문자열이 존재한다는 이유만으로 QA PASS 처리하지 않는다.
+
+- 페이지의 `img src`, `og:image`, 구조화데이터 `image` 등 모든 로컬 이미지 참조를 확인한다.
+- `/assets/images/...` 또는 `https://board.moapick.co.kr/assets/images/...`를 가리키는 경우 현재 Git에 **동일한 파일명과 동일한 확장자**의 실파일이 존재해야 한다.
+- `.png`, `.webp`, `.jpg`는 서로 다른 파일이다. HTML이 `.webp`를 요청하고 실제 파일이 `.png`라면 QA FAIL이다.
+- 템플릿 복사 후 기존 이미지 파일명이나 확장자가 일부 위치에 남지 않았는지 전수 확인한다.
+- `og:image`만 정상이고 본문 `img src`가 깨져 있어도 QA FAIL이다.
+- 배포 ZIP에는 신규 페이지가 실제 참조하는 신규 이미지 파일을 반드시 함께 포함한다.
+- 완료 전에 모든 로컬 이미지 참조와 파일시스템을 대조하여 누락 0건을 확인한다.
+
+
+## 숫자 행정동 지역명 통합 발행 규칙
+
+지역형 콘텐츠는 행정동이 `1동`, `2동`, `3동`처럼 숫자로 분리되어 있어도 숫자 행정동별로 페이지를 따로 만들지 않는다.
+
+- 예: `역삼1동`, `역삼2동` → **역삼동** 1개 페이지로 통합한다.
+- 예: `화곡1동`, `화곡2동` 등 → **화곡동** 1개 페이지로 통합한다.
+- **신규 발행 페이지는** URL slug, `<title>`, H1, 본문, 썸네일, OG/구조화데이터, sitemap, 진행표 모두 숫자를 제거한 대표 통합 지역명을 사용한다. 기존 발행 페이지는 아래 보존 규칙을 우선한다.
+- 신규 지역 선정 전에 기존 숫자 행정동 페이지와 통합 지역 페이지가 이미 있는지 함께 중복검사한다.
+- 이미 숫자 행정동 페이지가 발행되어 있다면 기존 URL과 페이지는 원칙적으로 그대로 유지한다. 숫자를 제거하기 위한 강제 개명·URL 변경은 하지 않는다.
+- 기존 숫자 행정동 페이지가 있으면 같은 대표 지역의 다른 숫자 동이나 대표 통합명 신규 페이지를 추가하지 않는다. 즉, 기존 페이지를 대표 지역의 1개 페이지로 간주한다.
+- 기존 페이지 수정은 실제 중복 페이지가 생성된 경우처럼 정리가 필요한 때에만 진행하며, 이 경우에도 가능하면 기존 발행 URL을 보존하고 새로 생긴 중복본을 제거한다.
+- 인구순 진행표도 숫자 행정동을 개별 슬롯으로 반복 소비하지 않고 대표 지역 1개로 관리한다.
+
+### 페이지 내부 주제 중복 검수
+- 신규·수정 지역 페이지는 최종 QA에서 같은 페이지의 01~08 섹션을 서로 대조한다.
+- 제목 표현만 다르고 실질적으로 같은 주제(예: 방문관리/자가관리 연속 반복, 이전설치 연속 반복)를 두 섹션에서 재설명하지 않는다.
+- 공통 계약 안내가 이미 한 섹션에 있으면 다른 섹션은 해당 지역의 설치공간·주거형태·사용패턴 등 별도 검색 의도로 작성한다.
+- 자동 QA PASS만으로 완료 처리하지 않고, 01~08 소제목을 한 번에 펼쳐 사람이 읽었을 때 역할이 겹치지 않는지 확인한다.
+
+
+### 2026-10-23 신규 8페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 현대 코나 장기렌트 초기비용·트림·계약조건 비교 | `/rent/hyundai-kona-long-term-rental/` |
+| 장기렌트 | 장기렌트 출고 전 체크리스트 차량상태·서류·인수 확인 | `/rent/long-term-rental-delivery-checklist/` |
+| 포장이사 | 서울 강동구 천호동 포장이사 비용·비교견적·현장조건 체크 | `/moving/seoul-gangdong-cheonho-moving/` |
+| 포장이사 | 서울 마포구 공덕동 포장이사 비용·비교견적·현장조건 체크 | `/moving/seoul-mapo-gongdeok-moving/` |
+| 인터넷가입 | 서울 영등포구 당산동 인터넷가입 요금·결합·설치조건 비교 | `/internet/seoul-yeongdeungpo-dangsan-internet-signup-benefits/` |
+| 인터넷가입 | 서울 마포구 공덕동 인터넷가입 요금·결합·설치조건 비교 | `/internet/seoul-mapo-gongdeok-internet-signup-benefits/` |
+| 정수기렌탈 | 서울 중랑구 신내동 정수기렌탈 가격·관리·설치조건 비교 | `/water/seoul-jungnang-sinnae-water-purifier-rental/` |
+| 정수기렌탈 | 서울 관악구 청룡동 정수기렌탈 가격·관리·설치조건 비교 | `/water/seoul-gwanak-cheongnyong-water-purifier-rental/` |
+### 2026-11-05 강화형 신규 4페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 장기렌트 월 렌트료 포함 비용·자동차세·보험·정비 범위 비교 | `/rent/long-term-rental-monthly-fee-inclusions/` |
+| 포장이사 | 서울 구로구 오류동 포장이사 비용·차량 진입·추가금 비교 | `/moving/seoul-guro-oryu-moving/` |
+| 인터넷가입 | 서울 성북구 길음동 인터넷가입 요금·결합·설치환경 비교 | `/internet/seoul-seongbuk-gireum-internet-signup-benefits/` |
+| 정수기렌탈 | 서울 강동구 천호동 정수기렌탈 가격·관리·설치조건 비교 | `/water/seoul-gangdong-cheonho-water-purifier-rental/` |
+
+### 2026-11-05 강화형 신규 8페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 전기차 장기렌트 충전환경·주행거리·보험·반납조건 비교 | `/rent/electric-vehicle-long-term-rental-guide/` |
+| 장기렌트 | 장기렌트 반납 점검 외관·휠·실내·정산 기준 | `/rent/long-term-rental-return-inspection-guide/` |
+| 포장이사 | 서울 성북구 길음동 포장이사 승강기·주차·추가비용 비교 | `/moving/seoul-seongbuk-gireum-moving/` |
+| 포장이사 | 서울 강서구 발산동 포장이사 차량진입·포장범위·추가금 비교 | `/moving/seoul-gangseo-balsan-moving/` |
+| 인터넷가입 | 서울 은평구 녹번동 인터넷가입 주소조회·요금·결합·설치 비교 | `/internet/seoul-eunpyeong-nokbeon-internet-signup-benefits/` |
+| 인터넷가입 | 서울 서초구 잠원동 인터넷가입 아파트망·결합·와이파이 비교 | `/internet/seoul-seocho-jamwon-internet-signup-benefits/` |
+| 정수기렌탈 | 서울 구로구 신도림동 정수기렌탈 설치공간·관리·가격 비교 | `/water/seoul-guro-sindorim-water-purifier-rental/` |
+| 정수기렌탈 | 서울 구로구 오류동 정수기렌탈 수압·설치·관리·가격 비교 | `/water/seoul-guro-oryu-water-purifier-rental/` |
+
+## 썸네일 한글 가독성 차단 규칙
+
+- 장기렌트, 정수기렌탈처럼 획이 촘촘한 핵심 문구는 이중 외곽선 때문에 글자 내부가 뭉개지지 않는지 반드시 확인한다.
+- 검은 가로띠, 흰 조각, 끊긴 획, 겹친 자소, 비정상 내부 공백이 보이면 자동 QA 결과와 관계없이 FAIL이다.
+- 핵심 문구가 다른 영역을 침범하거나 획이 뭉개지면 글자 크기와 외곽선 두께를 함께 낮춰 모든 음절이 분리되어 보이게 한다.
+- 1024×1024 원본과 256×256, 100×100 축소본을 모두 육안 비교한 뒤에만 배포한다.
+- 세부 승인 기준은 THUMBNAIL_STANDARD.md의 한글 획 깨짐·겹침 필수 검수를 따른다.
+## 장기렌트 정보형·비교형 썸네일 고정 규칙
+
+- 정보형·비교형 장기렌트 썸네일은 gasoline-vs-hybrid-long-term-rental.png를 1순위 기준본으로 사용하고, long-term-rental-vs-auto-lease.png와 long-term-rental-contract-period-guide.png를 함께 비교한다.
+- 반드시 rent-thumbnail-background.png 무문자 공용 배경에서 새로 합성한다. 기존 완성본을 배경으로 재사용하지 않는다.
+- 작은 상단 네이비 캡슐, 중앙 1~2줄 핵심 비교어, 작은 하단 빨간 보조문구 박스라는 이전 정상 구조를 유지한다.
+- 장기렌트는 상단 캡슐에 선명하게 배치하며 최근 제작본처럼 중앙에 거대한 두 번째 줄로 반복하지 않는다.
+- 대형 상단 캡슐과 대형 하단 네이비 박스는 정보형·비교형에 사용하지 않는다.
+- 1024×1024 원본, 256×256, 100×100에서 이전 정상 기준본과 나란히 비교해 글자 모양·외곽선·박스 비율을 확인한다.
+### 2026-11-06 강화형 신규 4페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 장기렌트 재계약 vs 신규 계약 비용·차량·조건 비교 | /rent/long-term-rental-renewal-vs-new-contract/ |
+| 포장이사 | 서울 영등포구 여의도동 포장이사 아파트·오피스·승강기·주차 비교 | /moving/seoul-yeongdeungpo-yeouido-moving/ |
+| 인터넷가입 | 서울 강동구 강일동 인터넷가입 아파트망·결합·와이파이·설치 비교 | /internet/seoul-gangdong-gangil-internet-signup-benefits/ |
+| 정수기렌탈 | 서울 은평구 녹번동 정수기렌탈 설치공간·수압·관리·가격 비교 | /water/seoul-eunpyeong-nokbeon-water-purifier-rental/ |
+
+
+### 2026-11-06 강화형 추가 4페이지 발행
+
+| 업종 | 주제 | URL |
+|---|---|---|
+| 장기렌트 | 장기렌트 운전자 범위·연령·가족·직원·보험 조건 비교 | `/rent/long-term-rental-driver-age-coverage-guide/` |
+| 포장이사 | 서울 동대문구 장안동 포장이사 주차·승강기·골목 동선 비교 | `/moving/seoul-dongdaemun-jangan-moving/` |
+| 인터넷가입 | 서울 서대문구 홍제동 인터넷가입 주소조회·결합·와이파이 비교 | `/internet/seoul-seodaemun-hongje-internet-signup-benefits/` |
+| 정수기렌탈 | 서울 마포구 성산동 정수기렌탈 공간·기능·관리·가격 비교 | `/water/seoul-mapo-seongsan-water-purifier-rental/` |
+
+## OG 대표 이미지 규격 태그 필수 규칙
+
+- 신규 페이지의 `og:image`에는 절대 HTTPS URL을 사용한다.
+- 바로 뒤에 실제 대표 이미지와 일치하는 `og:image:width`, `og:image:height`, `og:image:type`을 함께 넣는다.
+- 현재 1024×1024 PNG 썸네일은 각각 `1024`, `1024`, `image/png`로 기록한다. 실제 파일과 다른 `1000` 또는 `image/jpeg` 값을 넣지 않는다.
+- 본문 대표 이미지, Article 구조화데이터의 image, og:image는 동일한 파일을 가리켜야 한다.
