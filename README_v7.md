@@ -20,4 +20,4 @@
 
 ## 🔗 접속 주소
 - **메인 페이지**: `https://moapick.co.kr/rent/`
-- **관리자 페이지**: `https://moapick.co.kr/rent/api/admin?pwd=1029qpwo`
+- **관리자 페이지**: 관리자 인증정보는 공개 문서나 URL에 기록하지 말고, 비공개 환경 변수와 안전한 인증 방식으로 관리하세요.
