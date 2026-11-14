@@ -1,10 +1,18 @@
 [
     {
+        "url": "45.html",
+        "title": "젠슨 황, 엔비디아 CEO 사임…콜레트 크레스 임시 수장",
+        "summary": "33년간 엔비디아를 이끈 공동창업자 퇴진…정식 후임 CEO 선정 절차 착수",
+        "date": "2026.11.14",
+        "category": "뉴스",
+        "image": "https://moapick.co.kr/news/img/20261114_jensen-huang-shin-a-young.png"
+    },
+    {
         "url": "44.html",
         "title": "T1, 롤드컵 4강서 BLG에 1대 3 패배",
         "summary": "3연속 우승 뒤 4연패 도전 마감…BLG는 젠지와 결승 맞대결",
         "date": "2026.11.09",
-        "category": "??",
+        "category": "뉴스",
         "image": "https://moapick.co.kr/news/img/20261109_t1-worlds-semifinal-elimination.png"
     },
     {
